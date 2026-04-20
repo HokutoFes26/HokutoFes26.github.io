@@ -25,7 +25,7 @@ export default function ItemCard({ data: item }: { data: Payload }) {
   const isProduct = item.type === "product";
 
   const href = isProduct
-    ? getPath(`/products?name=${encodeURIComponent(item.name)}`)
+    ? `/products?name=${encodeURIComponent(item.name)}`
     : item.url.startsWith("http")
       ? item.url
       : `https://${item.url}`;
