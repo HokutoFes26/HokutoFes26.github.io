@@ -6,6 +6,9 @@ import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import ProductModalManager from "@/components/ui/ProductModal/ProductModalManager";
+import { MapProvider } from "@/components/webapp/contexts/MapContext";
+import MapModalWrapper from "./MapModalWrapper";
+import { RoleProvider } from "@/components/webapp/contexts/RoleContext";
 
 function getLocalData(fileName: string) {
   const filePath = path.join(process.cwd(), "public/data", fileName);
@@ -26,53 +29,60 @@ export default function Products() {
 
   return (
     <main>
-      <ProductModalManager allData={allData} />
-      <PageHeader
-        enTitle="PROJECTS"
-        jaTitle="企画紹介"
-        imgSrc={getPath("/img/company/mainvisual.jpg")}
-      />
+      <RoleProvider initialRole="user">
+        <MapProvider>
+          <ProductModalManager allData={allData} />
+          
+          <PageHeader
+            enTitle="PROJECTS"
+            jaTitle="企画紹介"
+            imgSrc={getPath("/img/company/mainvisual.jpg")}
+          />
 
-      <PageNav
-        items={[
-          { label: "展示", href: "#service" },
-          { label: "模擬店", href: "#philosophy" },
-          { label: "ステージ企画", href: "#overview" },
-          { label: "タイムテーブル", href: "#access" },
-        ]}
-      />
+          <PageNav
+            items={[
+              { label: "展示", href: "#service" },
+              { label: "模擬店", href: "#philosophy" },
+              { label: "ステージ企画", href: "#overview" },
+              { label: "タイムテーブル", href: "#access" },
+            ]}
+          />
 
-      <TabbedSectionClient
-        id="service"
-        title="展示"
-        tabs={["クラス展示", "部活動展示", "学科展示", "特別展示"]}
-        data={allData.products}
-        type="card"
-      />
+          <TabbedSectionClient
+            id="service"
+            title="展示"
+            tabs={["クラス展示", "部活動展示", "学科展示", "特別展示"]}
+            data={allData.products}
+            type="card"
+          />
 
-      <TabbedSectionClient
-        id="philosophy"
-        title="模擬店"
-        tabs={["運動部", "文化部", "クラス", "その他"]}
-        data={allData.stalls}
-        type="card"
-      />
+          <TabbedSectionClient
+            id="philosophy"
+            title="模擬店"
+            tabs={["運動部", "文化部", "クラス", "その他"]}
+            data={allData.stalls}
+            type="card"
+          />
 
-      <TabbedSectionClient
-        id="overview"
-        title="ステージ企画"
-        tabs={["1日目", "2日目"]}
-        data={allData.events}
-        type="list"
-      />
+          <TabbedSectionClient
+            id="overview"
+            title="ステージ企画"
+            tabs={["1日目", "2日目"]}
+            data={allData.events}
+            type="list"
+          />
 
-      <TabbedSectionClient
-        id="access"
-        title="タイムテーブル"
-        tabs={["1日目", "2日目"]}
-        data={allData.events}
-        type="timeline"
-      />
+          <TabbedSectionClient
+            id="access"
+            title="タイムテーブル"
+            tabs={["1日目", "2日目"]}
+            data={allData.events}
+            type="timeline"
+          />
+
+          <MapModalWrapper />
+        </MapProvider>
+      </RoleProvider>
     </main>
   );
 }

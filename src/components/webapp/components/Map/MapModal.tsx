@@ -9,9 +9,10 @@ const MapSection = React.lazy(() => import("./MapSection"));
 interface MapModalProps {
   isOpen: boolean;
   onClose: () => void;
+  targetPlace?: string | null;
 }
 
-export default function MapModal({ isOpen, onClose }: MapModalProps) {
+export default function MapModal({ isOpen, onClose, targetPlace }: MapModalProps) {
   return (
     <div
       className={`map-modal-overlay ${isOpen ? "open" : ""}`}
@@ -26,7 +27,7 @@ export default function MapModal({ isOpen, onClose }: MapModalProps) {
 
         <div className="map-modal-body">
           <Suspense fallback={<div style={{ padding: "40px", textAlign: "center" }}>Loading Map...</div>}>
-            <MapSection />
+            <MapSection initialPlace={targetPlace} />
           </Suspense>
         </div>
       </div>

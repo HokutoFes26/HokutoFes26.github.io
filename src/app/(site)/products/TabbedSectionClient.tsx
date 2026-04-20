@@ -93,11 +93,7 @@ export default function TabbedSectionClient({
       <SectionTitle>{title}</SectionTitle>
       <ul className="tab-list">
         {tabs.map((tab, i) => (
-          <button
-            key={i}
-            className={`tab-btn ${activeIndex === i ? "active" : ""}`}
-            onClick={() => setActiveIndex(i)}
-          >
+          <button key={i} className={`tab-btn ${activeIndex === i ? "active" : ""}`} onClick={() => setActiveIndex(i)}>
             {tab}
           </button>
         ))}
