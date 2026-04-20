@@ -35,9 +35,7 @@ export default function ProductModal({ item }: ProductModalProps) {
   const handleClose = () => {
     setIsOpen(false);
     setTimeout(() => {
-      const url = new URL(window.location.href);
-      url.searchParams.delete("name");
-      router.push(url.pathname, { scroll: false });
+      router.push("/products/", { scroll: false });
     }, 300);
   };
 
