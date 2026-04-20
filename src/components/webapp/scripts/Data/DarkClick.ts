@@ -18,6 +18,8 @@ export default function DarkClick(isDark: boolean) {
       root.style.setProperty("--glass-bg", "linear-gradient(135deg, rgba(30, 30, 30, 0.5), rgba(10, 10, 10, 0.3))");
       root.style.setProperty("--glass-border", "rgba(255, 255, 255, 0.2)");
       root.style.setProperty("--glass-shadow-1", "rgba(255, 255, 255, 0.2)");
+      root.style.setProperty("--bottom-nav", "rgba(60, 60, 64, 0.6)");
+      root.style.setProperty("--bottom-nav-shadow", "rgba(240, 240, 240, 0) 0 0 0");
       root.style.setProperty("--scheme", "dark");
    } else {
       root.style.setProperty("--bg-color", "#fff");
@@ -34,6 +36,8 @@ export default function DarkClick(isDark: boolean) {
       root.style.setProperty("--glass-bg", "linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1))");
       root.style.setProperty("--glass-border", "rgba(255, 255, 255, 0.6)");
       root.style.setProperty("--glass-shadow-1", "rgba(0, 0, 0, 0.2)");
+      root.style.setProperty("--bottom-nav", "rgba(250, 250, 254, 0.6");
+      root.style.setProperty("--bottom-nav-shadow", "rgba(0, 0, 0, 0.4) 0 0 20px");
       root.style.setProperty("--scheme", "light");
    }
 }

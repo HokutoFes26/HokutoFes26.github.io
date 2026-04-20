@@ -5,6 +5,7 @@ import "./products.css";
 import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
 import PageNav from "@/components/ui/PageNav/PageNav";
+import ProductModalManager from "@/components/ui/ProductModal/ProductModalManager";
 
 function getLocalData(fileName: string) {
   const filePath = path.join(process.cwd(), "public/data", fileName);
@@ -25,6 +26,7 @@ export default function Products() {
 
   return (
     <main>
+      <ProductModalManager allData={allData} />
       <PageHeader
         enTitle="PROJECTS"
         jaTitle="企画紹介"

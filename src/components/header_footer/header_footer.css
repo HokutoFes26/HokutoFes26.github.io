@@ -95,6 +95,7 @@
 
 .header .navi .menu .menu-first span {
   cursor: pointer;
+  word-break: keep-all;
 }
 
 .header .navi .menu .menu-first span::after {
@@ -136,6 +137,7 @@
   font-weight: 500;
   padding: 8px 30px;
   text-align: center;
+  word-break: keep-all;
 }
 
 .footer {

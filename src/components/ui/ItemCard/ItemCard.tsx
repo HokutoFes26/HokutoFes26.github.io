@@ -34,7 +34,7 @@ export default function ItemCard({ data: item }: { data: Payload }) {
 
   return (
     <li className={styles.card}>
-      <Link href={href} target={target}>
+      <Link href={href} target={target} scroll={false}>
         {item.image && (
           <img 
             src={getPath(item.image)} 

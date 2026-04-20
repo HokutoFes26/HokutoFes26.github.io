@@ -71,6 +71,7 @@
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 40px;
+  word-break: auto-phrase;
 }
 
 .products {
@@ -104,6 +105,7 @@
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 60px;
+  word-break: auto-phrase;
 }
 
 .products .products-list-area {
@@ -167,6 +169,7 @@
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 20px;
+  word-break: auto-phrase;
 }
 
 .works .works-list {

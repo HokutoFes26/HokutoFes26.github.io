@@ -77,13 +77,30 @@ export default function BoothManager() {
         }
     };
 
+    const myStall = fetchedData?.stalls?.find((s) => s.stallName === assignedStall);
+    const crowdOptions = ["空き", "やや混雑", "混雑"];
+    const stockOptions = ["在庫あり", "少なめ", "売り切れ"];
+    const statusColors = ["#52c41a", "#faad14", "#ff4d4f"];
+
     return (
         <CardBase title="Booth Manager">
             <CardInside>
                 <div style={{ display: "flex", flexDirection: "column", gap: "25px", padding: "10px 0" }}>
-                    <span style={{ fontSize: "1.4em", fontWeight: "bold" }}>
-                        模擬店名 : {assignedStall || "Loading..."}
-                    </span>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                        <span style={{ fontSize: "1.4em", fontWeight: "bold" }}>
+                            模擬店名 : {assignedStall || "Loading..."}
+                        </span>
+                        <div style={{ display: "flex", gap: "10px", fontSize: "1.1em" }}>
+                            <span style={{ color: "#555" }}>反映されている状態:</span>
+                            <span style={{ color: statusColors[myStall?.crowdLevel ?? 0], fontWeight: "bold" }}>
+                                {crowdOptions[myStall?.crowdLevel ?? 0]}
+                            </span>
+                            <span style={{ color: "#ccc" }}>|</span>
+                            <span style={{ color: statusColors[myStall?.stockLevel ?? 0], fontWeight: "bold" }}>
+                                {stockOptions[myStall?.stockLevel ?? 0]}
+                            </span>
+                        </div>
+                    </div>
 
                     <BoothStatusSelector
                         label="混雑状況"
@@ -92,7 +109,7 @@ export default function BoothManager() {
                             setCrowd(val);
                             checkDirty(val, stock);
                         }}
-                        options={["空き", "やや混雑", "混雑"]}
+                        options={crowdOptions}
                     />
 
                     <BoothStatusSelector
@@ -102,7 +119,7 @@ export default function BoothManager() {
                             setStock(val);
                             checkDirty(crowd, val);
                         }}
-                        options={["在庫あり", "少なめ", "売り切れ"]}
+                        options={stockOptions}
                     />
 
                     <Button
@@ -111,23 +128,35 @@ export default function BoothManager() {
                         size="large"
                         onClick={handleUpdate}
                         loading={loading}
-                        style={{ fontWeight: "bold" }}
+                        style={{ fontWeight: "bold", height: "50px", borderRadius: "12px" }}
                     >
                         情報を更新する
                     </Button>
                     {isDirty && (
-                        <span
+                        <div
                             style={{
-                                color: "#ff4d4f",
-                                fontSize: "1.1em",
-                                fontWeight: "bold",
                                 display: "flex",
+                                flexDirection: "column",
                                 alignItems: "center",
-                                justifyContent: "center",
+                                gap: "4px",
+                                padding: "10px",
+                                background: "rgba(255, 77, 79, 0.05)",
+                                borderRadius: "8px",
                             }}
                         >
-                            情報は反映されていません！
-                        </span>
+                            <span
+                                style={{
+                                    color: "#ff4d4f",
+                                    fontSize: "1.1em",
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                変更が未反映です
+                            </span>
+                            <span style={{ color: "#888", fontSize: "0.85em" }}>
+                                「情報を更新する」ボタンを押すと公開されます
+                            </span>
+                        </div>
                     )}
                     <Divider />
                     <BoothHandoverQR assignedStall={assignedStall} />

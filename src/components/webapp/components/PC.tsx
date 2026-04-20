@@ -23,96 +23,96 @@ const LostManager = React.lazy(() => import("@/components/webapp/components/Admi
 const QAManager = React.lazy(() => import("@/components/webapp/components/Admin/QAManager"));
 
 const FallbackLoader = ({ text = "Loading..." }: { text?: string }) => (
-  <div style={{ textAlign: "center", padding: "40px 20px", color: "var(--text-sub-color)", fontSize: "13px" }}>
-    {text}
-  </div>
+    <div style={{ textAlign: "center", padding: "40px 20px", color: "var(--text-sub-color)", fontSize: "13px" }}>
+        {text}
+    </div>
 );
 export default function PC() {
-  const { isAdmin, isStallAdmin, assignedStall } = useRole();
-  const {
-    api: { fetchedData },
-  } = useData();
-  const { currentTime } = useAppTime();
-  const news = fetchedData?.news || [];
-  const hotTime = 20;
+    const { isAdmin, isStallAdmin, assignedStall } = useRole();
+    const {
+        api: { fetchedData },
+    } = useData();
+    const { currentTime } = useAppTime();
+    const news = fetchedData?.news || [];
+    const hotTime = 20;
 
-  const hasHotNews = useMemo(() => {
-    const now = currentTime.valueOf();
-    return news.some((item) => {
-      const diffMin = (now - dayjs(item.created_at).valueOf()) / (1000 * 60);
-      return diffMin > -1 && diffMin <= hotTime;
-    });
-  }, [news, currentTime]);
+    const hasHotNews = useMemo(() => {
+        const now = currentTime.valueOf();
+        return news.some((item) => {
+            const diffMin = (now - dayjs(item.created_at).valueOf()) / (1000 * 60);
+            return diffMin > -1 && diffMin <= hotTime;
+        });
+    }, [news, currentTime]);
 
-  const MainContent = useMemo(() => {
-    const isServerAdmin = assignedStall === "server";
+    const MainContent = useMemo(() => {
+        const isServerAdmin = assignedStall === "server";
 
-    if (isAdmin) {
-      return (
-        <Suspense fallback={<FallbackLoader text="Admin Tools..." />}>
-          {isServerAdmin ? <ServerConfig /> : <NewsManager />}
-        </Suspense>
-      );
-    }
+        if (isAdmin) {
+            return (
+                <Suspense fallback={<FallbackLoader text="Admin Tools..." />}>
+                    {isServerAdmin ? <ServerConfig /> : <NewsManager />}
+                </Suspense>
+            );
+        }
 
-    if (isStallAdmin) {
-      return (
-        <Suspense fallback={<FallbackLoader text="Stall Manager..." />}>
-          <BoothManager />
-        </Suspense>
-      );
-    }
+        if (isStallAdmin) {
+            return (
+                <Suspense fallback={<FallbackLoader text="Stall Manager..." />}>
+                    <BoothManager />
+                </Suspense>
+            );
+        }
 
-    return (
-      <>
-        {hasHotNews && <NewsStatus onlyHot={true} hotTime={hotTime} />}
-        <EventStatus />
-        <BoothStatus />
-        <NewsStatus />
-      </>
-    );
-  }, [isAdmin, isStallAdmin, hasHotNews, news, currentTime]);
-
-  const SubContent = useMemo(() => {
-    const isServerAdmin = assignedStall === "server";
-    if (isAdmin) {
-      return (
-        <Suspense fallback={<FallbackLoader text="Admin Tools..." />}>
-          {!isServerAdmin ? (
+        return (
             <>
-              <LostManager />
-              <QAManager />
+                {hasHotNews && <NewsStatus onlyHot={true} hotTime={hotTime} />}
+                <EventStatus />
+                <BoothStatus />
+                <NewsStatus />
             </>
-          ) : (
-            <NewsStatus />
-          )}
-        </Suspense>
-      );
-    }
-    if (isStallAdmin) {
-      return <NewsStatus />;
-    }
-    return (
-      <>
-        <LostStatus />
-        <BusStatus />
-        <QAStatus />
-        <MapSection />
-      </>
-    );
-  }, [isAdmin, isStallAdmin]);
+        );
+    }, [isAdmin, isStallAdmin, hasHotNews, news, currentTime]);
 
-  return (
-    <div className="mainCanvas">
-      <div className="PCCanvas">
-        <div className="main" id="main">
-          <div className="mainCards">{MainContent}</div>
+    const SubContent = useMemo(() => {
+        const isServerAdmin = assignedStall === "server";
+        if (isAdmin) {
+            return (
+                <Suspense fallback={<FallbackLoader text="Admin Tools..." />}>
+                    {!isServerAdmin ? (
+                        <>
+                            <LostManager />
+                            <QAManager />
+                        </>
+                    ) : (
+                        <NewsStatus />
+                    )}
+                </Suspense>
+            );
+        }
+        if (isStallAdmin) {
+            return <NewsStatus />;
+        }
+        return (
+            <>
+                <LostStatus />
+                <BusStatus />
+                <QAStatus />
+                <MapSection />
+            </>
+        );
+    }, [isAdmin, isStallAdmin]);
+
+    return (
+        <div className="mainCanvas">
+            <div className="PCCanvas">
+                <div className="main" id="main">
+                    <div className="mainCards">{MainContent}</div>
+                </div>
+                <div className="sche" id="sche">
+                    <div className="mainCards">{SubContent}</div>
+                </div>
+            </div>
+            <Menu />
         </div>
-        <div className="sche" id="sche">
-          <div className="mainCards">{SubContent}</div>
-        </div>
-      </div>
-      <Menu />
-    </div>
-  );
+    );
 }
