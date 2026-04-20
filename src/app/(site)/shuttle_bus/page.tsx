@@ -73,10 +73,10 @@ export default function Bus() {
       <div className={styles.main}>
         <div className={styles.skipNav}>
           <a href="#to-imizu" className={styles.skipBtn}>
-            本郷 → 射水
+            本郷 / 富山駅 → 射水
           </a>
           <a href="#to-hongo" className={styles.skipBtn}>
-            射水 → 本郷
+            射水 → 本郷 / 富山駅
           </a>
         </div>
 

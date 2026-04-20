@@ -581,12 +581,12 @@
 
 .webapp-root .map-modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  right: 0.8em;
+  top: 0.8em;
   width: 40px;
-  height: 40px;
+  aspect-ratio: 1;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.05);
+  background: none;
   border: none;
   display: flex;
   align-items: center;

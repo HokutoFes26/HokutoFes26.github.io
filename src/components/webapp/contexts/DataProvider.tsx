@@ -30,8 +30,8 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const lastFetchTime = useRef(0);
 
   const [serverConfig, setServerConfig] = useState({
-    interval: 15000,
-    freq: 6,
+    interval: 1000,
+    freq: 2,
   });
 
   const parseCompactDate = (compactDateStr: string) => {
@@ -57,8 +57,8 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
 
         if (allData.config) {
           setServerConfig({
-            interval: allData.config.fetch_interval_ms || 15000,
-            freq: allData.config.full_refresh_freq || 6,
+            interval: allData.config.fetch_interval_ms || 1000,
+            freq: allData.config.full_refresh_freq || 2,
           });
         }
 
