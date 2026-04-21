@@ -7,7 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
-import { useMapControl } from "@/components/webapp/contexts/MapContext";
+import { useMapControl } from "@/components/Map/MapContext";
 
 interface ProductModalProps {
   item: {
@@ -25,9 +25,7 @@ export default function ProductModal({ item }: ProductModalProps) {
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 10);
-
     if (mapControl) mapControl.setProductModalOpen(true);
-
     return () => {
       clearTimeout(timer);
       if (mapControl) mapControl.setProductModalOpen(false);
@@ -91,7 +89,11 @@ export default function ProductModal({ item }: ProductModalProps) {
                   <span className={styles.label}>場所</span>
                   <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
                     <p className={styles.value}>{item.place} / </p>
-                    {mapControl && <p style={{cursor: "pointer" }} className={styles.mapLink}>地図で見る ↗</p>}
+                    {mapControl && (
+                      <p style={{ cursor: "pointer" }} className={styles.mapLink}>
+                        地図で見る ↗
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>

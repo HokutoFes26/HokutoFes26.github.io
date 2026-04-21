@@ -1,7 +1,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: transparent; /* 共通背景を使うため透明にする */
+  background-color: transparent;
   z-index: 10000;
   display: flex;
   justify-content: center;
@@ -26,8 +26,6 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-
-  /* ポップアウト演出 */
   transform: scale(0.2) rotateY(180deg);
   filter: blur(10px);
   opacity: 0;

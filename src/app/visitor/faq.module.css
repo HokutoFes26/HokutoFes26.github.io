@@ -1,0 +1,146 @@
+
+.faq-list {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto 120px;
+}
+
+.item {
+  border-top: solid 1px var(--color-black);
+}
+
+.item:last-child {
+  border-bottom: solid 1px var(--color-black);
+}
+
+.item dt {
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 40px 0;
+  position: relative;
+}
+
+.item dt::before,
+.item dt::after {
+  content: "";
+  background-color: var(--color-black);
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.item dt::before {
+  width: 15px;
+  height: 1px;
+  top: 55px;
+  right: 0;
+}
+
+.item dt::after {
+  width: 1px;
+  height: 15px;
+  top: 48px;
+  right: 6px;
+  left: auto;
+}
+
+.item.active dt::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.question {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 14px;
+  margin-right: 100px;
+}
+
+.item dd {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.3s ease-out,
+    padding 0.3s ease-out;
+  overflow: hidden;
+  padding-bottom: 0;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.item.active dd {
+  grid-template-rows: 1fr;
+  padding-bottom: 40px;
+}
+
+.answer-content {
+  display: flex;
+  min-height: 0;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.item.active dd .answer-content {
+  visibility: visible;
+}
+
+.item dd a {
+  text-decoration: underline;
+}
+
+.answer {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: solid 1px var(--color-black);
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .faq-list {
+    margin: 0 auto 60px;
+  }
+
+  .item {
+    padding-right: 20px;
+  }
+
+  .item dt {
+    padding: 30px 0;
+  }
+
+  .item dt::before {
+    top: 45px;
+    right: -20px;
+  }
+
+  .item dt::after {
+    top: 38px;
+    right: -14px;
+  }
+
+  .question {
+    margin-right: 20px;
+  }
+
+  .item.active dd {
+    padding-bottom: 30px;
+  }
+
+  .answer {
+    margin-right: 20px;
+  }
+}
