@@ -115,7 +115,7 @@ export default function Phone() {
           <div className="mainCards">{SubContent}</div>
         </div>
         <div className="others" id="others">
-          <div className="otherCards">
+          <div className="mainCards">
             <Suspense fallback={<FallbackLoader text="Settings..." />}>
               <Other />
             </Suspense>

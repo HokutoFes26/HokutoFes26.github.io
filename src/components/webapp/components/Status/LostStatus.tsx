@@ -7,55 +7,55 @@ import dayjs from "dayjs";
 import { useData } from "@/components/webapp/contexts/DataContext";
 
 export default function LostStatus() {
-  const { t } = useTranslation();
-  const {
-    api: { fetchedData, isLoading },
-  } = useData();
-  const items = fetchedData?.lostItems || [];
+    const { t } = useTranslation();
+    const {
+        api: { fetchedData, isLoading },
+    } = useData();
+    const items = fetchedData?.lostItems || [];
 
-  return (
-    <CardBase title={t("CardTitles.LOST_FOUND")}>
-      <CardInside className="no-vertical-padding">
-        {isLoading ? (
-          <SubList>
-            <p style={{ fontSize: "14px", color: "#999", textAlign: "center", width: "100%" }}>読み込み中...</p>
-          </SubList>
-        ) : items.length > 0 ? (
-          items.map((item, index) => (
-            <React.Fragment key={item.id}>
-              {index !== 0 && <Divider />}
-              <SubList>
-                <div style={{ textAlign: "left", width: "100%" }}>
-                  <p style={{ fontSize: "16px", fontWeight: "bold", margin: "0 0 4px 0" }}>{item.name}</p>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <p style={{ fontSize: "12px", color: "#666", margin: 0 }}>場所: {item.place}</p>
-                    <p style={{ fontSize: "10px", color: "#999", margin: 0 }}>
-                      {dayjs(item.created_at).format("HH:mm")}
-                    </p>
-                  </div>
-                  {item.edit_reason && (
-                    <p style={{ fontSize: "10px", color: "#999", margin: "4px 0 0 0", fontStyle: "italic" }}>
-                      (編集: {item.edit_reason})
-                    </p>
-                  )}
-                </div>
-              </SubList>
-            </React.Fragment>
-          ))
-        ) : (
-          <SubList>
-            <p style={{ fontSize: "14px", color: "#999", textAlign: "center", width: "100%" }}>
-              現在、届け出のある落とし物はありません
-            </p>
-          </SubList>
-        )}
-      </CardInside>
-    </CardBase>
-  );
+    return (
+        <CardBase title={t("CardTitles.LOST_FOUND")}>
+            <CardInside className="no-vertical-padding">
+                {isLoading ? (
+                    <SubList>
+                        <p style={{ fontSize: "14px", color: "#999", textAlign: "center", width: "100%" }}>
+                            読み込み中...
+                        </p>
+                    </SubList>
+                ) : items.length > 0 ? (
+                    items.map((item, index) => (
+                        <React.Fragment key={item.id}>
+                            {index !== 0 && <Divider />}
+                            <SubList>
+                                <div style={{ textAlign: "left", width: "100%" }}>
+                                    <p style={{ fontSize: "16px", fontWeight: "bold", margin: "0 0 4px 0" }}>
+                                        {item.name}
+                                    </p>
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <p style={{ fontSize: "12px", color: "#666", margin: 0 }}>場所: {item.place}</p>
+                                        <p style={{ fontSize: "10px", color: "#999", margin: 0 }}>
+                                            {dayjs(item.created_at).format("HH:mm")}
+                                        </p>
+                                    </div>
+                                    {item.edit_reason && <p className="edited-text">編集済み: {item.edit_reason}</p>}
+                                </div>
+                            </SubList>
+                        </React.Fragment>
+                    ))
+                ) : (
+                    <SubList>
+                        <p style={{ fontSize: "14px", color: "#999", textAlign: "center", width: "100%" }}>
+                            現在、届け出のある落とし物はありません
+                        </p>
+                    </SubList>
+                )}
+            </CardInside>
+        </CardBase>
+    );
 }

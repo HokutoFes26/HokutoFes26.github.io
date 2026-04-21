@@ -767,9 +767,7 @@
 }
 
 @media (min-width: 550px) and (orientation: portrait) {
-  .webapp-root .canvas > .main > .mainCards,
-  .webapp-root .canvas > .sche > .scheCards,
-  .webapp-root .canvas > .others > .othersCards {
+  .webapp-root .mainCards {
     width: 500px;
     margin: 0 auto;
   }

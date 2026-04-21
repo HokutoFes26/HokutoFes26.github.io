@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { DataContext, DataContextType } from "./DataContext";
 import {
+  supabase,
   mockSupabase,
   StallStatus,
   NewsItem,
@@ -30,7 +31,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const lastFetchTime = useRef(0);
 
   const [serverConfig, setServerConfig] = useState({
-    interval: 1000,
+    interval: 30000,
     freq: 2,
   });
 
@@ -57,7 +58,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
 
         if (allData.config) {
           setServerConfig({
-            interval: allData.config.fetch_interval_ms || 1000,
+            interval: allData.config.fetch_interval_ms || 30000,
             freq: allData.config.full_refresh_freq || 2,
           });
         }
@@ -111,6 +112,39 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
       refreshCycle.current = (refreshCycle.current + 1) % 24;
     }
   };
+
+  useEffect(() => {
+    // 1. 屋台の混雑・在庫状況のリアルタイム更新
+    const stallChannel = supabase
+      .channel("stalls-changes")
+      .on("postgres_changes", { event: "UPDATE", schema: "public", table: "stalls_status" }, (payload) => {
+        const updatedRow = payload.new as any;
+        setStalls((currentStalls) =>
+          currentStalls.map((s) =>
+            s.stallName === updatedRow.stall_name
+              ? { ...s, crowdLevel: updatedRow.crowd_level, stockLevel: updatedRow.stock_level }
+              : s,
+          ),
+        );
+      })
+      .subscribe();
+
+    // 2. ニュース、落とし物、質問のリアルタイム通知
+    const tables = ["news", "lost_items", "questions"];
+    const otherChannels = tables.map((tableName) =>
+      supabase
+        .channel(`${tableName}-changes`)
+        .on("postgres_changes", { event: "*", schema: "public", table: tableName }, () => {
+          performRefresh(true);
+        })
+        .subscribe(),
+    );
+
+    return () => {
+      supabase.removeChannel(stallChannel);
+      otherChannels.forEach((ch) => supabase.removeChannel(ch));
+    };
+  }, []);
 
   useEffect(() => {
     if (isInitialRefreshStarted.current) return;
