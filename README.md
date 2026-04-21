@@ -1,5 +1,5 @@
-Pagesリンク : https://hokutosai2026toyamakosen.github.io/hp \
-Web Appリンク : https://hokutosai2026toyamakosen.github.io/hp/app
+Pagesリンク : https://hokutofes26.github.io/ \
+Web Appリンク : https://hokutofes26.github.io/app
 
 ### 各データjson場所
 
