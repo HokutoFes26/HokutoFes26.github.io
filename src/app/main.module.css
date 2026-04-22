@@ -22,11 +22,93 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #3f1354 0%, #16213e 50%, #1a1a2e 100%);
 }
 
-.mainvisual img {
+.mainlogo {
   width: clamp(200px, 40vw, 600px);
-  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #ffffff;
+  object-fit: contain;
+  padding: 5%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.star-orbits-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.star-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(25, 60, 128, 0.6);
+}
+
+.orbit-1 {
+  width: clamp(260px, 50vw, 750px);
+  height: clamp(260px, 50vw, 750px);
+  animation: rotate-orbit 30s linear infinite;
+}
+
+.orbit-2 {
+  width: clamp(350px, 65vw, 950px);
+  height: clamp(350px, 65vw, 950px);
+  border: 2px dotted rgba(150, 35, 116, 0.5);
+  animation: rotate-orbit-reverse 45s linear infinite;
+}
+
+.orbit-3 {
+  width: clamp(450px, 80vw, 1150px);
+  height: clamp(450px, 80vw, 1150px);
+  animation: rotate-orbit 60s linear infinite;
+}
+
+.star {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  line-height: 1;
+  color: #fbd341;
+  text-shadow: 0 0 10px rgba(251, 211, 65, 0.8);
+  filter: drop-shadow(0 0 5px rgba(251, 211, 65, 0.5));
+}
+
+@keyframes rotate-orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-orbit-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
 
 .company {
@@ -199,12 +281,10 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 1)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1));
   position: absolute;
   top: 0;
   left: 0;

@@ -62,7 +62,18 @@ export default function Home() {
     <div>
       <main className={styles["top-page"]}>
         <div className={styles.mainvisual}>
-          <img src={getPath("/img/common/mainlogo.jpg")} alt="" />
+          <div className={styles["star-orbits-container"]}>
+            <div className={`${styles["star-orbit"]} ${styles["orbit-1"]}`}>
+              <span className={styles.star}>★</span>
+            </div>
+            <div className={`${styles["star-orbit"]} ${styles["orbit-2"]}`}>
+              <span className={styles.star}>✦</span>
+            </div>
+            <div className={`${styles["star-orbit"]} ${styles["orbit-3"]}`}>
+              <span className={styles.star}>✧</span>
+            </div>
+          </div>
+          <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.jpg")} alt="Hokuto Fes Logo" />
         </div>
 
         <section className={`${styles.company} fadein`}>
