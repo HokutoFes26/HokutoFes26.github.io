@@ -6,6 +6,7 @@ interface worksDataItem {
   name: string;
   url: string;
   image: string;
+  fit: number;
 }
 
 type worksDataType = worksDataItem[];
@@ -15,7 +16,7 @@ export default function ThanksSection(props: { worksData: worksDataType }) {
     <div className="sitenavi-section">
       <SectionTitle>スペシャルサンクス</SectionTitle>
       <CardWrapper>
-        {props.worksData.map((item: { name: string; url: string; image: string }, index: number) => (
+        {props.worksData.map((item, index: number) => (
           <ItemCard
             key={index}
             data={{
@@ -23,6 +24,7 @@ export default function ThanksSection(props: { worksData: worksDataType }) {
               name: item.name,
               url: item.url,
               image: item.image,
+              fit: item.fit
             }}
           />
         ))}

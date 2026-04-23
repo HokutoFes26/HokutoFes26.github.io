@@ -10,6 +10,7 @@ interface Product {
   team: string;
   place: string;
   image: string;
+  fit?: number;
 }
 
 interface Company {
@@ -17,6 +18,7 @@ interface Company {
   name: string;
   url: string;
   image: string;
+  fit?: number;
 }
 
 type Payload = Product | Company;
@@ -32,15 +34,33 @@ export default function ItemCard({ data: item }: { data: Payload }) {
 
   const target = isProduct ? undefined : "_blank";
 
+  const imgPath = item.image ? getPath(item.image) : "";
+
+  const mainImgStyle: React.CSSProperties = {
+    objectFit: "contain",
+    transform: item.fit 
+      ? `translate(0, ${item.fit ?? 0}px)` 
+      : "scale(1)",
+  };
+
   return (
     <li className={styles.card}>
       <Link href={href} target={target} scroll={false}>
-        {item.image && (
-          <img 
-            src={getPath(item.image)} 
-            alt={item.name} 
-            className={styles.image} 
-          />
+        {imgPath && (
+          <div className={styles.imageWrapper}>
+            <img 
+              src={imgPath} 
+              alt="" 
+              className={styles.bgImage} 
+              aria-hidden="true"
+            />
+            <img 
+              src={imgPath} 
+              alt={item.name} 
+              className={styles.image} 
+              style={mainImgStyle}
+            />
+          </div>
         )}
         <div className={`${styles.info} ${isProduct ? "" : styles.textOnlyInfo}`}>
           <p className={styles.name}>{item.name}</p>
