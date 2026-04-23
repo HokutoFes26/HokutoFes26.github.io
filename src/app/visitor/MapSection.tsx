@@ -104,6 +104,10 @@ export default function MapSection() {
               <MapContainer
                 key={`${activeIndex}-${ratio}`}
                 crs={L.CRS.Simple}
+                maxBounds={[
+                  [-60, -60 * ratio],
+                  [1060, 1060 * ratio],
+                ]}
                 bounds={[
                   [-40, -40 * ratio],
                   [1040, 1040 * ratio],
