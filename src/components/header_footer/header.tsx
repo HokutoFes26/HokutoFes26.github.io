@@ -13,7 +13,7 @@ const Header = () => {
       const now = new Date();
       const eventDay =
         (now.getFullYear() === 2026 &&
-          now.getMonth() === 3 &&
+          now.getMonth() === 4 &&
           (now.getDate() === 23 || now.getDate() === 24)) ||
         new URLSearchParams(window.location.search).get("app") === "true";
       setIsEventDay(eventDay);
