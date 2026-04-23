@@ -62,6 +62,11 @@ export default function Home() {
     <div>
       <main className={styles["top-page"]}>
         <div className={styles.mainvisual}>
+          <div className={styles["twinkling-stars-container"]}>
+            {[...Array(15)].map((_, i) => (
+              <div key={`ts-${i}`} className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}></div>
+            ))}
+          </div>
           <div className={styles["star-orbits-container"]}>
             <div className={`${styles["star-orbit"]} ${styles["orbit-1"]}`}>
               <span className={styles.star}>★</span>
@@ -72,6 +77,14 @@ export default function Home() {
             <div className={`${styles["star-orbit"]} ${styles["orbit-3"]}`}>
               <span className={styles.star}>✧</span>
             </div>
+          </div>
+          <div className={styles["shooting-stars-container"]}>
+            <div className={`${styles["shooting-star"]} ${styles["ss-1"]}`}></div>
+            <div className={`${styles["shooting-star"]} ${styles["ss-2"]}`}></div>
+            <div className={`${styles["shooting-star"]} ${styles["ss-3"]}`}></div>
+            <div className={`${styles["shooting-star"]} ${styles["ss-4"]}`}></div>
+            <div className={`${styles["shooting-star"]} ${styles["ss-5"]}`}></div>
+            <div className={`${styles["shooting-star"]} ${styles["ss-6"]}`}></div>
           </div>
           <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.jpg")} alt="Hokuto Fes Logo" />
         </div>
