@@ -9,14 +9,14 @@ Web Appリンク : https://hokutofes26.github.io/app
 | イベントリスト | `./public/data/events.json`   |
 | Q&A            | `./public/data/faq.json`      |
 | 展示一覧       | `./public/data/products.json` |
-| 模擬店一覧     | `./public/data/stalls.json`   |
+| 模擬店一覧     | `./public/data/booth.json`   |
 | 企業一覧       | `./public/data/works.json`    |
 
 画像は`./public/img`、そのパスを`.json`へ
 
 ---
 
-### `products.json`と`stalls.json`のグループ分け
+### `products.json`と`booth.json`のグループ分け
 
 | json内ID | 展示   | 模擬店 |
 | -------- | ------ | ------ |
