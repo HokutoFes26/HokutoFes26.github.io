@@ -37,7 +37,7 @@ const Header = () => {
           boxShadow: "0 2px 10px rgba(0,0,0,0.2)"
         }}>
           <p style={{ margin: "0 0 10px 0", fontSize: "14px", fontWeight: "bold" }}>本日は北斗祭開催日です！</p>
-          <Link href="/app" style={{
+          <a href={getPath("/app/")} style={{
             background: "white",
             color: "#007aff",
             padding: "8px 20px",
@@ -48,7 +48,7 @@ const Header = () => {
             display: "inline-block"
           }}>
             当日用ウェブアプリを開く
-          </Link>
+          </a>
         </div>
       )}
       <header className="header" style={{ top: isEventDay ? "95px" : "0", transition: "top 0.3s" }}>
