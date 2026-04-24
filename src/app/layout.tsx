@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     title: "北斗祭2026 | 富山高専",
     description: "富山高専で行われる北斗祭2026に関する情報を来場者・関係者に提供します。",
     icons: {
-        icon: getPath("/favicon.ico"),
-        apple: getPath("/apple-touch-icon.png"),
+        icon: getPath("/img/common/favicon.ico"),
+        apple: getPath("/img/common/apple-touch-icon.png"),
     },
 };
 
