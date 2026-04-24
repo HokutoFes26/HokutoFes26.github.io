@@ -87,8 +87,8 @@ export default function Company() {
                 <br />
                 ～Reigntion～
               </p>
-              <p className={styles.text}>文章は誰かに任せます</p>
-              <p className={styles.text}>以下同文</p>
+              <p className={styles.text}>　「最高の北斗祭で再び煌めく」そして、「前回の北斗祭を経てもう一度さらに輝く、今までの北斗祭を越えたより良いものを作ろう」という願いが込められています。</p>
+              <p className={styles.text}>　再煌は、ただ"もう一度輝こう"という意味だけでなく、全員で"最高"を更新していくという強い決意でもあります。</p>
             </div>
           </div>
           <div className={styles["img-top"]}>
