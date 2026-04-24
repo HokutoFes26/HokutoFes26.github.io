@@ -16,7 +16,7 @@
       "name": "朝日印刷株式会社",
       "url": "https://www.asahi-pp.co.jp/",
       "image": "/img/works/朝日印刷.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "旭タンカー株式会社",
@@ -28,7 +28,7 @@
       "name": "株式会社網屋",
       "url": "https://www.amiya.co.jp/",
       "image": "/img/works/網屋.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "株式会社石金精機",
@@ -52,19 +52,19 @@
       "name": "有限会社エフディイー",
       "url": "https://fde.co.jp/",
       "image": "/img/works/FDE.jpg",
-      "fit": -60
+      "fit": -50
     },
     {
       "name": "株式会社オーフエン機器",
       "url": "https://aofen.co.jp/",
       "image": "/img/works/オーフェン機器.jpg",
-      "fit": 0
+      "fit": -60
     },
     {
       "name": "北日本電機産業株式会社",
       "url": "https://www.kitanihon-ds.co.jp/",
       "image": "/img/works/北日本電機産業.jpg",
-      "fit": 0
+      "fit": -55
     },
     {
       "name": "キタノ制作株式会社",
@@ -76,7 +76,7 @@
       "name": "協和ファーマケミカル株式会社",
       "url": "https://www.kyowa-pharma.co.jp/",
       "image": "/img/works/協和ファーマケミカル.jpg",
-      "fit": 0
+      "fit": -50
     },
     {
       "name": "クリエーションライン株式会社",
@@ -94,19 +94,19 @@
       "name": "五洲薬品株式会社",
       "url": "https://www.goshu.co.jp/",
       "image": "/img/works/五洲薬品.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "コマツNTC株式会社",
       "url": "https://ntc.komatsu/jp",
       "image": "/img/works/コマツNTC.jpg",
-      "fit": -60
+      "fit": -40
     },
     {
       "name": "株式会社小松製作所 氷見工場",
       "url": "https://www.komatsu.jp/ja",
       "image": "/img/works/小松製作所.jpg",
-      "fit": 0
+      "fit": -50
     },
     {
       "name": "金鋼化学株式会社",
@@ -148,7 +148,7 @@
       "name": "新日本海重工業株式会社",
       "url": "https://snhi.co.jp/",
       "image": "/img/works/新日本海重工業.jpg",
-      "fit": 0
+      "fit": -50
     },
     {
       "name": "株式会社セイキ",
@@ -172,13 +172,13 @@
       "name": "株式会社高橋",
       "url": "https://www.kk-takahashi.com/",
       "image": "/img/works/高橋.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "株式会社高松メッキ",
       "url": "https://www.takamatsu-p.co.jp/",
       "image": "/img/works/高松メッキ.jpg",
-      "fit": -60
+      "fit": -50
     },
     {
       "name": "立山科学株式会社",
@@ -196,7 +196,7 @@
       "name": "中越合金鋳工株式会社",
       "url": "https://www.chuetsu-metal.co.jp/",
       "image": "/img/works/中越合金鋳工.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "津根精機株式会社",
@@ -208,19 +208,19 @@
       "name": "TSK株式会社",
       "url": "https://tsk-corp.jp/",
       "image": "/img/works/TSK.jpg",
-      "fit": 0
+      "fit": -30
     },
     {
       "name": "東ソー・エイアイエイ株式会社",
       "url": "https://tosoh-aia.co.jp/",
       "image": "/img/works/東ソー・エイアイエイ.jpg",
-      "fit": -70
+      "fit": -60
     },
     {
       "name": "鳥羽システム株式会社",
       "url": "https://www.toba-system.co.jp/",
       "image": "/img/works/鳥羽システム.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "富山県綜合警備保障株式会社",
@@ -238,7 +238,7 @@
       "name": "日研プラント株式会社",
       "url": "https://www.nikken-p.jp/",
       "image": "/img/works/日研プラント.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "一般社団法人日本海事検定協会",
@@ -250,13 +250,13 @@
       "name": "日本海電業株式会社",
       "url": "https://nihonkai-dengyo.co.jp/",
       "image": "/img/works/日本海電業.jpg",
-      "fit": -60
+      "fit": -50
     },
     {
       "name": "日本ソフテック株式会社",
       "url": "https://www.nsft.co.jp/",
       "image": "/img/works/日本ソフテック.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "日本フィールド＆マリンエンジニアリング株式会社",
@@ -268,13 +268,13 @@
       "name": "パナソニックインダストリー株式会社",
       "url": "https://www.panasonic.com/jp/industry.html",
       "image": "/img/works/パナソニックインダストリー.jpg",
-      "fit": -70
+      "fit": -65
     },
     {
       "name": "富士フイルムビジネスイノベーションジャパン株式会社",
       "url": "https://www.fujifilm.com/fb/ja",
       "image": "/img/works/富士フィルム.jpg",
-      "fit": -90
+      "fit": -70
     },
     {
       "name": "北銀ソフトウエア株式会社",
@@ -292,7 +292,7 @@
       "name": "株式会社北熱",
       "url": "https://hokunetsu.com/",
       "image": "/img/works/北熱.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "株式会社北陸銀行",
@@ -304,31 +304,31 @@
       "name": "北陸電機製造株式会社",
       "url": "https://www.hokurikudenki.co.jp/",
       "image": "/img/works/北陸電機製造.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "三谷産業コンストラクションズ株式会社",
       "url": "https://www.mitani-cs.co.jp/",
       "image": "/img/works/三谷産業.jpg",
-      "fit": 0
+      "fit": -50
     },
     {
       "name": "八重洲工業株式会社",
       "url": "https://www.yaesukougyou.co.jp/",
       "image": "/img/works/八重洲工業.jpg",
-      "fit": -60
+      "fit": -40
     },
     {
       "name": "株式会社リョーシン",
       "url": "https://www.ryohshin.co.jp/",
       "image": "/img/works/リョーシン.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "株式会社レゾナック・セラミックス",
       "url": "https://www.rce.resonac.com/",
       "image": "/img/works/レゾナックセラミック.jpg",
-      "fit": 0
+      "fit": -50
     }
   ],
   "thanks": [

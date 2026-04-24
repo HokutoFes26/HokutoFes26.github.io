@@ -35,7 +35,7 @@ export default function Company() {
             </div>
           </Link>
 
-          <Link className={`${styles.item} ${styles.store}`} href="/works">
+          {/* <Link className={`${styles.item} ${styles.store}`} href="/works">
             <div className={styles.text}>
               <p className={styles["title-ja"]}>北斗祭実行委員長</p>
               <p className={styles["title-en"]}>名前</p>
@@ -56,6 +56,21 @@ export default function Company() {
             </div>
             <div className={styles.img}>
               <img src={getPath("/img/company/products-interior.jpg")} alt="" />
+            </div>
+          </Link> */}
+
+          <Link className={`${styles.item_sub} ${styles.interior}`} href="/products">
+            <div className={styles.text_sub}>
+              <p className={styles["title-ja"]}>北斗祭実行委員長</p>
+              <p className={styles["title-en"]}>名前</p>
+              <p className={styles.description}>軽く一言お願いします。</p>
+              <p className={styles["view-more"]}>VIEW MORE</p>
+            </div>
+            <div className={styles.text_sub}>
+              <p className={styles["title-ja"]}>射水キャンパス学生会長</p>
+              <p className={styles["title-en"]}>名前</p>
+              <p className={styles.description}>軽く一言お願いします。</p>
+              <p className={styles["view-more"]}>VIEW MORE</p>
             </div>
           </Link>
         </Container>
