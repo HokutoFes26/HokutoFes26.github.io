@@ -3,8 +3,8 @@
     {
       "name": "有限会社アイコス",
       "url": "https://icos.jp/",
-      "image": "/img/works/works3.jpg",
-      "fit": 0
+      "image": "/img/works/アイコス.jpg",
+      "fit": -40
     },
     {
       "name": "株式会社アイザック",
@@ -21,8 +21,8 @@
     {
       "name": "旭タンカー株式会社",
       "url": "https://www.asahi-tanker.com/",
-      "image": "/img/works/works9.jpg",
-      "fit": 0
+      "image": "/img/works/旭タンカー.jpg",
+      "fit": -35
     },
     {
       "name": "株式会社網屋",
@@ -109,10 +109,10 @@
       "fit": -50
     },
     {
-      "name": "金鋼化学株式会社",
+      "name": "金剛化学株式会社",
       "url": "https://www.kongo-chemical.com/",
       "image": "/img/works/金剛化学.jpg",
-      "fit": 0
+      "fit": -40
     },
     {
       "name": "コンチネンタル株式会社",
@@ -201,8 +201,8 @@
     {
       "name": "津根精機株式会社",
       "url": "https://www.tsune.co.jp/",
-      "image": "/img/works/works9.jpg",
-      "fit": 0
+      "image": "/img/works/津根精機.jpg",
+      "fit": -30
     },
     {
       "name": "TSK株式会社",
@@ -225,8 +225,8 @@
     {
       "name": "富山県綜合警備保障株式会社",
       "url": "https://www.toyama-alsok.co.jp/",
-      "image": "/img/works/works9.jpg",
-      "fit": 0
+      "image": "/img/works/アルソック.jpg",
+      "fit": -50
     },
     {
       "name": "ナブテスコ株式会社",
@@ -243,7 +243,7 @@
     {
       "name": "一般社団法人日本海事検定協会",
       "url": "https://www.nkkk.or.jp/",
-      "image": "/img/works/NKKK.jpg",
+      "image": "/img/works/一般社団法人日本海事検定協会.jpg",
       "fit": 0
     },
     {
