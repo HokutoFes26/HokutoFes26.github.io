@@ -303,7 +303,7 @@
     }
 
     .serviceSection .item {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-bottom: 20px;
     }
 
