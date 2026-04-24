@@ -26,12 +26,12 @@ export default function Company() {
           <Link className={`${styles.item} ${styles.interior}`} href="/products">
             <div className={styles.text}>
               <p className={styles["title-ja"]}>富山高等専門学校　校長</p>
-              <p className={styles["title-en"]}>名前</p>
+              <p className={styles["title-en"]}>國枝　佳明</p>
               <p className={styles.description}>軽く一言お願いします。</p>
               <p className={styles["view-more"]}>VIEW MORE</p>
             </div>
             <div className={styles.img}>
-              <img src={getPath("/img/company/products-interior.jpg")} alt="" />
+              <img src={getPath("/img/common/校長.jpg")} alt="" />
             </div>
           </Link>
 
@@ -62,13 +62,13 @@ export default function Company() {
           <Link className={`${styles.item_sub} ${styles.interior}`} href="/products">
             <div className={styles.text_sub}>
               <p className={styles["title-ja"]}>北斗祭実行委員長</p>
-              <p className={styles["title-en"]}>名前</p>
+              <p className={styles["title-en"]}>冨水　琉花</p>
               <p className={styles.description}>軽く一言お願いします。</p>
               <p className={styles["view-more"]}>VIEW MORE</p>
             </div>
             <div className={styles.text_sub}>
               <p className={styles["title-ja"]}>射水キャンパス学生会長</p>
-              <p className={styles["title-en"]}>名前</p>
+              <p className={styles["title-en"]}>島　杏彩</p>
               <p className={styles.description}>軽く一言お願いします。</p>
               <p className={styles["view-more"]}>VIEW MORE</p>
             </div>
