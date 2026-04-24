@@ -52,7 +52,7 @@
             "name": "ペットボトル",
             "team": "サッカー部",
             "place": "場所名",
-            "image": "/img/booth/"
+            "image": "/img/booth/サッカー.jpg"
         },
         {
             "name": "カステラ",
@@ -108,7 +108,7 @@
             "name": "Cの誘惑",
             "team": "アントレプレナー同好会",
             "place": "場所名",
-            "image": "/img/booth/"
+            "image": "/img/booth/アントレプレナー.jpg"
         }
     ],
     "L3": [
