@@ -196,31 +196,17 @@ export default function Home() {
             </li>
           </ul>
         </section>
-
+        {/* map */}
         <div className={`${styles["faq-contact"]} fadein`}>
           <Link className={styles.item} href="/visitor?tab=maps">
             <div className={styles.img}>
               <img src={getPath("/img/top/faq.jpg")} alt="" />
             </div>
-            <p className={styles.title}>
-              <span className={styles.en}>MAP</span>
-              <span className={styles.ja}>キャンパスマップ</span>
-            </p>
-            <div className={styles.arrow}>
-              <img src={getPath("/img/top/arrow.svg")} alt="" />
-            </div>
           </Link>
-
+        {/* sponsor */}
           <Link className={styles.item} href="/works">
             <div className={styles.img}>
               <img src={getPath("/img/top/contact.jpg")} alt="" />
-            </div>
-            <p className={styles.title}>
-              <span className={styles.en}>SPONSORS</span>
-              <span className={styles.ja}>ご協賛企業様</span>
-            </p>
-            <div className={styles.arrow}>
-              <img src={getPath("/img/top/arrow.svg")} alt="" />
             </div>
           </Link>
         </div>

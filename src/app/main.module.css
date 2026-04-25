@@ -522,7 +522,7 @@
   position: relative;
 }
 
-.faq-contact .item::before {
+/* .faq-contact .item::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -533,7 +533,7 @@
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .faq-contact .item .title {
   color: #fff;
