@@ -48,13 +48,13 @@
             "name": "新聞展示",
             "team": "新聞部",
             "place": "ラウンジC",
-            "image": "/img/products/"
+            "image": "/img/products/新聞部.jpg"
         },
         {
             "name": "部誌・読書スペース",
             "team": "文芸同好会",
             "place": "ラウンジA",
-            "image": "/img/products/"
+            "image": "/img/products/文芸.jpg"
         },
         {
             "name": "書道作品展示",

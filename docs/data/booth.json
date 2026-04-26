@@ -3,79 +3,73 @@
         {
             "name": "チュロス",
             "team": "バレーボール部",
-            "place": "場所名",
+            "place": "テント番号9",
             "image": "/img/booth/"
         },
         {
             "name": "たこ焼き",
             "team": "漕艇部",
-            "place": "場所名",
+            "place": "テント番号7",
             "image": "/img/booth/"
         },
         {
             "name": "焼き鳥",
             "team": "剣道部",
-            "place": "場所名",
+            "place": "テント番号5",
             "image": "/img/booth/"
         },
         {
             "name": "あんばやし",
             "team": "野球部",
-            "place": "場所名",
+            "place": "テント番号19",
             "image": "/img/booth/"
         },
         {
-            "name": "今川焼き",
+            "name": "大判焼き",
             "team": "ラグビー同好会",
-            "place": "場所名",
+            "place": "テント番号13",
             "image": "/img/booth/"
         },
         {
             "name": "わたあめ",
             "team": "ヨット部",
-            "place": "場所名",
+            "place": "テント番号15",
             "image": "/img/booth/"
         },
         {
             "name": "焼きそば",
             "team": "テニス部",
-            "place": "場所名",
+            "place": "テント番号8",
             "image": "/img/booth/"
         },
         {
             "name": "揚げパン・いちごあめ・ラムネ",
             "team": "水泳競技部",
-            "place": "場所名",
+            "place": "テント番号10",
             "image": "/img/booth/"
         },
         {
-            "name": "ペットボトル",
+            "name": "ペットボトル飲料",
             "team": "サッカー部",
-            "place": "場所名",
+            "place": "テント番号14",
             "image": "/img/booth/サッカー.jpg"
         },
         {
             "name": "カステラ",
             "team": "卓球部",
-            "place": "場所名",
+            "place": "テント番号21",
             "image": "/img/booth/"
         },
         {
             "name": "ワッフル",
             "team": "バドミントン部",
-            "place": "場所名",
-            "image": "/img/booth/"
+            "place": "テント番号18",
+            "image": "/img/booth/バドミントン部.jpg"
         },
         {
             "name": "唐揚げ",
             "team": "バスケットボール部",
-            "place": "場所名",
-            "image": "/img/booth/"
-        },
-        {
-            "name": "ドーナツ",
-            "team": "ダンス部",
-            "place": "場所名",
+            "place": "テント番号20",
             "image": "/img/booth/"
         }
     ],
@@ -83,31 +77,31 @@
         {
             "name": "フランクフルト",
             "team": "機関学同好会",
-            "place": "場所名",
+            "place": "テント番号17",
             "image": "/img/booth/"
         },
         {
             "name": "どら焼き・お茶",
             "team": "茶道同好会",
-            "place": "場所名",
-            "image": "/img/booth/"
+            "place": "テント番号12",
+            "image": "/img/booth/茶道部.jpg"
         },
         {
             "name": "お茶会～２日目のみ～",
             "team": "茶道同好会",
-            "place": "場所名",
-            "image": "/img/booth/"
+            "place": "奈古の浦会館2F和室",
+            "image": "/img/booth/お茶会.jpg"
         },
         {
             "name": "たい焼き",
             "team": "新聞部",
-            "place": "場所名",
+            "place": "テント番号6",
             "image": "/img/booth/"
         },
         {
             "name": "Cの誘惑",
             "team": "アントレプレナー同好会",
-            "place": "場所名",
+            "place": "テント番号16",
             "image": "/img/booth/アントレプレナー.jpg"
         }
     ],
@@ -115,19 +109,19 @@
         {
             "name": "肉巻きおにぎり",
             "team": "電子情報工学科４年",
-            "place": "場所名",
-            "image": "/img/booth/"
+            "place": "テント番号11",
+            "image": "/img/booth/I4.jpg"
         },
         {
-            "name": "冥途カフェ",
+            "name": "冥土カフェ",
             "team": "国際ビジネス科４年",
-            "place": "場所名",
-            "image": "/img/booth/"
+            "place": "I5教室",
+            "image": "/img/booth/K4.jpg"
         },
         {
             "name": "カフェ",
             "team": "国際ビジネス科５年",
-            "place": "場所名",
+            "place": "共通講義室1",
             "image": "/img/booth/"
         }
     ],

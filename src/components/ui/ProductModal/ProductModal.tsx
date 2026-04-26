@@ -98,17 +98,6 @@ export default function ProductModal({ item }: ProductModalProps) {
                 </div>
               </div>
             )}
-            {item.team && (
-              <div className={styles.detailItem}>
-                <div className={styles.iconWrapper}>
-                  <GroupsOutlinedIcon style={{ fontSize: "24px", color: "#1f1f1f" }} />
-                </div>
-                <div>
-                  <span className={styles.label}>運営</span>
-                  <p className={styles.value}>{item.team}</p>
-                </div>
-              </div>
-            )}
           </div>
           <button className={styles.shareBtn} onClick={handleShare}>
             <ShareOutlinedIcon style={{ fontSize: "20px" }} />

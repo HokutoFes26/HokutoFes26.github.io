@@ -1,3 +1,2 @@
 各イベント → 詳細ポップアウト
 Google Analyticsつける
-模擬店json 場所と画像 追加
