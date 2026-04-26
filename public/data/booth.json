@@ -16,7 +16,7 @@
             "name": "焼き鳥",
             "team": "剣道部",
             "place": "テント番号5",
-            "image": "/img/booth/"
+            "image": "/img/booth/剣道.jpg"
         },
         {
             "name": "あんばやし",
@@ -96,7 +96,7 @@
             "name": "たい焼き",
             "team": "新聞部",
             "place": "テント番号6",
-            "image": "/img/booth/"
+            "image": "/img/booth/新聞.jpg"
         },
         {
             "name": "Cの誘惑",
