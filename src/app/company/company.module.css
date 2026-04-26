@@ -80,7 +80,7 @@
 
 .serviceSection .item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: 5px 5px 25px var(--color-gray);
     margin-bottom: 40px;
 }
@@ -105,7 +105,7 @@
 
 .serviceSection .item .text {
     width: 65%;
-    padding: 1% 5%;
+    padding: 6.3% 5%;
 }
 
 .serviceSection .item .text .title-ja,
@@ -121,10 +121,28 @@
     margin-bottom: 20px;
 }
 
+.serviceSection .item .text .title,
+.serviceSection .item_sub .text_sub .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4em !important;
+}
+
 .serviceSection .item .text .description,
 .serviceSection .item_sub .text_sub .description {
-    font-size: 14px;
+    font-size: 1em !important;
+    line-height: 1.6;
     margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.serviceSection .item .text .description.expanded,
+.serviceSection .item_sub .text_sub .description.expanded {
+    -webkit-line-clamp: unset;
+    display: block;
 }
 
 .serviceSection .item .text .view-more,
@@ -132,6 +150,7 @@
     font-size: 14px;
     text-align: right;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .serviceSection .item .img {

@@ -16,7 +16,7 @@
             "name": "焼き鳥",
             "team": "剣道部",
             "place": "テント番号5",
-            "image": "/img/booth/"
+            "image": "/img/booth/剣道.jpg"
         },
         {
             "name": "あんばやし",
@@ -40,7 +40,7 @@
             "name": "焼きそば",
             "team": "テニス部",
             "place": "テント番号8",
-            "image": "/img/booth/"
+            "image": "/img/booth/テニス.jpg"
         },
         {
             "name": "揚げパン・いちごあめ・ラムネ",
@@ -58,7 +58,7 @@
             "name": "カステラ",
             "team": "卓球部",
             "place": "テント番号21",
-            "image": "/img/booth/"
+            "image": "/img/booth/卓球.jpg"
         },
         {
             "name": "ワッフル",
@@ -70,7 +70,7 @@
             "name": "唐揚げ",
             "team": "バスケットボール部",
             "place": "テント番号20",
-            "image": "/img/booth/"
+            "image": "/img/booth/バスケ.jpg"
         }
     ],
     "L2": [
@@ -96,7 +96,7 @@
             "name": "たい焼き",
             "team": "新聞部",
             "place": "テント番号6",
-            "image": "/img/booth/"
+            "image": "/img/booth/新聞.jpg"
         },
         {
             "name": "Cの誘惑",

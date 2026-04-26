@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import styles from "./company.module.css";
 import { getPath } from "@/constants/paths";
@@ -7,6 +10,10 @@ import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
 
 export default function Company() {
+  const [isPrincipalExpanded, setIsPrincipalExpanded] = useState(false);
+  const [isChairmanExpanded, setIsChairmanExpanded] = useState(false);
+  const [isPresidentExpanded, setIsPresidentExpanded] = useState(false);
+
   return (
     <main>
       <PageHeader enTitle="ABOUT" jaTitle="「北斗祭」について" imgSrc={getPath("/img/company/mainvisual.jpg")} />
@@ -23,56 +30,53 @@ export default function Company() {
       <section id="service" className={styles.serviceSection}>
         <SectionTitle>ご挨拶</SectionTitle>
         <Container>
-          <Link className={`${styles.item} ${styles.interior}`} href="/products">
+          <div className={`${styles.item} ${styles.interior}`}>
             <div className={styles.text}>
               <p className={styles["title-ja"]}>富山高等専門学校　校長</p>
               <p className={styles["title-en"]}>國枝　佳明</p>
-              <p className={styles.description}>軽く一言お願いします。</p>
-              <p className={styles["view-more"]}>VIEW MORE</p>
+              <p className={styles.title}>「ようこそ北斗祭へ！」</p>
+              <div className={`${styles.description} ${isPrincipalExpanded ? styles.expanded : ""}`}>
+                <div className={styles.inner}>
+                  　ケンシロウのようにコツコツと鍛え、作り上げた北斗祭、これを目撃したあなたは、「すでに魅了されている。」・・・かもしれません。
+                  <br></br>
+                  <br></br>
+                  　若葉薫る季節、5月23日・24日、2年に一度の高専祭「第18回北斗祭」を開催します。学生が主体となって創り上げるこの祭のテーマは、「再煌～Reignition～」。再煌には、最高の北斗祭で再び輝き、前回を超えるものを全員で作り上げ、最高を更新し続けるという強い決意が込められています。
+                  <br></br>
+                  <br></br>
+                  　激しく変化する現代において、学生たちは自ら考え、行動し、挑戦を重ねながら大きく成長してきました。失敗を乗り越えた経験の一つ一つが、今の彼らを支えています。その成果は、工夫を凝らした展示や個性あふれる企画はもちろん、生き生きとした一人ひとりの姿にもはっきりと表れています。ぜひ会場を巡り、見て、感じて、そして一緒に参加してください。若者たちが切り拓く未来への想いとエネルギーに満ちた北斗祭を、心ゆくまでお楽しみください。
+                </div>
+              </div>
+              <p className={styles["view-more"]} onClick={() => setIsPrincipalExpanded(!isPrincipalExpanded)}>
+                {isPrincipalExpanded ? "CLOSE" : "VIEW MORE"}
+              </p>
             </div>
             <div className={styles.img}>
               <img src={getPath("/img/common/校長.jpg")} alt="" />
             </div>
-          </Link>
+          </div>
 
-          {/* <Link className={`${styles.item} ${styles.store}`} href="/works">
-            <div className={styles.text}>
-              <p className={styles["title-ja"]}>北斗祭実行委員長</p>
-              <p className={styles["title-en"]}>名前</p>
-              <p className={styles.description}>軽く一言お願いします。</p>
-              <p className={styles["view-more"]}>VIEW MORE</p>
-            </div>
-            <div className={styles.img}>
-              <img src={getPath("/img/company/products-store.jpg")} alt="" />
-            </div>
-          </Link>
-
-          <Link className={`${styles.item} ${styles.interior}`} href="/products">
-            <div className={styles.text}>
-              <p className={styles["title-ja"]}>射水キャンパス学生会長</p>
-              <p className={styles["title-en"]}>名前</p>
-              <p className={styles.description}>軽く一言お願いします。</p>
-              <p className={styles["view-more"]}>VIEW MORE</p>
-            </div>
-            <div className={styles.img}>
-              <img src={getPath("/img/company/products-interior.jpg")} alt="" />
-            </div>
-          </Link> */}
-
-          <Link className={`${styles.item_sub} ${styles.interior}`} href="/products">
+          <div className={`${styles.item_sub} ${styles.interior}`}>
             <div className={styles.text_sub}>
               <p className={styles["title-ja"]}>北斗祭実行委員長</p>
               <p className={styles["title-en"]}>冨水　琉花</p>
-              <p className={styles.description}>軽く一言お願いします。</p>
-              <p className={styles["view-more"]}>VIEW MORE</p>
+              <div className={`${styles.description} ${isChairmanExpanded ? styles.expanded : ""}`}>
+                <div className={styles.inner}>軽く一言お願いします。</div>
+              </div>
+              <p className={styles["view-more"]} onClick={() => setIsChairmanExpanded(!isChairmanExpanded)}>
+                {isChairmanExpanded ? "CLOSE" : "VIEW MORE"}
+              </p>
             </div>
             <div className={styles.text_sub}>
               <p className={styles["title-ja"]}>射水キャンパス学生会長</p>
               <p className={styles["title-en"]}>島　杏彩</p>
-              <p className={styles.description}>軽く一言お願いします。</p>
-              <p className={styles["view-more"]}>VIEW MORE</p>
+              <div className={`${styles.description} ${isPresidentExpanded ? styles.expanded : ""}`}>
+                <div className={styles.inner}>軽く一言お願いします。</div>
+              </div>
+              <p className={styles["view-more"]} onClick={() => setIsPresidentExpanded(!isPresidentExpanded)}>
+                {isPresidentExpanded ? "CLOSE" : "VIEW MORE"}
+              </p>
             </div>
-          </Link>
+          </div>
         </Container>
       </section>
 
@@ -87,8 +91,12 @@ export default function Company() {
                 <br />
                 ～Reigntion～
               </p>
-              <p className={styles.text}>　「最高の北斗祭で再び煌めく」そして、「前回の北斗祭を経てもう一度さらに輝く、今までの北斗祭を越えたより良いものを作ろう」という願いが込められています。</p>
-              <p className={styles.text}>　再煌は、ただ"もう一度輝こう"という意味だけでなく、全員で"最高"を更新していくという強い決意でもあります。</p>
+              <p className={styles.text}>
+                　「最高の北斗祭で再び煌めく」そして、「前回の北斗祭を経てもう一度さらに輝く、今までの北斗祭を越えたより良いものを作ろう」という願いが込められています。
+              </p>
+              <p className={styles.text}>
+                　再煌は、ただ"もう一度輝こう"という意味だけでなく、全員で"最高"を更新していくという強い決意でもあります。
+              </p>
             </div>
           </div>
           <div className={styles["img-top"]}>
