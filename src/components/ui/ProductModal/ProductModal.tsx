@@ -15,6 +15,7 @@ interface ProductModalProps {
     team?: string;
     place?: string;
     image?: string;
+    image2?: string;
   };
 }
 
@@ -72,7 +73,11 @@ export default function ProductModal({ item }: ProductModalProps) {
         <button className={styles.closeBtn} onClick={handleClose}>
           <CloseIcon />
         </button>
-        {item.image && <img src={getPath(item.image)} alt={item.name} className={styles.image} />}
+        {item.image2 ? (
+          <img src={getPath(item.image2)} alt={item.name} className={styles.image2} />
+        ) : (
+          item.image && <img src={getPath(item.image)} alt={item.name} className={styles.image} />
+        )}
         <div className={styles.content}>
           <p className={styles.name}>{item.name}</p>
           {item.team && <p className={styles.team}>{item.team}</p>}

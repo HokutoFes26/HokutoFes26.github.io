@@ -4,7 +4,8 @@
             "name": "チュロス",
             "team": "バレーボール部",
             "place": "テント番号9",
-            "image": "/img/booth/バレー１.jpg"
+            "image": "/img/booth/バレー１.jpg",
+            "image2": "/img/booth/バレー２.jpg"
         },
         {
             "name": "たこ焼き",
@@ -28,7 +29,8 @@
             "name": "大判焼き",
             "team": "ラグビー同好会",
             "place": "テント番号13",
-            "image": "/img/booth/ラグビー１.jpg"
+            "image": "/img/booth/ラグビー１.jpg",
+            "image2": "/img/booth/ラグビー２.jpg"
         },
         {
             "name": "わたあめ",

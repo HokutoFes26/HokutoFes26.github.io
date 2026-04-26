@@ -4,7 +4,8 @@
             "name": "チュロス",
             "team": "バレーボール部",
             "place": "テント番号9",
-            "image": "/img/booth/"
+            "image": "/img/booth/バレー１.jpg",
+            "image2": "/img/booth/バレー２.jpg"
         },
         {
             "name": "たこ焼き",
@@ -22,13 +23,14 @@
             "name": "あんばやし",
             "team": "野球部",
             "place": "テント番号19",
-            "image": "/img/booth/"
+            "image": "/img/booth/野球.jpg"
         },
         {
             "name": "大判焼き",
             "team": "ラグビー同好会",
             "place": "テント番号13",
-            "image": "/img/booth/"
+            "image": "/img/booth/ラグビー１.jpg",
+            "image2": "/img/booth/ラグビー２.jpg"
         },
         {
             "name": "わたあめ",
@@ -78,7 +80,7 @@
             "name": "フランクフルト",
             "team": "機関学同好会",
             "place": "テント番号17",
-            "image": "/img/booth/"
+            "image": "/img/booth/機関学.jpg"
         },
         {
             "name": "どら焼き・お茶",
@@ -122,7 +124,7 @@
             "name": "カフェ",
             "team": "国際ビジネス科５年",
             "place": "共通講義室1",
-            "image": "/img/booth/"
+            "image": "/img/booth/K5.jpg"
         }
     ],
     "L4": [

@@ -31,6 +31,7 @@ Web Appリンク : https://hokutofes26.github.io/app
 | team             | 運営名   |
 | place            | 配置場所 |
 | image            | 画像パス |
+| image2           | 画像パス(あれば) |
 
 ---
 
