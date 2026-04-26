@@ -58,7 +58,7 @@
             "name": "カステラ",
             "team": "卓球部",
             "place": "テント番号21",
-            "image": "/img/booth/"
+            "image": "/img/booth/卓球.jpg"
         },
         {
             "name": "ワッフル",
@@ -70,7 +70,7 @@
             "name": "唐揚げ",
             "team": "バスケットボール部",
             "place": "テント番号20",
-            "image": "/img/booth/"
+            "image": "/img/booth/バスケ.jpg"
         }
     ],
     "L2": [
