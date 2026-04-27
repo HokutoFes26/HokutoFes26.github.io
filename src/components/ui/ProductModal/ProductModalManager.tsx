@@ -14,6 +14,7 @@ interface ProductModalManagerProps {
   allData: {
     products: Item[][];
     stalls: Item[][];
+    events?: Item[][];
   };
 }
 
@@ -24,15 +25,24 @@ function ModalContent({ allData }: ProductModalManagerProps) {
   const selectedItem = useMemo(() => {
     if (!selectedName) return null;
 
-    const findInArray = (arrs: Item[][]) => {
+    const findInArray = (arrs: Item[][] | undefined) => {
+      if (!arrs) return null;
       for (const group of arrs) {
-        const found = group.find((item) => item.name === selectedName);
+        const found = group.find((item) => {
+          if (item.name === selectedName) return true;
+          if (item.team && `${item.name}-${item.team}` === selectedName) return true;
+          return false;
+        });
         if (found) return found;
       }
       return null;
     };
 
-    return findInArray(allData.products) || findInArray(allData.stalls);
+    return (
+      findInArray(allData.products) ||
+      findInArray(allData.stalls) ||
+      findInArray(allData.events)
+    );
   }, [selectedName, allData]);
 
   if (!selectedItem) return null;

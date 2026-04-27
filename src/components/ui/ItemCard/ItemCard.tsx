@@ -27,7 +27,9 @@ export default function ItemCard({ data: item }: { data: Payload }) {
   const isProduct = item.type === "product";
 
   const href = isProduct
-    ? `/products?name=${encodeURIComponent(item.name)}`
+    ? item.name === "縁日"
+      ? `/products?name=${encodeURIComponent(item.name)}-${encodeURIComponent(item.team)}`
+      : `/products?name=${encodeURIComponent(item.name)}`
     : item.url.startsWith("http")
       ? item.url
       : `https://${item.url}`;
@@ -38,9 +40,7 @@ export default function ItemCard({ data: item }: { data: Payload }) {
 
   const mainImgStyle: React.CSSProperties = {
     objectFit: "contain",
-    transform: item.fit 
-      ? `translate(0, ${item.fit ?? 0}px)` 
-      : "scale(1)",
+    transform: item.fit ? `translate(0, ${item.fit ?? 0}px)` : "scale(1)",
   };
 
   return (
@@ -48,18 +48,8 @@ export default function ItemCard({ data: item }: { data: Payload }) {
       <Link href={href} target={target} scroll={false}>
         {imgPath && (
           <div className={styles.imageWrapper}>
-            <img 
-              src={imgPath} 
-              alt="" 
-              className={styles.bgImage} 
-              aria-hidden="true"
-            />
-            <img 
-              src={imgPath} 
-              alt={item.name} 
-              className={styles.image} 
-              style={mainImgStyle}
-            />
+            <img src={imgPath} alt="" className={styles.bgImage} aria-hidden="true" />
+            <img src={imgPath} alt={item.name} className={styles.image} style={mainImgStyle} />
           </div>
         )}
         <div className={`${styles.info} ${isProduct ? "" : styles.textOnlyInfo}`}>

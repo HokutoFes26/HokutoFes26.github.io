@@ -8,6 +8,46 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import BaseButton from "@/components/ui/BaseButton/BaseButton";
 
 export default function Home() {
+  const [randomImages, setRandomImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const [boothRes, productsRes] = await Promise.all([
+          fetch(getPath("/data/booth.json")),
+          fetch(getPath("/data/products.json")),
+        ]);
+        const boothData = await boothRes.json();
+        const productsData = await productsRes.json();
+
+        const extract = (obj: any): string[] => {
+          let found: string[] = [];
+          if (Array.isArray(obj)) {
+            obj.forEach((item) => {
+              [item.image, item.image2].forEach((img) => {
+                if (typeof img === "string" && /\.(jpg|jpeg|png)$/i.test(img)) {
+                  found.push(img);
+                }
+              });
+            });
+          } else if (obj && typeof obj === "object") {
+            Object.values(obj).forEach((val) => {
+              found = found.concat(extract(val));
+            });
+          }
+          return found;
+        };
+
+        const allImages = Array.from(new Set([...extract(boothData), ...extract(productsData)]));
+        const shuffled = allImages.sort(() => 0.5 - Math.random());
+        setRandomImages(shuffled.slice(0, 6));
+      } catch (e) {
+        console.error("Failed to load images (json)", e);
+      }
+    };
+    loadImages();
+  }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const isMobile = window.innerWidth <= 767;
@@ -64,7 +104,10 @@ export default function Home() {
         <div className={styles.mainvisual}>
           <div className={styles["twinkling-stars-container"]}>
             {[...Array(15)].map((_, i) => (
-              <div key={`ts-${i}`} className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}></div>
+              <div
+                key={`ts-${i}`}
+                className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}
+              ></div>
             ))}
           </div>
           <div className={styles["star-orbits-container"]}>
@@ -120,44 +163,38 @@ export default function Home() {
 
           <div className={styles["products-list-area"]}>
             <ul className={styles["products-list"]}>
-              <li>
-                <img src={getPath("/img/top/products1.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products2.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products3.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products4.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products5.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products6.jpg")} alt="" />
-              </li>
+              {(randomImages.length > 0
+                ? randomImages
+                : [
+                  "/img/top/products1.jpg",
+                  "/img/top/products2.jpg",
+                  "/img/top/products3.jpg",
+                  "/img/top/products4.jpg",
+                  "/img/top/products5.jpg",
+                  "/img/top/products6.jpg",
+                ]
+              ).map((src, i) => (
+                <li key={i}>
+                  <img src={getPath(src)} alt="" />
+                </li>
+              ))}
             </ul>
             <ul className={styles["products-list"]}>
-              <li>
-                <img src={getPath("/img/top/products1.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products2.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products3.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products4.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products5.jpg")} alt="" />
-              </li>
-              <li>
-                <img src={getPath("/img/top/products6.jpg")} alt="" />
-              </li>
+              {(randomImages.length > 0
+                ? randomImages
+                : [
+                  "/img/top/products1.jpg",
+                  "/img/top/products2.jpg",
+                  "/img/top/products3.jpg",
+                  "/img/top/products4.jpg",
+                  "/img/top/products5.jpg",
+                  "/img/top/products6.jpg",
+                ]
+              ).map((src, i) => (
+                <li key={i}>
+                  <img src={getPath(src)} alt="" />
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -203,7 +240,7 @@ export default function Home() {
               <img src={getPath("/img/top/faq.jpg")} alt="" />
             </div>
           </Link>
-        {/* sponsor */}
+          {/* sponsor */}
           <Link className={styles.item} href="/works">
             <div className={styles.img}>
               <img src={getPath("/img/top/contact.jpg")} alt="" />

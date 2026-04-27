@@ -46,7 +46,10 @@ export default function Company() {
                   　激しく変化する現代において、学生たちは自ら考え、行動し、挑戦を重ねながら大きく成長してきました。失敗を乗り越えた経験の一つ一つが、今の彼らを支えています。その成果は、工夫を凝らした展示や個性あふれる企画はもちろん、生き生きとした一人ひとりの姿にもはっきりと表れています。ぜひ会場を巡り、見て、感じて、そして一緒に参加してください。若者たちが切り拓く未来への想いとエネルギーに満ちた北斗祭を、心ゆくまでお楽しみください。
                 </div>
               </div>
-              <p className={styles["view-more"]} onClick={() => setIsPrincipalExpanded(!isPrincipalExpanded)}>
+              <p
+                className={styles["view-more"]}
+                onClick={() => setIsPrincipalExpanded(!isPrincipalExpanded)}
+              >
                 {isPrincipalExpanded ? "CLOSE" : "VIEW MORE"}
               </p>
             </div>
@@ -62,7 +65,10 @@ export default function Company() {
               <div className={`${styles.description} ${isChairmanExpanded ? styles.expanded : ""}`}>
                 <div className={styles.inner}>軽く一言お願いします。</div>
               </div>
-              <p className={styles["view-more"]} onClick={() => setIsChairmanExpanded(!isChairmanExpanded)}>
+              <p
+                className={styles["view-more"]}
+                onClick={() => setIsChairmanExpanded(!isChairmanExpanded)}
+              >
                 {isChairmanExpanded ? "CLOSE" : "VIEW MORE"}
               </p>
             </div>
@@ -72,7 +78,10 @@ export default function Company() {
               <div className={`${styles.description} ${isPresidentExpanded ? styles.expanded : ""}`}>
                 <div className={styles.inner}>軽く一言お願いします。</div>
               </div>
-              <p className={styles["view-more"]} onClick={() => setIsPresidentExpanded(!isPresidentExpanded)}>
+              <p
+                className={styles["view-more"]}
+                onClick={() => setIsPresidentExpanded(!isPresidentExpanded)}
+              >
                 {isPresidentExpanded ? "CLOSE" : "VIEW MORE"}
               </p>
             </div>
@@ -98,9 +107,9 @@ export default function Company() {
                 　再煌は、ただ"もう一度輝こう"という意味だけでなく、全員で"最高"を更新していくという強い決意でもあります。
               </p>
             </div>
-          </div>
-          <div className={styles["img-top"]}>
-            <img src={getPath("/img/common/mainlogo.jpg")} alt="" />
+            <div className={styles["img-top"]}>
+              <img src={getPath("/img/common/mainlogo.jpg")} alt="" />
+            </div>
           </div>
         </Container>
       </section>
