@@ -8,6 +8,54 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import BaseButton from "@/components/ui/BaseButton/BaseButton";
 
 export default function Home() {
+  const [isVideoFinished, setIsVideoFinished] = useState(false);
+  const handleVideoEnded = () => {
+    setIsVideoFinished(true);
+
+    const isMobile = window.innerWidth <= 767;
+    const startPosition = window.scrollY;
+    const targetPosition = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.8;
+    const distance = targetPosition - startPosition;
+    if (distance <= 0) return;
+    const duration = 1400;
+    let start: number | null = null;
+    const originalScrollBehavior = document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+    const easeInOutSine = (t: number): number => {
+      return -(Math.cos(Math.PI * t) - 1) / 2;
+    };
+
+    let requestId: number;
+
+    const stopAnimation = () => {
+      cancelAnimationFrame(requestId);
+      window.removeEventListener("wheel", stopAnimation);
+      window.removeEventListener("touchmove", stopAnimation);
+      window.removeEventListener("mousedown", stopAnimation);
+      document.documentElement.style.scrollBehavior = originalScrollBehavior;
+    };
+    window.addEventListener("wheel", stopAnimation);
+    window.addEventListener("touchmove", stopAnimation);
+    window.addEventListener("mousedown", stopAnimation);
+
+    function step(timestamp: number) {
+      if (!start) start = timestamp;
+      const elapsed = timestamp - start;
+      const progress = Math.min(elapsed / duration, 1);
+
+      const currentPos = startPosition + distance * easeInOutSine(progress);
+
+      window.scrollTo(0, currentPos);
+
+      if (progress < 1) {
+        requestId = requestAnimationFrame(step);
+      } else {
+        stopAnimation();
+      }
+    }
+
+    requestId = requestAnimationFrame(step);
+  };
   const [randomImages, setRandomImages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -129,7 +177,18 @@ export default function Home() {
             <div className={`${styles["shooting-star"]} ${styles["ss-5"]}`}></div>
             <div className={`${styles["shooting-star"]} ${styles["ss-6"]}`}></div>
           </div>
-          <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.jpg")} alt="Hokuto Fes Logo" />
+          {!isVideoFinished ? (
+            <video
+              className={styles.mainlogo}
+              src={getPath("/img/common/animation.mp4")}
+              autoPlay
+              muted
+              playsInline
+              onEnded={handleVideoEnded}
+            />
+          ) : (
+            <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.jpg")} alt="Hokuto Fes Logo" />
+          )}
         </div>
 
         <section className={`${styles.company} fadein`}>
