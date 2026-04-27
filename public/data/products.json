@@ -20,9 +20,15 @@
         },
         {
             "name": "縁日",
-            "team": "I3・K3",
-            "place": "I3・K3教室",
+            "team": "I3",
+            "place": "I3教室",
             "image": "/img/products/"
+        },
+        {
+            "name": "縁日",
+            "team": "K3",
+            "place": "K3教室",
+            "image": "/img/products/K3.jpg"
         },
         {
             "name": "お化け屋敷",
