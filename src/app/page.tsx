@@ -10,13 +10,14 @@ import BaseButton from "@/components/ui/BaseButton/BaseButton";
 export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
   const handleVideoEnded = () => {
-    setIsVideoFinished(true);
-
     const isMobile = window.innerWidth <= 767;
     const startPosition = window.scrollY;
     const targetPosition = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.8;
     const distance = targetPosition - startPosition;
-    if (distance <= 0) return;
+    if (distance <= 0) {
+      setIsVideoFinished(true);
+      return;
+    }
     const duration = 1400;
     let start: number | null = null;
     const originalScrollBehavior = document.documentElement.style.scrollBehavior;
@@ -33,6 +34,7 @@ export default function Home() {
       window.removeEventListener("touchmove", stopAnimation);
       window.removeEventListener("mousedown", stopAnimation);
       document.documentElement.style.scrollBehavior = originalScrollBehavior;
+      setIsVideoFinished(true);
     };
     window.addEventListener("wheel", stopAnimation);
     window.addEventListener("touchmove", stopAnimation);
