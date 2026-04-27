@@ -203,7 +203,7 @@ export default function Home() {
           </BaseButton>
         </section>
 
-        <section className={`${styles.works} fadein`}>
+        {/* <section className={`${styles.works} fadein`}>
           <div className={styles.text}>
             <SectionTitle type="top">ABOUT</SectionTitle>
             <p className={styles.description}>
@@ -232,9 +232,16 @@ export default function Home() {
               <img src={getPath("/img/temporary/works4.jpg")} alt="" />
             </li>
           </ul>
-        </section>
-        {/* map */}
+        </section> */}
+
         <div className={`${styles["faq-contact"]} fadein`}>
+          {/* company */}
+          <Link className={styles.item} href="/company">
+            <div className={styles.img}>
+              <img src={getPath("/img/top/about.jpg")} alt="" />
+            </div>
+          </Link>          
+          {/* map */}
           <Link className={styles.item} href="/visitor?tab=maps">
             <div className={styles.img}>
               <img src={getPath("/img/top/faq.jpg")} alt="" />
