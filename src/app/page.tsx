@@ -137,7 +137,7 @@ export default function Home() {
 
           <div className={styles.flex}>
             <div className={styles.img}>
-              <img src={getPath("/img/top/company.jpg")} alt="" />
+              <img src={getPath("/img/temporary/company.jpg")} alt="" />
             </div>
             <div className={styles.text}>
               <p className={styles.title}>ご来場の皆様へ</p>
@@ -220,16 +220,16 @@ export default function Home() {
 
           <ul className={styles["works-list"]}>
             <li>
-              <img src={getPath("/img/top/works1.jpg")} alt="" />
+              <img src={getPath("/img/temporary/works1.jpg")} alt="" />
             </li>
             <li>
-              <img src={getPath("/img/top/works2.jpg")} alt="" />
+              <img src={getPath("/img/temporary/works2.jpg")} alt="" />
             </li>
             <li>
-              <img src={getPath("/img/top/works3.jpg")} alt="" />
+              <img src={getPath("/img/temporary/works3.jpg")} alt="" />
             </li>
             <li>
-              <img src={getPath("/img/top/works4.jpg")} alt="" />
+              <img src={getPath("/img/temporary/works4.jpg")} alt="" />
             </li>
           </ul>
         </section>

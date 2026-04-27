@@ -29,7 +29,7 @@ function SitenaviContent() {
 
   return (
     <main>
-      <PageHeader enTitle="SITE NAVI" jaTitle="サイトナビ" imgSrc={getPath("/img/common/mainvisual.jpg")} />
+      <PageHeader enTitle="SITE NAVI" jaTitle="サイトナビ" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
 
       <TabNav items={tabItems} currentTab={currentTab} onTabChange={(value) => setCurrentTab(value)} />
 

@@ -1,7 +1,6 @@
 import styles from "./contact.module.css";
 import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
-import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import Container from "@/components/ui/Container/Container";
 
 export default function Contact() {
@@ -10,7 +9,7 @@ export default function Contact() {
       <PageHeader
         enTitle="CONTACT"
         jaTitle="お問い合わせ"
-        imgSrc={getPath("/img/contact/mainvisual.jpg")}
+        imgSrc={getPath("/img/temporary/mainvisual.jpg")}
       />
 
       <Container>

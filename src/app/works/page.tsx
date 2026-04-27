@@ -43,7 +43,7 @@ function WorksContent() {
 export default function WorksPage() {
     return (
         <main>
-            <PageHeader enTitle="WORKS" jaTitle="ご協賛企業様" imgSrc={getPath("/img/works/mainvisual.jpg")} />
+            <PageHeader enTitle="WORKS" jaTitle="ご協賛企業様" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
             <Suspense fallback={<div>Loading...</div>}>
                 <WorksContent />
             </Suspense>

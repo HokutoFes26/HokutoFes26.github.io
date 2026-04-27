@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header_footer/header";
 import Footer from "@/components/header_footer/footer";
-import getConfig from "next/config";
 import Script from "next/script";
 import { getPath } from "@/constants/paths";
 

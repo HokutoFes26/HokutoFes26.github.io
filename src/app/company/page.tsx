@@ -16,7 +16,7 @@ export default function Company() {
 
   return (
     <main>
-      <PageHeader enTitle="ABOUT" jaTitle="「北斗祭」について" imgSrc={getPath("/img/company/mainvisual.jpg")} />
+      <PageHeader enTitle="ABOUT" jaTitle="「北斗祭」について" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
 
       <PageNav
         items={[

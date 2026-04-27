@@ -67,7 +67,7 @@ export default function Bus() {
       <PageHeader
         enTitle="Bus"
         jaTitle="シャトルバス"
-        imgSrc={getPath("/img/works/mainvisual.jpg")}
+        imgSrc={getPath("/img/temporary/mainvisual.jpg")}
       />
             <SectionTitle>シャトルバス時刻表</SectionTitle>
       <div className={styles.main}>

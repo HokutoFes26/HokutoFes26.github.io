@@ -3,49 +3,28 @@ Web Appリンク : https://hokutofes26.github.io/app
 
 ### 各データjson場所
 
-| 中身           | ファイル                      |
-| -------------- | ----------------------------- |
-| バス時刻       | `./public/data/bus.json`      |
-| イベントリスト | `./public/data/events.json`   |
-| Q&A            | `./public/data/faq.json`      |
-| 展示一覧       | `./public/data/products.json` |
-| 模擬店一覧     | `./public/data/booth.json`   |
-| 企業一覧       | `./public/data/works.json`    |
+| 中身           | ファイル                                                 |
+| -------------- | -------------------------------------------------------- |
+| バス時刻       | [public/data/bus.json](./public/data/bus.json)           |
+| イベントリスト | [public/data/events.json](./public/data/events.json)     |
+| Q&A            | [public/data/faq.json](./public/data/faq.json)           |
+| 展示一覧       | [public/data/products.json](./public/data/products.json) |
+| 模擬店一覧     | [public/data/booth.json](./public/data/booth.json)       |
+| 企業一覧       | [public/data/works.json](./public/data/works.json)       |
 
 画像は`./public/img`、そのパスを`.json`へ
 
 ---
 
-### `products.json`と`booth.json`のグループ分け
+### ページとディレクトリ対応表
 
-| json内ID | 展示   | 模擬店 |
-| -------- | ------ | ------ |
-| L1       | クラス | 運動部 |
-| L2       | 部活動 | 文化部 |
-| L3       | 学科   | クラス |
-| L4       | 特別   | その他 |
-
-| json内アイテムID | 役割     |
-| ---------------- | -------- |
-| name             | 店名     |
-| team             | 運営名   |
-| place            | 配置場所 |
-| image            | 画像パス |
-| image2           | 画像パス(あれば) |
-
----
-
-### `works.json`のグループ分け
-
-| json内ID | 区分     |
-| -------- | -------- |
-| works    | 協賛     |
-| thanks   | サンクス |
-
-| json内アイテムID | 役割     |
-| ---------------- | -------- |
-| name             | 企業     |
-| url              | 企業URL  |
-| image            | 画像パス |
-
----
+| ページ内容       | ページリンク | ディレクトリ名                                 |
+| ---------------- | ------------ | ---------------------------------------------- |
+| トップページ     | /            | [src/app/](./src/app/)                         |
+| 北斗祭について   | /company     | [src/app/company/](./src/app/company/)         |
+| 企画紹介         | /products    | [src/app/products/](./src/app/products/)       |
+| ご来場の皆さまへ | /visitor     | [src/app/visitor/](./src/app/visitor/)         |
+| ご協賛企業様     | /works       | [src/app/works/](./src/app/works/)             |
+| シャトルバス     | /shuttle_bus | [src/app/shuttle_bus/](./src/app/shuttle_bus/) |
+| お問い合わせ     | /contact     | [src/app/contact/](./src/app/contact/)         |
+| ページについて   | /sitenavi    | [src/app/sitenavi/](./src/app/sitenavi/)       |

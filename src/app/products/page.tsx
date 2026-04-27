@@ -30,7 +30,7 @@ export default function Products() {
       <MapProvider>
         <ProductModalManager allData={allData} />
 
-        <PageHeader enTitle="PROJECTS" jaTitle="企画紹介" imgSrc={getPath("/img/company/mainvisual.jpg")} />
+        <PageHeader enTitle="PROJECTS" jaTitle="企画紹介" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
 
         <PageNav
           items={[
