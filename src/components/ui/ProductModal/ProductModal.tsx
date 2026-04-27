@@ -5,7 +5,6 @@ import { getPath } from "@/constants/paths";
 import styles from "./ProductModal.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import ListIcon from '@mui/icons-material/List';
 import { useMapControl } from "@/components/Map/MapContext";
