@@ -10,6 +10,7 @@ import styles from "./TabbedSectionClient.module.css";
 interface ProjectItemData {
   name: string;
   image?: string;
+  image_hidden?: string;
   team?: string;
   place?: string;
   start?: string;
@@ -115,6 +116,7 @@ export default function TabbedSectionClient({
                 team: item.team || "",
                 place: item.place || "",
                 image: item.image || "",
+                image_hidden: item.image_hidden || "",
               }}
             />
           ))}

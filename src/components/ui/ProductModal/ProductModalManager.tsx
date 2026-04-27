@@ -8,6 +8,7 @@ interface Item {
   team?: string;
   place?: string;
   image?: string;
+  image_hidden?: string;
 }
 
 interface ProductModalManagerProps {

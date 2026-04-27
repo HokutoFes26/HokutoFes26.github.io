@@ -10,6 +10,7 @@ interface Product {
   team: string;
   place: string;
   image: string;
+  image_hidden?: string;
   fit?: number;
 }
 
@@ -24,19 +25,28 @@ interface Company {
 type Payload = Product | Company;
 
 export default function ItemCard({ data: item }: { data: Payload }) {
+  const [showHidden, setShowHidden] = React.useState(false);
   const isProduct = item.type === "product";
+
+  React.useEffect(() => {
+    if (isProduct && (item as Product).image_hidden && Math.random() < 0.35) {
+      setShowHidden(true);
+    }
+  }, [isProduct, item.name]);
 
   const href = isProduct
     ? item.name === "縁日"
-      ? `/products?name=${encodeURIComponent(item.name)}-${encodeURIComponent(item.team)}`
-      : `/products?name=${encodeURIComponent(item.name)}`
+      ? `/products?name=${encodeURIComponent(item.name)}-${encodeURIComponent(item.team)}${showHidden ? "&hidden=true" : ""}`
+      : `/products?name=${encodeURIComponent(item.name)}${showHidden ? "&hidden=true" : ""}`
     : item.url.startsWith("http")
       ? item.url
       : `https://${item.url}`;
 
   const target = isProduct ? undefined : "_blank";
 
-  const imgPath = item.image ? getPath(item.image) : "";
+  const imgPath = isProduct && showHidden && (item as Product).image_hidden
+    ? getPath((item as Product).image_hidden!)
+    : item.image ? getPath(item.image) : "";
 
   const mainImgStyle: React.CSSProperties = {
     objectFit: "contain",

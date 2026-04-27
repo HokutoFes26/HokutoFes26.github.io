@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { getPath } from "@/constants/paths";
 import styles from "./ProductModal.module.css";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,13 +22,23 @@ interface ProductModalProps {
         menu?: ProductModalPropsMenu[];
         image?: string;
         image2?: string;
+        image_hidden?: string;
     };
 }
 
 export default function ProductModal({ item }: ProductModalProps) {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const isHiddenFromUrl = searchParams.get("hidden") === "true";
     const [isOpen, setIsOpen] = useState(false);
+    const [showHidden, setShowHidden] = useState(isHiddenFromUrl);
     const mapControl = useMapControl();
+
+    useEffect(() => {
+        if (!isHiddenFromUrl && item.image_hidden && Math.random() < 0) {
+            setShowHidden(true);
+        }
+    }, [isHiddenFromUrl, item.name]);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsOpen(true), 10);
@@ -79,7 +89,9 @@ export default function ProductModal({ item }: ProductModalProps) {
                 <button className={styles.closeBtn} onClick={handleClose}>
                     <CloseIcon />
                 </button>
-                {item.image2 ? (
+                {showHidden && item.image_hidden ? (
+                    <img src={getPath(item.image_hidden)} alt={item.name} className={styles.image} />
+                ) : item.image2 ? (
                     <img src={getPath(item.image2)} alt={item.name} className={styles.image2} />
                 ) : (
                     item.image && <img src={getPath(item.image)} alt={item.name} className={styles.image} />
