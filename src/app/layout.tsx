@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/header_footer/header";
 import Footer from "@/components/header_footer/footer";
@@ -37,7 +38,10 @@ export default function RootLayout({
                 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400&display=swap" rel="stylesheet" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400&display=swap"
+                    rel="stylesheet"
+                />
             </head>
 
             <body>
@@ -46,6 +50,9 @@ export default function RootLayout({
                 <Footer />
                 <Script src={getPath("/js/main.js")} strategy="afterInteractive" />
             </body>
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
+                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+            )}
         </html>
     );
 }
