@@ -45,7 +45,7 @@ function VisitorContent() {
 export default function VisitorPage() {
   return (
     <main>
-      <PageHeader enTitle="VISITOR" jaTitle="来場者の皆様へ" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
+      <PageHeader enTitle="VISITOR INFORMATION" jaTitle="来場者の皆様へ" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
       <Suspense fallback={<div style={{ textAlign: "center", padding: "40px" }}>読み込み中...</div>}>
         <VisitorContent />
       </Suspense>
