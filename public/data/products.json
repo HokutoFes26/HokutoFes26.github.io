@@ -34,7 +34,7 @@
             "name": "お化け屋敷",
             "team": "S3",
             "place": "S3教室",
-            "image": "/img/products/"
+            "image": "/img/products/S3.jpg"
         }
     ],
     "L2": [
@@ -42,7 +42,7 @@
             "name": "ゲーム・イラスト展示",
             "team": "デジタルメディア創作部",
             "place": "第２プラザ",
-            "image": "/img/products/"
+            "image": "/img/products/デジ研.jpg"
         },
         {
             "name": "ロボット操作体験",
@@ -66,7 +66,7 @@
             "name": "書道作品展示",
             "team": "書道同好会",
             "place": "学生昇降口",
-            "image": "/img/products/"
+            "image": "/img/products/書道.jpg"
         },
         {
             "name": "写真展示",
