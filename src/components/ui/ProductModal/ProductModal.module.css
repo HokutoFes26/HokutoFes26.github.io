@@ -178,7 +178,19 @@
   max-height: 500px;
   opacity: 1;
   margin-top: 8px;
-  line-height: 1.2em;
+  line-height: 1.4em;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  row-gap: 4px;
+  align-items: baseline;
+}
+
+.menuPrice {
+  white-space: nowrap;
 }
 
 .shareBtn {

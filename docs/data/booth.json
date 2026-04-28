@@ -190,11 +190,16 @@
             "image_hidden": "/img/booth/gishiki_nikumaki.gif"
         },
         {
-            "name": "カフェ",
+            "name": "めいどびより",
             "team": "国際ビジネス科5年",
             "place": "共通講義室1",
-            "menu": [{ "content": "カフェ", "price": 0 }],
-            "image": "/img/booth/K5.jpg"
+            "menu": [
+                { "content": "ワッフル2枚", "price": 450 },
+                { "content": "シューアイス", "price": 300 },
+                { "content": "ドリンク", "price": 250 },
+                { "content": "シャンメリー", "price": 1300 }
+            ],
+            "image": "/img/booth/K5-1.jpg"
         }
     ],
     "L4": [

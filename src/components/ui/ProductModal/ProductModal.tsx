@@ -163,26 +163,25 @@ export default function ProductModal({ item }: ProductModalProps) {
                           />
                         </div>
                         <div className={`${styles.accordionContent} ${isMenuExpanded ? styles.expanded : ""}`}>
-                          {item.menu.map((item_menu, index) => (
-                            <div
-                              key={index}
-                              style={{ display: "flex", alignItems: "center", gap: "4px", marginBottom: "4px" }}
-                            >
-                              <p className={styles.value}>
-                                {item_menu.content} : {item_menu.price}円
-                              </p>
-                            </div>
-                          ))}
+                          <div className={styles.menuGrid}>
+                            {item.menu.map((item_menu, index) => (
+                              <React.Fragment key={index}>
+                                <span className={styles.value}>{item_menu.content}</span>
+                                <span className={`${styles.value} ${styles.menuPrice}`}>{item_menu.price}円</span>
+                              </React.Fragment>
+                            ))}
+                          </div>
                         </div>
                       </>
                     ) : (
-                      item.menu.map((item_menu, index) => (
-                        <div key={index} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-                          <p className={styles.value}>
-                            {item_menu.content} : {item_menu.price}円
-                          </p>
-                        </div>
-                      ))
+                      <div className={styles.menuGrid}>
+                        {item.menu.map((item_menu, index) => (
+                          <React.Fragment key={index}>
+                            <span className={styles.value}>{item_menu.content}</span>
+                            <span className={`${styles.value} ${styles.menuPrice}`}>{item_menu.price}円</span>
+                          </React.Fragment>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>
