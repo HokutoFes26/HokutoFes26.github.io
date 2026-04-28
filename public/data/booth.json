@@ -19,7 +19,11 @@
             "name": "焼き鳥",
             "team": "剣道部",
             "place": "テント番号5",
-            "menu": [{ "content": "焼き鳥", "price": 0 }],
+            "menu": [
+                { "content": "１本", "price": 150 },
+                { "content": "３本", "price": 400 },
+                { "content": "５本", "price": 750 }
+            ],
             "image": "/img/booth/剣道.jpg"
         },
         {
@@ -76,14 +80,23 @@
             "name": "カステラ",
             "team": "卓球部",
             "place": "テント番号21",
-            "menu": [{ "content": "カステラ", "price": 0 }],
+            "menu": [
+                { "content": "8個", "price": 300 },
+                { "content": "15個", "price": 500 },
+                { "content": "20個", "price": 600 }
+            ],
             "image": "/img/booth/卓球.jpg"
         },
         {
             "name": "クロッフル",
             "team": "バドミントン部",
             "place": "テント番号18",
-            "menu": [{ "content": "クロッフル", "price": 0 }],
+            "menu": [
+                { "content": "プレーン", "price": 300 },
+                { "content": "チョコソース", "price": 350 },
+                { "content": "いちごソース", "price": 350 },
+                { "content": "メープルソース", "price": 350 }
+            ],
             "image": "/img/booth/バドミントン部.jpg"
         },
         {
@@ -146,7 +159,22 @@
             "name": "冥土カフェ",
             "team": "国際ビジネス科４年",
             "place": "I5教室",
-            "menu": [{ "content": "カフェ", "price": 0 }],
+            "menu": [
+                { "content": "冥土のご褒美♡パンケーキ", "price": 350 },
+                { "content": "甘～い呪いのチョコタルト", "price": 250 },
+                { "content": "おばけの一口マドレーヌ", "price": 250 },
+                { "content": "ひみつ配合フィナンシェ", "price": 250 },
+                { "content": "ぐるぐる目玉グミ", "price": 200 },
+                { "content": "あわあわゴーストソーダ", "price": 300 },
+                { "content": "冥土産ブレンドコーヒー", "price": 300 },
+                { "content": "あやしいストレートティー", "price": 300 },
+                { "content": "魔女の仕込みのミルクティー", "price": 300 },
+                { "content": "黄昏オレンジジュース", "price": 300 },
+                { "content": "恋するドロドロいちごジャム", "price": 50 },
+                { "content": "夕焼けオレンジの記憶", "price": 50 },
+                { "content": "夜のいざないブルーベリー", "price": 50 },
+                { "content": "禁断の甘やかし♡ホワイト＆ブラック", "price": 50 }
+            ],
             "image": "/img/booth/K4.jpg"
         },
         {
@@ -169,8 +197,13 @@
         {
             "name": "ポップコーン",
             "team": "実行委員会",
-            "place": "場所名",
-            "menu": [{ "content": "ポップコーン", "price": 0 }],
+            "place": "テント番号4",
+            "menu": [
+                { "content": "能登の塩", "price": 200 },
+                { "content": "白エビ", "price": 200 },
+                { "content": "塩キャラメル", "price": 200 },
+                { "content": "ペンライト", "price": 100 }
+            ],
             "image": "/img/booth/"
         }
     ]
