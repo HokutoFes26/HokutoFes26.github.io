@@ -1,0 +1,348 @@
+{
+  "works": [
+    {
+      "name": "有限会社アイコス",
+      "url": "https://icos.jp/",
+      "image": "/img/works/アイコス.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社アイザック",
+      "url": "https://www.izak.co.jp/",
+      "image": "/img/works/アイザック.jpg",
+      "fit": -45
+    },
+    {
+      "name": "朝日印刷株式会社",
+      "url": "https://www.asahi-pp.co.jp/",
+      "image": "/img/works/朝日印刷.jpg",
+      "fit": -40
+    },
+    {
+      "name": "旭タンカー株式会社",
+      "url": "https://www.asahi-tanker.com/",
+      "image": "/img/works/旭タンカー.jpg",
+      "fit": -35
+    },
+    {
+      "name": "株式会社網屋",
+      "url": "https://www.amiya.co.jp/",
+      "image": "/img/works/網屋.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社石金精機",
+      "url": "https://www.ishigane-fas.co.jp/",
+      "image": "/img/works/石金精機.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社エーティーワークス",
+      "url": "https://www.atworks.co.jp/",
+      "image": "/img/works/エーティーワークス.jpg",
+      "fit": -60
+    },
+    {
+      "name": "FCM株式会社",
+      "url": "https://fc-m.co.jp/",
+      "image": "/img/works/FCM.jpg",
+      "fit": -40
+    },
+    {
+      "name": "有限会社エフディイー",
+      "url": "https://fde.co.jp/",
+      "image": "/img/works/FDE.jpg",
+      "fit": -50
+    },
+    {
+      "name": "株式会社オーフエン機器",
+      "url": "https://aofen.co.jp/",
+      "image": "/img/works/オーフェン機器.jpg",
+      "fit": -60
+    },
+    {
+      "name": "北日本電機産業株式会社",
+      "url": "https://www.kitanihon-ds.co.jp/",
+      "image": "/img/works/北日本電機産業.jpg",
+      "fit": -55
+    },
+    {
+      "name": "キタノ制作株式会社",
+      "url": "https://kitanoseisaku.co.jp/",
+      "image": "/img/works/キタノ製作.jpg",
+      "fit": -60
+    },
+    {
+      "name": "協和ファーマケミカル株式会社",
+      "url": "https://www.kyowa-pharma.co.jp/",
+      "image": "/img/works/協和ファーマケミカル.jpg",
+      "fit": -50
+    },
+    {
+      "name": "クリエーションライン株式会社",
+      "url": "https://www.creationline.com/",
+      "image": "/img/works/クリエーションライン.jpg",
+      "fit": -60
+    },
+    {
+      "name": "コーセル株式会社",
+      "url": "https://www.cosel.com/",
+      "image": "/img/works/コーセル.jpg",
+      "fit": -50
+    },
+    {
+      "name": "五洲薬品株式会社",
+      "url": "https://www.goshu.co.jp/",
+      "image": "/img/works/五洲薬品.jpg",
+      "fit": -40
+    },
+    {
+      "name": "コマツNTC株式会社",
+      "url": "https://ntc.komatsu/jp",
+      "image": "/img/works/コマツNTC.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社小松製作所 氷見工場",
+      "url": "https://www.komatsu.jp/ja",
+      "image": "/img/works/小松製作所.jpg",
+      "fit": -50
+    },
+    {
+      "name": "金剛化学株式会社",
+      "url": "https://www.kongo-chemical.com/",
+      "image": "/img/works/金剛化学.jpg",
+      "fit": -40
+    },
+    {
+      "name": "コンチネンタル株式会社",
+      "url": "https://continental-ltd.com/",
+      "image": "/img/works/コンチネンタル.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社サプラ",
+      "url": "https://www.sapla.co.jp/",
+      "image": "/img/works/サプラ.jpg",
+      "fit": -40
+    },
+    {
+      "name": "三協立山株式会社",
+      "url": "https://www.st-grp.co.jp/",
+      "image": "/img/works/三協立山.jpg",
+      "fit": 0
+    },
+    {
+      "name": "シロウマサイエンス株式会社",
+      "url": "https://www.shirouma.co.jp/",
+      "image": "/img/works/シロウマサイエンス.jpg",
+      "fit": -60
+    },
+    {
+      "name": "株式会社シンテックホズミ",
+      "url": "https://www.shcl.co.jp/",
+      "image": "/img/works/シンテックホズミ.jpg",
+      "fit": 0
+    },
+    {
+      "name": "新日本海重工業株式会社",
+      "url": "https://snhi.co.jp/",
+      "image": "/img/works/新日本海重工業.jpg",
+      "fit": -50
+    },
+    {
+      "name": "株式会社セイキ",
+      "url": "https://www.seiki-toyama.co.jp/",
+      "image": "/img/works/セイキ.jpg",
+      "fit": -45
+    },
+    {
+      "name": "株式会社ソアロン",
+      "url": "https://soalon.com/",
+      "image": "/img/works/ソアロン.jpg",
+      "fit": -40
+    },
+    {
+      "name": "大平洋ランダム株式会社",
+      "url": "https://rundum.co.jp/",
+      "image": "/img/works/大平洋ランダム.jpg",
+      "fit": 0
+    },
+    {
+      "name": "株式会社高橋",
+      "url": "https://www.kk-takahashi.com/",
+      "image": "/img/works/高橋.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社高松メッキ",
+      "url": "https://www.takamatsu-p.co.jp/",
+      "image": "/img/works/高松メッキ.jpg",
+      "fit": -50
+    },
+    {
+      "name": "立山科学株式会社",
+      "url": "https://www.tateyama.jp/tk/",
+      "image": "/img/works/立山科学.jpg",
+      "fit": -40
+    },
+    {
+      "name": "立山化成株式会社",
+      "url": "https://www.tateyamakasei.com/",
+      "image": "/img/works/立山化成.jpg",
+      "fit": -35
+    },
+    {
+      "name": "中越合金鋳工株式会社",
+      "url": "https://www.chuetsu-metal.co.jp/",
+      "image": "/img/works/中越合金鋳工.jpg",
+      "fit": -40
+    },
+    {
+      "name": "津根精機株式会社",
+      "url": "https://www.tsune.co.jp/",
+      "image": "/img/works/津根精機.jpg",
+      "fit": -30
+    },
+    {
+      "name": "TSK株式会社",
+      "url": "https://tsk-corp.jp/",
+      "image": "/img/works/TSK.jpg",
+      "fit": -30
+    },
+    {
+      "name": "東ソー・エイアイエイ株式会社",
+      "url": "https://tosoh-aia.co.jp/",
+      "image": "/img/works/東ソー・エイアイエイ.jpg",
+      "fit": -60
+    },
+    {
+      "name": "鳥羽システム株式会社",
+      "url": "https://www.toba-system.co.jp/",
+      "image": "/img/works/鳥羽システム.jpg",
+      "fit": -40
+    },
+    {
+      "name": "富山県綜合警備保障株式会社",
+      "url": "https://www.toyama-alsok.co.jp/",
+      "image": "/img/works/アルソック.jpg",
+      "fit": -50
+    },
+    {
+      "name": "ナブテスコ株式会社",
+      "url": "https://www.nabtesco.com/",
+      "image": "/img/works/ナブテスコ.jpg",
+      "fit": 0
+    },
+    {
+      "name": "日研プラント株式会社",
+      "url": "https://www.nikken-p.jp/",
+      "image": "/img/works/日研プラント.jpg",
+      "fit": -40
+    },
+    {
+      "name": "一般社団法人日本海事検定協会",
+      "url": "https://www.nkkk.or.jp/",
+      "image": "/img/works/一般社団法人日本海事検定協会.jpg",
+      "fit": 0
+    },
+    {
+      "name": "日本海電業株式会社",
+      "url": "https://nihonkai-dengyo.co.jp/",
+      "image": "/img/works/日本海電業.jpg",
+      "fit": -50
+    },
+    {
+      "name": "日本ソフテック株式会社",
+      "url": "https://www.nsft.co.jp/",
+      "image": "/img/works/日本ソフテック.jpg",
+      "fit": -40
+    },
+    {
+      "name": "日本フィールド＆マリンエンジニアリング株式会社",
+      "url": "https://jfmeng.co.jp/",
+      "image": "/img/works/日本フィールド＆マリンエンジニアリング.jpg",
+      "fit": 0
+    },
+    {
+      "name": "パナソニックインダストリー株式会社",
+      "url": "https://www.panasonic.com/jp/industry.html",
+      "image": "/img/works/パナソニックインダストリー.jpg",
+      "fit": -65
+    },
+    {
+      "name": "富士フイルムビジネスイノベーションジャパン株式会社",
+      "url": "https://www.fujifilm.com/fb/ja",
+      "image": "/img/works/富士フィルム.jpg",
+      "fit": -70
+    },
+    {
+      "name": "北銀ソフトウエア株式会社",
+      "url": "https://www.hokugin-sw.co.jp/",
+      "image": "/img/works/北銀ソフトウエア.jpg",
+      "fit": -60
+    },
+    {
+      "name": "北電情報システムサービス株式会社",
+      "url": "https://www.hiss.co.jp/",
+      "image": "/img/works/北電情報システムサービス.jpg",
+      "fit": -60
+    },
+    {
+      "name": "株式会社北熱",
+      "url": "https://hokunetsu.com/",
+      "image": "/img/works/北熱.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社北陸銀行",
+      "url": "https://www.hokugin.co.jp/",
+      "image": "/img/works/北陸銀行.jpg",
+      "fit": -40
+    },
+    {
+      "name": "北陸電機製造株式会社",
+      "url": "https://www.hokurikudenki.co.jp/",
+      "image": "/img/works/北陸電機製造.jpg",
+      "fit": -40
+    },
+    {
+      "name": "三谷産業コンストラクションズ株式会社",
+      "url": "https://www.mitani-cs.co.jp/",
+      "image": "/img/works/三谷産業.jpg",
+      "fit": -50
+    },
+    {
+      "name": "八重洲工業株式会社",
+      "url": "https://www.yaesukougyou.co.jp/",
+      "image": "/img/works/八重洲工業.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社リョーシン",
+      "url": "https://www.ryohshin.co.jp/",
+      "image": "/img/works/リョーシン.jpg",
+      "fit": -40
+    },
+    {
+      "name": "株式会社レゾナック・セラミックス",
+      "url": "https://www.rce.resonac.com/",
+      "image": "/img/works/レゾナックセラミック.jpg",
+      "fit": -50
+    }
+  ],
+  "thanks": [
+    {
+      "name": "Company3",
+      "url": "google.com",
+      "image": "/img/works/works6.jpg",
+      "fit": 0
+    },
+    {
+      "name": "Name",
+      "url": "url.com",
+      "image": "/img/works/works9.jpg",
+      "fit": 0
+    }
+  ]
+}

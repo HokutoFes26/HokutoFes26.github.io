@@ -111,15 +111,15 @@
 
 .serviceSection .item .text .title-ja,
 .serviceSection .item_sub .text_sub .title-ja {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
 .serviceSection .item .text .title-en,
 .serviceSection .item_sub .text_sub .title-en {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .serviceSection .item .text .title,
@@ -345,7 +345,7 @@
 
     .serviceSection .item .text .title-en,
     .serviceSection .item_sub .text_sub .title-en {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .serviceSection .item .img {

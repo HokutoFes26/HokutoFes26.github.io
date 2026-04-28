@@ -518,6 +518,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 5% 80px;
+  gap: 5%;
 }
 
 .faq-contact .item {

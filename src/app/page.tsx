@@ -10,43 +10,38 @@ import BaseButton from "@/components/ui/BaseButton/BaseButton";
 export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
   const handleVideoEnded = () => {
+    setIsVideoFinished(true);
     const isMobile = window.innerWidth <= 767;
-    const startPosition = window.scrollY;
     const targetPosition = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.8;
+    const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
-    if (distance <= 0) {
-      setIsVideoFinished(true);
-      return;
-    }
+    if (distance <= 0) return;
     const duration = 1400;
     let start: number | null = null;
-    const originalScrollBehavior = document.documentElement.style.scrollBehavior;
-    document.documentElement.style.scrollBehavior = "auto";
+    const html = document.documentElement;
+    const originalScrollBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
     const easeInOutSine = (t: number): number => {
       return -(Math.cos(Math.PI * t) - 1) / 2;
     };
 
     let requestId: number;
-
     const stopAnimation = () => {
       cancelAnimationFrame(requestId);
       window.removeEventListener("wheel", stopAnimation);
       window.removeEventListener("touchmove", stopAnimation);
       window.removeEventListener("mousedown", stopAnimation);
-      document.documentElement.style.scrollBehavior = originalScrollBehavior;
-      setIsVideoFinished(true);
+      html.style.scrollBehavior = originalScrollBehavior;
     };
-    window.addEventListener("wheel", stopAnimation);
-    window.addEventListener("touchmove", stopAnimation);
+    window.addEventListener("wheel", stopAnimation, { passive: true });
+    window.addEventListener("touchmove", stopAnimation, { passive: true });
     window.addEventListener("mousedown", stopAnimation);
 
     function step(timestamp: number) {
       if (!start) start = timestamp;
       const elapsed = timestamp - start;
       const progress = Math.min(elapsed / duration, 1);
-
       const currentPos = startPosition + distance * easeInOutSine(progress);
-
       window.scrollTo(0, currentPos);
 
       if (progress < 1) {
@@ -98,66 +93,13 @@ export default function Home() {
     loadImages();
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const isMobile = window.innerWidth <= 767;
-      const startPosition = window.scrollY;
-      const targetPosition = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.8;
-      const distance = targetPosition - startPosition;
-      if (distance <= 0) return;
-      const duration = 1400;
-      let start: number | null = null;
-      const originalScrollBehavior = document.documentElement.style.scrollBehavior;
-      document.documentElement.style.scrollBehavior = "auto";
-      const easeInOutSine = (t: number): number => {
-        return -(Math.cos(Math.PI * t) - 1) / 2;
-      };
-
-      let requestId: number;
-
-      const stopAnimation = () => {
-        cancelAnimationFrame(requestId);
-        window.removeEventListener("wheel", stopAnimation);
-        window.removeEventListener("touchmove", stopAnimation);
-        window.removeEventListener("mousedown", stopAnimation);
-        document.documentElement.style.scrollBehavior = originalScrollBehavior;
-      };
-      window.addEventListener("wheel", stopAnimation);
-      window.addEventListener("touchmove", stopAnimation);
-      window.addEventListener("mousedown", stopAnimation);
-
-      function step(timestamp: number) {
-        if (!start) start = timestamp;
-        const elapsed = timestamp - start;
-        const progress = Math.min(elapsed / duration, 1);
-
-        const currentPos = startPosition + distance * easeInOutSine(progress);
-
-        window.scrollTo(0, currentPos);
-
-        if (progress < 1) {
-          requestId = requestAnimationFrame(step);
-        } else {
-          stopAnimation();
-        }
-      }
-
-      requestId = requestAnimationFrame(step);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div>
       <main className={styles["top-page"]}>
         <div className={styles.mainvisual}>
           <div className={styles["twinkling-stars-container"]}>
             {[...Array(15)].map((_, i) => (
-              <div
-                key={`ts-${i}`}
-                className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}
-              ></div>
+              <div key={`ts-${i}`} className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}></div>
             ))}
           </div>
           <div className={styles["star-orbits-container"]}>
@@ -227,13 +169,13 @@ export default function Home() {
               {(randomImages.length > 0
                 ? randomImages
                 : [
-                  "/img/top/products1.jpg",
-                  "/img/top/products2.jpg",
-                  "/img/top/products3.jpg",
-                  "/img/top/products4.jpg",
-                  "/img/top/products5.jpg",
-                  "/img/top/products6.jpg",
-                ]
+                    "/img/top/products1.jpg",
+                    "/img/top/products2.jpg",
+                    "/img/top/products3.jpg",
+                    "/img/top/products4.jpg",
+                    "/img/top/products5.jpg",
+                    "/img/top/products6.jpg",
+                  ]
               ).map((src, i) => (
                 <li key={i}>
                   <img src={getPath(src)} alt="" />
@@ -244,13 +186,13 @@ export default function Home() {
               {(randomImages.length > 0
                 ? randomImages
                 : [
-                  "/img/top/products1.jpg",
-                  "/img/top/products2.jpg",
-                  "/img/top/products3.jpg",
-                  "/img/top/products4.jpg",
-                  "/img/top/products5.jpg",
-                  "/img/top/products6.jpg",
-                ]
+                    "/img/top/products1.jpg",
+                    "/img/top/products2.jpg",
+                    "/img/top/products3.jpg",
+                    "/img/top/products4.jpg",
+                    "/img/top/products5.jpg",
+                    "/img/top/products6.jpg",
+                  ]
               ).map((src, i) => (
                 <li key={i}>
                   <img src={getPath(src)} alt="" />
@@ -301,7 +243,7 @@ export default function Home() {
             <div className={styles.img}>
               <img src={getPath("/img/top/about.jpg")} alt="" />
             </div>
-          </Link>          
+          </Link>
           {/* map */}
           <Link className={styles.item} href="/visitor?tab=maps">
             <div className={styles.img}>
