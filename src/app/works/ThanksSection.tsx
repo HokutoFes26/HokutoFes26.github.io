@@ -2,16 +2,14 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import ItemCard from "@/components/ui/ItemCard/ItemCard";
 import CardWrapper from "@/components/ui/CardWrapper/CardWrapper";
 
-interface worksDataItem {
+interface Thanks {
   name: string;
-  url: string;
-  image: string;
-  fit: number;
+  job: string;
 }
 
-type worksDataType = worksDataItem[];
+type ThanksDataType = Thanks[];
 
-export default function ThanksSection(props: { worksData: worksDataType }) {
+export default function ThanksSection(props: { worksData: ThanksDataType }) {
   return (
     <div className="sitenavi-section">
       <SectionTitle>スペシャルサンクス</SectionTitle>
@@ -20,11 +18,9 @@ export default function ThanksSection(props: { worksData: worksDataType }) {
           <ItemCard
             key={index}
             data={{
-              type: "company",
+              type: "thanks",
               name: item.name,
-              url: item.url,
-              image: item.image,
-              fit: item.fit
+              job: item.job,
             }}
           />
         ))}

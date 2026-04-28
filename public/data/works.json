@@ -339,16 +339,36 @@
   ],
   "thanks": [
     {
-      "name": "Company3",
-      "url": "google.com",
-      "image": "/img/works/works6.jpg",
-      "fit": 0
+      "job": "御支援",
+      "name": ""
     },
     {
-      "name": "Name",
-      "url": "url.com",
-      "image": "/img/works/works9.jpg",
-      "fit": 0
+      "job": "ステージ設置",
+      "name": ""
+    },
+    {
+      "job": "音響・照明設備",
+      "name": ""
+    },
+    {
+      "job": "ポスター印刷",
+      "name": ""
+    },
+    {
+      "job": "ガスレンタル",
+      "name": ""
+    },
+    {
+      "job": "オリジナルグッズ作成",
+      "name": ""
+    },
+    {
+      "job": "ポスター掲載",
+      "name": ""
+    },
+    {
+      "job": "御理解・御協力",
+      "name": ""
     }
   ]
 }
