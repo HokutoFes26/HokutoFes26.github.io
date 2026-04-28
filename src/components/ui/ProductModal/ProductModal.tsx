@@ -52,7 +52,7 @@ export default function ProductModal({ item }: ProductModalProps) {
     const handleClose = () => {
         setIsOpen(false);
         setTimeout(() => {
-            router.push("/products/", { scroll: false });
+            router.back();
         }, 300);
     };
 
@@ -61,7 +61,7 @@ export default function ProductModal({ item }: ProductModalProps) {
             setIsOpen(false);
             mapControl.openMap(item.place);
             setTimeout(() => {
-                router.push("/products/", { scroll: false });
+                router.back();
             }, 300);
         }
     };
