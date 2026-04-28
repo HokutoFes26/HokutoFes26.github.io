@@ -12,7 +12,11 @@
             "name": "たこ焼き",
             "team": "漕艇部",
             "place": "テント番号7",
-            "menu": [{ "content": "たこ焼き", "price": 0 }],
+            "menu": [
+                { "content": "たこ焼き", "price": 400 },
+                { "content": "チーズたこ焼き", "price": 500 },
+                { "content": "明太マヨたこ焼き", "price": 500 }
+            ],
             "image": "/img/booth/漕艇.jpg"
         },
         {
