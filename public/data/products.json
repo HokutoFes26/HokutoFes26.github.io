@@ -41,13 +41,13 @@
         {
             "name": "ゲーム・イラスト展示",
             "team": "デジタルメディア創作部",
-            "place": "第２プラザ",
+            "place": "第2プラザ",
             "image": "/img/products/デジ研.jpg"
         },
         {
             "name": "ロボット操作体験",
             "team": "メカトロ技術研究部",
-            "place": "第１体育館",
+            "place": "第1体育館",
             "image": "/img/products/メカトロ.jpg"
         },
         {
@@ -77,13 +77,13 @@
         {
             "name": "ジオラマ展示",
             "team": "鉄道部",
-            "place": "第１体育館",
+            "place": "第1体育館",
             "image": "/img/products/"
         },
         {
             "name": "全国高専のロボット展示",
             "team": "メカテック部",
-            "place": "第１体育館",
+            "place": "第1体育館",
             "image": "/img/products/"
         }
     ],
@@ -91,7 +91,7 @@
         {
             "name": "電子情報工学科展示",
             "team": "電子情報工学科",
-            "place": "電子情報第１実験室",
+            "place": "電子情報第1実験室",
             "image": "/img/products/"
         },
         {
@@ -131,8 +131,8 @@
             "image": "/img/products/"
         },
         {
-            "name": "本郷３学科紹介展示",
-            "team": "本郷３学科",
+            "name": "本郷3学科紹介展示",
+            "team": "本郷3学科",
             "place": "ものづくり教室",
             "image": "/img/products/"
         },
