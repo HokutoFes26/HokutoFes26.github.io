@@ -59,10 +59,10 @@
   padding: 10px;
   transform: translateZ(0);
   will-change: backdrop-filter;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 24px 2px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 16px;
   border: solid #ddd 1px;
   text-align: center;
-  border-radius: 28px;
+  border-radius: 30px;
   transition: transform 0.2s ease-out;
   word-break: auto-phrase;
 }
@@ -190,7 +190,7 @@
 
   .info {
     border-radius: 18px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 12px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
     padding: 6px;
   }
 

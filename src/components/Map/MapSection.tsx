@@ -115,6 +115,8 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
     useEffect(() => {
         if (pinData) {
             setActiveIndex(pinData.mapId);
+        } else if (initialPlace && initialPlace.includes("テント番号")) {
+            setActiveIndex(7);
         }
     }, [pinData, initialPlace]);
 

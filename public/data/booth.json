@@ -133,7 +133,7 @@
         {
             "name": "お茶会～2日目のみ～",
             "team": "茶道同好会",
-            "place": "奈古の浦会館2F和室",
+            "place": "奈呉の浦会館2F和室",
             "menu": [{ "content": "清風茶会", "price": 500 }],
             "image": "/img/booth/お茶会.jpg"
         },

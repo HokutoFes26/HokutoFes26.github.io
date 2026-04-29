@@ -16,7 +16,7 @@
             "name": "キッキングスナイパー",
             "team": "S2",
             "place": "S2教室",
-            "image": "/img/products/"
+            "image": "/img/products/S2.jpg"
         },
         {
             "name": "縁日",
@@ -78,13 +78,13 @@
             "name": "ジオラマ展示",
             "team": "鉄道部",
             "place": "第1体育館",
-            "image": "/img/products/"
+            "image": "/img/products/鉄道.jpg"
         },
         {
             "name": "全国高専のロボット展示",
             "team": "メカテック部",
             "place": "第1体育館",
-            "image": "/img/products/"
+            "image": "/img/products/メカテック.jpg"
         }
     ],
     "L3": [
@@ -125,12 +125,6 @@
             "image": "/img/products/"
         },
         {
-            "name": "若潮丸Ⅳ・Ⅴ世の紹介など",
-            "team": "若潮丸委員会",
-            "place": "ラウンジB",
-            "image": "/img/products/"
-        },
-        {
             "name": "本郷3学科紹介展示",
             "team": "本郷3学科",
             "place": "ものづくり教室",
@@ -148,13 +142,13 @@
             "name": "連携事業・活動実績など",
             "team": "研究開発共創センター",
             "place": "ものづくり教室",
-            "image": "/img/products/"
+            "image": "/img/products/連携事業・活動実績など.jpg"
         },
         {
             "name": "富山高専の国際化への取り組み紹介",
             "team": "国際教育センター",
             "place": "K4教室",
-            "image": "/img/products/"
+            "image": "/img/products/富山高専の国際化への取り組み紹介.jpg"
         },
         {
             "name": "展示名",
@@ -166,7 +160,7 @@
             "name": "校長先生ポスター",
             "team": "団体名",
             "place": "ものづくり教室",
-            "image": "/img/products/"
+            "image": "/img/products/校長先生ポスター.jpg"
         }
     ]
 }
