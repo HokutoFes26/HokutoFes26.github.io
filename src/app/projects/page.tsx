@@ -14,7 +14,7 @@ function getLocalData(fileName: string) {
   return JSON.parse(fileContents);
 }
 
-export default function Products() {
+export default function Projects() {
   const p = getLocalData("products.json");
   const s = getLocalData("booth.json");
   const e = getLocalData("events.json");

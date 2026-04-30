@@ -85,7 +85,7 @@ export default function Home() {
 
         const allImages = Array.from(new Set([...extract(boothData), ...extract(productsData)]));
         const shuffled = allImages.sort(() => 0.5 - Math.random());
-        setRandomImages(shuffled.slice(0, 6));
+        setRandomImages(shuffled.slice(0, 8));
       } catch (e) {
         console.error("Failed to load images (json)", e);
       }
@@ -135,12 +135,12 @@ export default function Home() {
           )}
         </div>
 
-        <section className={`${styles.company} fadein`}>
+        <section className={`${styles.about} fadein`}>
           <SectionTitle type="top">VISITOR INFORMATION</SectionTitle>
 
           <div className={styles.flex}>
             <div className={styles.img}>
-              <img src={getPath("/img/temporary/company.jpg")} alt="" />
+              <img src={getPath("/img/temporary/about.jpg")} alt="" />
             </div>
             <div className={styles.text}>
               <p className={styles.title}>ご来場の皆様へ</p>
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.products} fadein`}>
+        <section className={`${styles.projects} fadein`}>
           <div className={styles.text}>
             <SectionTitle type="top">PROJECTS</SectionTitle>
             <p className={styles.description}>
@@ -201,7 +201,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <BaseButton href="/products" centered>
+          <BaseButton href="/projects" centered>
             VIEW MORE
           </BaseButton>
         </section>

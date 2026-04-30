@@ -40,43 +40,43 @@ const Footer = () => {
         <div className="menu-area">
           <div className="menu-col">
             <p className="menu-title">
-              <Link href="/company">北斗祭について</Link>
+              <Link href="/about">北斗祭について</Link>
             </p>
             <ul className="menu-list">
               <li>
-                <Link href="/company#service">ご挨拶</Link>
+                <Link href="/about#service">ご挨拶</Link>
               </li>
               <li>
-                <Link href="/company#philosophy">テーマ</Link>
+                <Link href="/about#philosophy">テーマ</Link>
               </li>
               <li>
-                <Link href="/company#overview">ニュース</Link>
+                <Link href="/about#overview">ニュース</Link>
               </li>
               <li>
-                <Link href="/company#access">アクセス</Link>
+                <Link href="/about#access">アクセス</Link>
               </li>
             </ul>
           </div>
 
           <div className="menu-col">
             <p className="menu-title">
-              <Link href="/products">企画紹介</Link>
+              <Link href="/projects">企画紹介</Link>
             </p>
             <ul className="menu-list">
               <li>
-                <Link href="/products#service">
+                <Link href="/projects#service">
                   展示
                   <br />
                 </Link>
               </li>
               <li>
-                <Link href="/products#philosophy">模擬店</Link>
+                <Link href="/projects#philosophy">模擬店</Link>
               </li>
               <li>
-                <Link href="/products#overview">ステージ企画</Link>
+                <Link href="/projects#overview">ステージ企画</Link>
               </li>
               <li>
-                <Link href="/products#access">タイムテーブル</Link>
+                <Link href="/projects#access">タイムテーブル</Link>
               </li>
             </ul>
           </div>

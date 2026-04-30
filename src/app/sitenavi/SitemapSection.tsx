@@ -19,16 +19,16 @@ export default function SitemapSection() {
                             「北斗祭」について
                             <ul>
                                 <li>
-                                    <Link href="/company#service">ご挨拶</Link>
+                                    <Link href="/about#service">ご挨拶</Link>
                                 </li>
                                 <li>
-                                    <Link href="/company#philosophy">テーマ</Link>
+                                    <Link href="/about#philosophy">テーマ</Link>
                                 </li>
                                 <li>
-                                    <Link href="/company#overview">ニュース</Link>
+                                    <Link href="/about#overview">ニュース</Link>
                                 </li>
                                 <li>
-                                    <Link href="/company#access">アクセス</Link>
+                                    <Link href="/about#access">アクセス</Link>
                                 </li>
                             </ul>
                         </li>
@@ -36,16 +36,16 @@ export default function SitemapSection() {
                             企画紹介
                             <ul>
                                 <li>
-                                    <Link href="/products#service">展示</Link>
+                                    <Link href="/projects#service">展示</Link>
                                 </li>
                                 <li>
-                                    <Link href="/products#philosophy">模擬店</Link>
+                                    <Link href="/projects#philosophy">模擬店</Link>
                                 </li>
                                 <li>
-                                    <Link href="/products#overview">ステージ企画</Link>
+                                    <Link href="/projects#overview">ステージ企画</Link>
                                 </li>
                                 <li>
-                                    <Link href="/products#access">タイムテーブル</Link>
+                                    <Link href="/projects#access">タイムテーブル</Link>
                                 </li>
                             </ul>
                         </li>

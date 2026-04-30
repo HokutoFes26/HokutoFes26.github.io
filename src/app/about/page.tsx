@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import styles from "./company.module.css";
+import styles from "./about.module.css";
 import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
 
-export default function Company() {
+export default function About() {
   const [isPrincipalExpanded, setIsPrincipalExpanded] = useState(false);
   const [isChairmanExpanded, setIsChairmanExpanded] = useState(false);
   const [isPresidentExpanded, setIsPresidentExpanded] = useState(false);

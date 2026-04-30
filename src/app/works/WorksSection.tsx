@@ -29,6 +29,7 @@ export default function ThanksSection(props: { worksData: worksDataType }) {
           />
         ))}
       </CardWrapper>
+      <p style={{ textAlign: "center", width: "100%", marginBottom: "60px", fontSize: "1.2em" }}>他にも多くの企業様にご協賛いただきましたことを、ここで感謝申し上げます。</p>
     </div>
   );
 }

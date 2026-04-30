@@ -43,8 +43,8 @@ export default function ItemCard({ data: item }: { data: Payload }) {
 
   const href = isProduct
     ? item.name === "縁日"
-      ? `/products?name=${encodeURIComponent(item.name)}-${encodeURIComponent(item.team)}${showHidden ? "&hidden=true" : ""}`
-      : `/products?name=${encodeURIComponent(item.name)}${showHidden ? "&hidden=true" : ""}`
+      ? `/projects?name=${encodeURIComponent(item.name)}-${encodeURIComponent(item.team)}${showHidden ? "&hidden=true" : ""}`
+      : `/projects?name=${encodeURIComponent(item.name)}${showHidden ? "&hidden=true" : ""}`
     : item.type === "company"
       ? item.url.startsWith("http")
         ? item.url
