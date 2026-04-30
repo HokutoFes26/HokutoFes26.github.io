@@ -15,7 +15,7 @@
 
 .pageTitleArea {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   height: 75%;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .pageHeader {
     margin-bottom: 40px;
   }

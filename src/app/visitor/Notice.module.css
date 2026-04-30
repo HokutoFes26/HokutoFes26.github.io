@@ -1,0 +1,31 @@
+.notice-content {
+  line-height: 2;
+  margin-bottom: 80px;
+}
+
+.notice-content p {
+  font-size: 18px;
+}
+
+.notice-list {
+  margin-top: 30px;
+}
+
+.notice-list li {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.notice-list li::before {
+  content: "・";
+}
+
+.notice-list li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+}
+
+.notice-list li a {
+  text-decoration: underline;
+  color: #0033cc;
+}

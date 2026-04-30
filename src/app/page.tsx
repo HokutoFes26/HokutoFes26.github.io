@@ -218,7 +218,7 @@ export default function Home() {
               また、情報を発信するニュースや当日のアクセスの方法も掲載しています。
             </p>
             <p className={styles.description}>ぜひご活用ください。</p>
-            <BaseButton href="/company">VIEW MORE</BaseButton>
+            <BaseButton href="/about">VIEW MORE</BaseButton>
           </div>
 
           <ul className={styles["works-list"]}>
@@ -239,7 +239,7 @@ export default function Home() {
 
         <div className={`${styles["faq-contact"]} fadein`}>
           {/* company */}
-          <Link className={styles.item} href="/company">
+          <Link className={styles.item} href="/about">
             <div className={styles.img}>
               <img src={getPath("/img/top/about.jpg")} alt="" />
             </div>

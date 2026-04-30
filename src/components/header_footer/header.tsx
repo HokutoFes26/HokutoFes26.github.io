@@ -73,13 +73,13 @@ const Header = () => {
               <span>北斗祭について</span>
               <ul className="menu-second">
                 <li>
-                  <Link href="/about#service">ご挨拶</Link>
+                  <Link href="/about#greeting">ご挨拶</Link>
                 </li>
                 <li>
-                  <Link href="/about#philosophy">テーマ</Link>
+                  <Link href="/about#theme">テーマ</Link>
                 </li>
                 <li>
-                  <Link href="/about#overview">ニュース</Link>
+                  <Link href="/about#news">ニュース</Link>
                 </li>
                 <li>
                   <Link href="/about#access">アクセス</Link>
@@ -90,16 +90,16 @@ const Header = () => {
               <span>企画紹介</span>
               <ul className="menu-second">
                 <li>
-                  <Link href="/projects#service">展示</Link>
+                  <Link href="/projects#products">展示</Link>
                 </li>
                 <li>
-                  <Link href="/projects#philosophy">模擬店</Link>
+                  <Link href="/projects#booth">模擬店</Link>
                 </li>
                 <li>
-                  <Link href="/projects#overview">ステージ企画</Link>
+                  <Link href="/projects#stage">ステージ企画</Link>
                 </li>
                 <li>
-                  <Link href="/projects#access">タイムテーブル</Link>
+                  <Link href="/projects#timetable">タイムテーブル</Link>
                 </li>
               </ul>
             </li>
@@ -113,7 +113,7 @@ const Header = () => {
                   <Link href="/visitor?tab=maps">校内マップ</Link>
                 </li>
                 <li>
-                  <Link href="/shuttle_bus">シャトルバス時刻表</Link>
+                  <Link href="/visitor?tab=bus">シャトルバス時刻表</Link>
                 </li>
                 <li>
                   <Link href="/visitor?tab=faq">よくあるご質問</Link>

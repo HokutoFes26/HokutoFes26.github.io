@@ -25,6 +25,5 @@ Web Appリンク : https://hokutofes26.github.io/app
 | 企画紹介         | /projects    | [src/app/projects/](./src/app/projects/)       |
 | ご来場の皆さまへ | /visitor     | [src/app/visitor/](./src/app/visitor/)         |
 | ご協賛企業様     | /works       | [src/app/works/](./src/app/works/)             |
-| シャトルバス     | /shuttle_bus | [src/app/shuttle_bus/](./src/app/shuttle_bus/) |
 | お問い合わせ     | /contact     | [src/app/contact/](./src/app/contact/)         |
 | ページについて   | /sitenavi    | [src/app/sitenavi/](./src/app/sitenavi/)       |

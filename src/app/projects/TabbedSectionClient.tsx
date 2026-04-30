@@ -17,8 +17,8 @@ interface ProjectItemData {
   end?: string;
 }
 
-const OverviewList = ({ items }: { items: ProjectItemData[] }) => (
-  <dl className={styles["overview-list"]}>
+const StageList = ({ items }: { items: ProjectItemData[] }) => (
+  <dl className={styles["stage-list"]}>
     {items.map((item, i) => (
       <React.Fragment key={i}>
         <dt>
@@ -123,7 +123,7 @@ export default function TabbedSectionClient({
         </CardWrapper>
       )}
       <Container>
-        {type === "list" && <OverviewList items={items} />}
+        {type === "list" && <StageList items={items} />}
         {type === "timeline" && (
           <div>
             <Timeline items={items} />

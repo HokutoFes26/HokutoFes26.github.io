@@ -3,23 +3,23 @@
   margin-bottom: 60px;
 }
 
-.overview-list {
+.stage-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.overview-list dt {
+.stage-list dt {
   width: 200px;
   border-top: solid 1px var(--color-black);
   font-size: 15px;
   padding: 40px 0;
 }
 
-.overview-list dt:last-of-type {
+.stage-list dt:last-of-type {
   border-bottom: solid 1px var(--color-black);
 }
 
-.overview-list dd {
+.stage-list dd {
   width: calc(100% - 200px);
   border-top: solid 1px var(--color-gray);
   font-size: 15px;
@@ -27,7 +27,7 @@
   line-height: 1.8;
 }
 
-.overview-list dd:last-of-type {
+.stage-list dd:last-of-type {
   border-bottom: solid 1px var(--color-gray);
 }
 

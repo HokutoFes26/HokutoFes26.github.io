@@ -27,13 +27,11 @@ export const MapPins: Record<string, { mapId: number; x: number; y: number }> = 
 };
 
 export const mapList = [
-  { category: "校舎", title: "1F", src: "/img/maps/1f.png" },
-  { category: "校舎", title: "2F", src: "/img/maps/2f.png" },
-  { category: "校舎", title: "3F", src: "/img/maps/3f.png" },
-  { category: "校舎", title: "4F", src: "/img/maps/4f.png" },
-  { category: "建物", title: "たいく", src: "/img/maps/gym.png" },
-  { category: "建物", title: "としょ", src: "/img/maps/lib.png" },
-  { category: "建物", title: "なごうら", src: "/img/maps/ng.png" },
+  { category: "校舎", title: "1F / 2F", src: "/img/maps/1f.png" },
+  { category: "校舎", title: "3F / 4F", src: "/img/maps/3f.png" },
+  { category: "建物", title: "第1体育館", src: "/img/maps/gym.png" },
+  { category: "建物", title: "図書館", src: "/img/maps/lib.png" },
+  { category: "建物", title: "奈呉の浦会館", src: "/img/maps/ng.png" },
   { category: "全体", title: "模擬店", src: "/img/maps/out_small.png" },
   { category: "全体", title: "全体図", src: "/img/maps/out_large.png" },
 ];
