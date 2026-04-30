@@ -141,7 +141,7 @@
             "name": "たい焼き",
             "team": "新聞部",
             "place": "テント番号6",
-            "menu": [{ "content": "たい焼き", "price": 0 }],
+            "menu": [{ "content": "たい焼き", "price": 300 }],
             "image": "/img/booth/新聞.jpg"
         },
         {
