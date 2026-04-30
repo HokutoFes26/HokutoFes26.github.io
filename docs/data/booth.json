@@ -199,7 +199,8 @@
                 { "content": "ドリンク", "price": 250 },
                 { "content": "シャンメリー", "price": 1300 }
             ],
-            "image": "/img/booth/K5-1.jpg"
+            "image": "/img/booth/K5-1.jpg",
+            "image2": "/img/booth/K5-2.jpg"
         }
     ],
     "L4": [
