@@ -21,8 +21,8 @@ Web Appリンク : https://hokutofes26.github.io/app
 | ページ内容       | ページリンク | ディレクトリ名                                 |
 | ---------------- | ------------ | ---------------------------------------------- |
 | トップページ     | /            | [src/app/](./src/app/)                         |
-| 北斗祭について   | /company     | [src/app/company/](./src/app/company/)         |
-| 企画紹介         | /products    | [src/app/products/](./src/app/products/)       |
+| 北斗祭について   | /about       | [src/app/about/](./src/app/about/)             |
+| 企画紹介         | /projects    | [src/app/projects/](./src/app/projects/)       |
 | ご来場の皆さまへ | /visitor     | [src/app/visitor/](./src/app/visitor/)         |
 | ご協賛企業様     | /works       | [src/app/works/](./src/app/works/)             |
 | シャトルバス     | /shuttle_bus | [src/app/shuttle_bus/](./src/app/shuttle_bus/) |
