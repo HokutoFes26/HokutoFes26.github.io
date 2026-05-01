@@ -140,7 +140,7 @@ export default function Home() {
 
           <div className={styles.flex}>
             <div className={styles.img}>
-              <img src={getPath("/img/temporary/about.jpg")} alt="" />
+              <img src={getPath("/img/top/visitor info.jpg")} alt="" />
             </div>
             <div className={styles.text}>
               <p className={styles.title}>ご来場の皆様へ</p>
