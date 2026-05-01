@@ -611,6 +611,7 @@
 
   .about {
     margin-bottom: 60px;
+    overflow-x: hidden;
   }
 
   .about .section-title {
