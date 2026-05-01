@@ -60,7 +60,18 @@ export default function AboutContent() {
               <p className={styles["title-ja"]}>北斗祭実行委員長</p>
               <p className={styles["title-en"]}>冨水　琉花</p>
               <div className={`${styles.description} ${isChairmanExpanded ? styles.expanded : ""}`}>
-                <div className={styles.inner}>軽く一言お願いします。</div>
+                <div className={styles.inner}>
+                  こんにちは！今年も2年に1度の北斗祭を開催します！！
+                  <br></br>
+                  <br></br>
+                  　今年度のテーマは「再煌（さいこう）」です。「再煌」には単に“もう一度輝く”という意味だけでなく、参加するすべての人で“最高”を更新していくという強い決意が込められています。また、「もう一度輝こう」という思いを表しています。このテーマのもと、これまで以上に心に残る北斗祭となるよう準備を進めてまいりました。北斗祭の準備・運営に尽力してくれた実行委員会の皆さんには、心より感謝しています。
+                  <br></br>
+                  <br></br>
+                  　今年の北斗祭では、復興への思いも込め、実行委員会の模擬店において能登の塩味と白エビ味のポップコーンを販売しています。実行委員会だけでなく、それぞれの企画や模擬店、展示には、一人ひとりの想いと工夫が詰まっています。また、この4月に就航した本校練習船「若潮丸Ⅴ世」による体験航海の実施が、多くの関係者のご協力のもと実現しています。北斗祭が、ご来場の皆さまにとって特別な時間となることを願っております。2日間にわたり、個性あふれる富山高専射水キャンパスの北斗祭をぜひお楽しみください。
+                  <br></br>
+                  <br></br>
+                  　最後になりますが、北斗祭の開催にあたり、ご指導・ご協力いただいた先生方、協賛企業の皆さまをはじめとするすべての関係者の方々に心より感謝申し上げます。
+                </div>
               </div>
               <p className={styles["view-more"]} onClick={() => setIsChairmanExpanded(!isChairmanExpanded)}>
                 {isChairmanExpanded ? "CLOSE" : "VIEW MORE"}
