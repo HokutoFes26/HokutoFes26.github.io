@@ -26,7 +26,7 @@ const slideToggle = (el) => {
 };
 
 const setupObserver = () => {
-  const elements = document.querySelectorAll(".fadein");
+  const elements = document.querySelectorAll(".fadein:not(.observed)");
   if (elements.length === 0) return;
 
   const observer = new IntersectionObserver(
@@ -41,11 +41,38 @@ const setupObserver = () => {
     { threshold: 0.1 },
   );
 
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((el) => {
+    el.classList.add("observed");
+    observer.observe(el);
+  });
+};
+
+const setupAnimationOptimizer = () => {
+  const elements = document.querySelectorAll(".animate-optimize:not(.optimized)");
+  if (elements.length === 0) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.willChange = "transform, opacity";
+        } else {
+          entry.target.style.willChange = "auto";
+        }
+      });
+    },
+    { rootMargin: "200px" }
+  );
+
+  elements.forEach((el) => {
+    el.classList.add("optimized");
+    observer.observe(el);
+  });
 };
 
 const initAll = () => {
   setupObserver();
+  setupAnimationOptimizer();
 
   document.querySelectorAll("section").forEach((section) => {
     const tabs = section.querySelectorAll(".tab-list li");
@@ -60,7 +87,7 @@ const initAll = () => {
   if (faqList) {
     faqList.querySelectorAll("dt").forEach((dt) => {
       const dd = dt.nextElementSibling;
-      if (dd && !dt.classList.contains("active")) {
+      if (dd && dd.style.display === "" && !dt.classList.contains("active")) {
         dd.style.display = "none";
       }
     });
@@ -100,9 +127,11 @@ document.addEventListener("click", (e) => {
   const tabItem = target.closest(".tab-list li");
   if (tabItem) {
     const section = tabItem.closest("section");
-    const tabs = Array.from(section.querySelectorAll(".tab-list li"));
-    tabs.forEach((t) => t.classList.remove("active"));
-    tabItem.classList.add("active");
+    if (section) {
+      const tabs = Array.from(section.querySelectorAll(".tab-list li"));
+      tabs.forEach((t) => t.classList.remove("active"));
+      tabItem.classList.add("active");
+    }
   }
 
   if (target.closest(".modal-open")) {
@@ -120,17 +149,19 @@ document.addEventListener("click", (e) => {
   }
 });
 
-let timer;
-const observer = new MutationObserver((mutations) => {
-  const hasAddedNodes = mutations.some((m) => m.addedNodes.length > 0);
-  if (hasAddedNodes) {
-    clearTimeout(timer);
-    timer = setTimeout(initAll, 100);
-  }
-});
-
 if (typeof window !== "undefined") {
-  initAll();
-  observer.observe(document.body, { childList: true, subtree: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAll);
+  } else {
+    initAll();
+  }
   window.addEventListener("popstate", initAll);
+
+  let lastPath = location.pathname;
+  setInterval(() => {
+    if (location.pathname !== lastPath) {
+      lastPath = location.pathname;
+      setTimeout(initAll, 500);
+    }
+  }, 1000);
 }

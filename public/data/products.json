@@ -72,7 +72,7 @@
             "name": "写真展示",
             "team": "写真同好会",
             "place": "ラウンジA",
-            "image": "/img/products/"
+            "image": "/img/products/写真.jpg"
         },
         {
             "name": "ジオラマ展示",
@@ -104,7 +104,7 @@
             "name": "機関実習室ツアー",
             "team": "商船学科機関コース",
             "place": "ETS演習室・蒸気実験室・補機実験室・内燃機関実験室",
-            "image": "/img/products/"
+            "image": "/img/products/機関実習室ツアー.jpg"
         },
         {
             "name": "操船シミュレータ体験など",

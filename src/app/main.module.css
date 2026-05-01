@@ -248,12 +248,13 @@
 
 .shooting-star {
   position: absolute;
+  width: 150px;
   height: 2px;
   background: linear-gradient(to right, rgba(100, 150, 255, 0.8) 0%, rgba(100, 150, 255, 0) 100%);
   filter: drop-shadow(0 0 6px rgba(100, 150, 255, 0.4));
   animation: shooting 4s ease-in-out infinite;
   opacity: 0;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) scaleX(0);
   transform-origin: left center;
 }
 
@@ -314,25 +315,22 @@
 
 @keyframes shooting {
   0% {
-    transform: rotate(-30deg) translateX(0);
+    transform: rotate(-30deg) translateX(0) scaleX(0);
     opacity: 1;
-    width: 0;
   }
 
   5% {
-    width: 150px;
+    transform: rotate(-30deg) translateX(0) scaleX(1);
     opacity: 1;
   }
 
   15% {
-    width: 0;
-    transform: rotate(-30deg) translateX(-600px);
+    transform: rotate(-30deg) translateX(-600px) scaleX(0);
     opacity: 0;
   }
 
   100% {
-    width: 0;
-    transform: rotate(-30deg) translateX(-600px);
+    transform: rotate(-30deg) translateX(-600px) scaleX(0);
     opacity: 0;
   }
 }
@@ -370,23 +368,32 @@
 .about .flex {
   display: flex;
   align-items: center;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about .flex .img {
-  width: 65%;
+  width: 60%;
 }
 
 .about .flex .img img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
+  border-radius: 28px;
 }
 
 .about .flex .text {
-  width: 35%;
-  background-color: #fff;
-  padding: 5% 0 5% 5%;
+  width: 60%;
+  height: 400px;
+  background: rgba(230, 235, 237, 0.6);
+  -webkit-backdrop-filter: saturate(180%) brightness(1.3) blur(15px);
+  backdrop-filter: saturate(180%) brightness(1.3) blur(15px);
+  padding: 5%;
   margin-left: -8%;
+  margin-top: 10%;
+  border-radius: 28px;
 }
 
 .about .text .title {
@@ -445,6 +452,8 @@
 .projects .products-list-area .products-list {
   display: flex;
   animation: slide-left 60s infinite linear both;
+  gap: 32px;
+  margin-right: 32px;
 }
 
 .projects .products-list-area .products-list li {
@@ -456,6 +465,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 48px;
+  border: 1px solid #e2e8f0;
 }
 
 @keyframes slide-left {
@@ -464,7 +475,7 @@
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 32px));
   }
 }
 
@@ -608,11 +619,13 @@
   }
 
   .about .flex {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .about .flex .img {
     width: 100%;
+    margin-left: -40%;
+    margin-top: -40%;
   }
 
   .about .flex .img img {
@@ -622,7 +635,10 @@
   .about .flex .text {
     width: 100%;
     margin-left: 0;
-    padding: 20px 20px 0;
+    padding: 20px;
+    margin-top: 10%;
+    margin-left: 40%;
+    height: auto;
   }
 
   .about .flex .text .title {
@@ -661,9 +677,28 @@
     margin-bottom: 20px;
   }
 
+  .projects .products-list-area .products-list {
+    gap: 14px;
+    margin-right: 14px;
+  }
+
   .projects .products-list-area .products-list li {
     width: calc(100vw / 3);
     aspect-ratio: 1 / 1;
+  }
+
+  .projects .products-list-area .products-list li img {
+    border-radius: 24px;
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-100% - 14px));
+    }
   }
 
   .works {

@@ -6,6 +6,7 @@ import styles from "./main.module.css";
 import { getPath } from "@/constants/paths";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import BaseButton from "@/components/ui/BaseButton/BaseButton";
+import { booth_projects_images } from "@/constants/imagePool";
 
 export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
@@ -16,16 +17,19 @@ export default function Home() {
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
     if (distance <= 0) return;
+
     const duration = 1400;
     let start: number | null = null;
+    let requestId: number;
+
     const html = document.documentElement;
     const originalScrollBehavior = html.style.scrollBehavior;
     html.style.scrollBehavior = "auto";
-    const easeInOutSine = (t: number): number => {
-      return -(Math.cos(Math.PI * t) - 1) / 2;
+
+    const easeInOutQuad = (t: number): number => {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     };
 
-    let requestId: number;
     const stopAnimation = () => {
       cancelAnimationFrame(requestId);
       window.removeEventListener("wheel", stopAnimation);
@@ -33,6 +37,7 @@ export default function Home() {
       window.removeEventListener("mousedown", stopAnimation);
       html.style.scrollBehavior = originalScrollBehavior;
     };
+
     window.addEventListener("wheel", stopAnimation, { passive: true });
     window.addEventListener("touchmove", stopAnimation, { passive: true });
     window.addEventListener("mousedown", stopAnimation);
@@ -41,7 +46,8 @@ export default function Home() {
       if (!start) start = timestamp;
       const elapsed = timestamp - start;
       const progress = Math.min(elapsed / duration, 1);
-      const currentPos = startPosition + distance * easeInOutSine(progress);
+      const currentPos = startPosition + distance * easeInOutQuad(progress);
+
       window.scrollTo(0, currentPos);
 
       if (progress < 1) {
@@ -57,38 +63,9 @@ export default function Home() {
 
   useEffect(() => {
     const loadImages = async () => {
-      try {
-        const [boothRes, productsRes] = await Promise.all([
-          fetch(getPath("/data/booth.json")),
-          fetch(getPath("/data/products.json")),
-        ]);
-        const boothData = await boothRes.json();
-        const productsData = await productsRes.json();
-
-        const extract = (obj: any): string[] => {
-          let found: string[] = [];
-          if (Array.isArray(obj)) {
-            obj.forEach((item) => {
-              [item.image, item.image2].forEach((img) => {
-                if (typeof img === "string" && /\.(jpg|jpeg|png)$/i.test(img)) {
-                  found.push(img);
-                }
-              });
-            });
-          } else if (obj && typeof obj === "object") {
-            Object.values(obj).forEach((val) => {
-              found = found.concat(extract(val));
-            });
-          }
-          return found;
-        };
-
-        const allImages = Array.from(new Set([...extract(boothData), ...extract(productsData)]));
-        const shuffled = allImages.sort(() => 0.5 - Math.random());
-        setRandomImages(shuffled.slice(0, 8));
-      } catch (e) {
-        console.error("Failed to load images (json)", e);
-      }
+      const allImages = Array.from(new Set([...booth_projects_images]));
+      const shuffled = allImages.sort(() => 0.5 - Math.random());
+      setRandomImages(shuffled.slice(0, 8));
     };
     loadImages();
   }, []);
@@ -97,12 +74,12 @@ export default function Home() {
     <div>
       <main className={styles["top-page"]}>
         <div className={styles.mainvisual}>
-          <div className={styles["twinkling-stars-container"]}>
+          <div className={`${styles["twinkling-stars-container"]} animate-optimize`}>
             {[...Array(15)].map((_, i) => (
               <div key={`ts-${i}`} className={`${styles["twinkling-star"]} ${styles[`ts-${i + 1}`]}`}></div>
             ))}
           </div>
-          <div className={styles["star-orbits-container"]}>
+          <div className={`${styles["star-orbits-container"]} animate-optimize`}>
             <div className={`${styles["star-orbit"]} ${styles["orbit-1"]}`}>
               <span className={styles.star}>★</span>
             </div>
@@ -113,7 +90,7 @@ export default function Home() {
               <span className={styles.star}>✧</span>
             </div>
           </div>
-          <div className={styles["shooting-stars-container"]}>
+          <div className={`${styles["shooting-stars-container"]} animate-optimize`}>
             <div className={`${styles["shooting-star"]} ${styles["ss-1"]}`}></div>
             <div className={`${styles["shooting-star"]} ${styles["ss-2"]}`}></div>
             <div className={`${styles["shooting-star"]} ${styles["ss-3"]}`}></div>
@@ -164,36 +141,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles["products-list-area"]}>
+          <div className={`${styles["products-list-area"]} animate-optimize`}>
             <ul className={styles["products-list"]}>
-              {(randomImages.length > 0
-                ? randomImages
-                : [
-                    "/img/top/products1.jpg",
-                    "/img/top/products2.jpg",
-                    "/img/top/products3.jpg",
-                    "/img/top/products4.jpg",
-                    "/img/top/products5.jpg",
-                    "/img/top/products6.jpg",
-                  ]
-              ).map((src, i) => (
+              {(randomImages.length > 0 ? randomImages : []).map((src, i) => (
                 <li key={i}>
                   <img src={getPath(src)} alt="" />
                 </li>
               ))}
             </ul>
             <ul className={styles["products-list"]}>
-              {(randomImages.length > 0
-                ? randomImages
-                : [
-                    "/img/top/products1.jpg",
-                    "/img/top/products2.jpg",
-                    "/img/top/products3.jpg",
-                    "/img/top/products4.jpg",
-                    "/img/top/products5.jpg",
-                    "/img/top/products6.jpg",
-                  ]
-              ).map((src, i) => (
+              {(randomImages.length > 0 ? randomImages : []).map((src, i) => (
                 <li key={i}>
                   <img src={getPath(src)} alt="" />
                 </li>

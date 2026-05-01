@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import ItemCard from "@/components/ui/ItemCard/ItemCard";
 import CardWrapper from "@/components/ui/CardWrapper/CardWrapper";
+import "./works.css";
 
 interface worksDataItem {
   name: string;
@@ -29,7 +30,7 @@ export default function ThanksSection(props: { worksData: worksDataType }) {
           />
         ))}
       </CardWrapper>
-      <p style={{ textAlign: "center", width: "100%", marginBottom: "60px", fontSize: "1.2em" }}>他にも多くの企業様にご協賛いただきましたことを、ここで感謝申し上げます。</p>
+      <p className="thanksOther">他にも多くの企業様にご協賛いただきましたことを、ここで感謝申し上げます。</p>
     </div>
   );
 }

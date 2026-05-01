@@ -72,7 +72,7 @@
             "name": "写真展示",
             "team": "写真同好会",
             "place": "ラウンジA",
-            "image": "/img/products/"
+            "image": "/img/products/写真.jpg"
         },
         {
             "name": "ジオラマ展示",
@@ -92,49 +92,49 @@
             "name": "電子情報工学科展示",
             "team": "電子情報工学科",
             "place": "電子情報第1実験室",
-            "image": "/img/products/"
+            "image": "/img/products/電子情報工学科展示.jpg"
         },
         {
             "name": "国際ビジネス学科紹介",
             "team": "国際ビジネス学科",
-            "place": "K5紹介",
-            "image": "/img/products/"
+            "place": "K5教室",
+            "image": "/img/products/国際ビジネス学科紹介.jpg"
         },
         {
             "name": "機関実習室ツアー",
             "team": "商船学科機関コース",
             "place": "ETS演習室・蒸気実験室・補機実験室・内燃機関実験室",
-            "image": "/img/products/"
+            "image": "/img/products/機関実習室ツアー.jpg"
         },
         {
             "name": "操船シミュレータ体験など",
             "team": "商船学科航海コース",
             "place": "航海学演習室・公開計測演習室・レーダーシミュレーター演習室",
-            "image": "/img/products/"
+            "image": "/img/products/操船シミュレータ体験など.jpg"
         },
         {
             "name": "若潮丸Ⅳ・Ⅴ世の紹介など",
             "team": "若潮丸委員会",
             "place": "ラウンジB",
-            "image": "/img/products/"
+            "image": "/img/products/若潮丸Ⅳ・Ⅴ世の紹介など.jpg"
         },
         {
             "name": "写真展",
             "team": "商船OB",
             "place": "S4教室",
-            "image": "/img/products/"
+            "image": "/img/products/写真展.jpg"
         },
         {
             "name": "本郷3学科紹介展示",
             "team": "本郷3学科",
             "place": "ものづくり教室",
-            "image": "/img/products/"
+            "image": "/img/products/本郷3学科紹介展示.jpg"
         },
         {
             "name": "専攻科活動紹介",
             "team": "専攻科",
             "place": "K4紹介",
-            "image": "/img/products/"
+            "image": "/img/products/専攻科活動紹介.jpg"
         }
     ],
     "L4": [

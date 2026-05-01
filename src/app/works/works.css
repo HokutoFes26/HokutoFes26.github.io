@@ -1,0 +1,14 @@
+.thanksOther {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 60px;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 767px) {
+  .thanksOther {
+    font-size: 1em;
+    margin-bottom: 40px;
+    padding: 0 5%;
+  }
+}
