@@ -11,6 +11,7 @@ Web Appリンク : https://hokutofes26.github.io/app
 | 展示一覧       | [public/data/products.json](./public/data/products.json) |
 | 模擬店一覧     | [public/data/booth.json](./public/data/booth.json)       |
 | 企業一覧       | [public/data/works.json](./public/data/works.json)       |
+| ニュース       | [public/data/news.json](./public/data/news.json)       |
 
 画像は`./public/img`、そのパスを`.json`へ
 

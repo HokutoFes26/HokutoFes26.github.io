@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./about.module.css";
 import { getPath } from "@/constants/paths";
@@ -9,10 +9,23 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
 
+type NewsItem = {
+  title: string;
+  contents: string[];
+};
+
 export default function AboutContent() {
   const [isPrincipalExpanded, setIsPrincipalExpanded] = useState(false);
   const [isChairmanExpanded, setIsChairmanExpanded] = useState(false);
   const [isPresidentExpanded, setIsPresidentExpanded] = useState(false);
+  const [news, setNews] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    fetch(getPath("/data/news.json"))
+      .then((res) => res.json())
+      .then((data) => setNews(data))
+      .catch((err) => console.error("Failed to load news:", err));
+  }, []);
 
   return (
     <main>
@@ -119,7 +132,18 @@ export default function AboutContent() {
       <section id="news" className={styles.newsSection}>
         <SectionTitle>ニュース</SectionTitle>
         <Container>
-          <p></p>
+          <div className={styles.newsList}>
+            {news.map((item, index) => (
+              <div key={index} className={styles.newsItem}>
+                <p className={styles.newsTitle}>{item.title}</p>
+                <div className={styles.newsContent}>
+                  {item.contents.map((content, idx) => (
+                    <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
 
