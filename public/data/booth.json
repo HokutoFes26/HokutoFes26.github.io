@@ -7,7 +7,7 @@
       "menu": [
         { "content": "ミニチュロス3本(同味)", "price": 250 },
         { "content": "ミニチュロス3本(異味)", "price": 300 },
-        { "content": "チュロス(ミルク,シナモン)", "price": 350 }
+        { "content": "チュロス(ミルク,シナモン)", "price": 350 },
         { "content": "チュロス(チョコ)", "price": 400 }
       ],
       "image": "/img/booth/バレー1.jpg",

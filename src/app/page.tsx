@@ -112,9 +112,8 @@ export default function Home() {
           )}
         </div>
 
-        <section className={`${styles.about} fadein`}>
+        <section className={`${styles.about} fadein`} style={{ opacity: "1" }}>
           <SectionTitle type="top">VISITOR INFORMATION</SectionTitle>
-
           <div className={styles.flex}>
             <div className={styles.img}>
               <img src={getPath("/img/top/visitor info.jpg")} alt="" />
@@ -127,7 +126,7 @@ export default function Home() {
                 また、よくあるご質問に対する回答もご用意しておりますので、ぜひ一度ご覧ください。
               </p>
               <BaseButton href="/visitor">VIEW MORE</BaseButton>
-            </div>{" "}
+            </div>
           </div>
         </section>
 
