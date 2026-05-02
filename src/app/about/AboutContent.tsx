@@ -74,7 +74,7 @@ export default function AboutContent() {
               <p className={styles["title-en"]}>冨水　琉花</p>
               <div className={`${styles.description} ${isChairmanExpanded ? styles.expanded : ""}`}>
                 <div className={styles.inner}>
-                  こんにちは！今年も2年に1度の北斗祭を開催します！！
+                  　こんにちは！今年も2年に1度の北斗祭を開催します！！
                   <br></br>
                   <br></br>
                   　今年度のテーマは「再煌（さいこう）」です。「再煌」には単に“もう一度輝く”という意味だけでなく、参加するすべての人で“最高”を更新していくという強い決意が込められています。このテーマのもと、これまで以上に心に残る北斗祭となるよう準備を進めてまいりました。北斗祭の準備・運営に尽力してくれた実行委員会の皆さんには、心より感謝しています。
@@ -94,7 +94,21 @@ export default function AboutContent() {
               <p className={styles["title-ja"]}>射水キャンパス学生会長</p>
               <p className={styles["title-en"]}>島　杏彩</p>
               <div className={`${styles.description} ${isPresidentExpanded ? styles.expanded : ""}`}>
-                <div className={styles.inner}>軽く一言お願いします。</div>
+                <div className={styles.inner}>
+                  　皆さん、こんにちは！本日は北斗祭にご来場いただき、誠にありがとうございます。
+                  <br></br>
+                  <br></br>
+                  　ついにこの日を迎えましたが、今日のために学生たちは本当に多くの時間を費やして準備を進めてきました。各クラスや部活動、実行委員のみんなが試行錯誤しながら作り上げてきたものを、ようやくこうして形にできたことを私自身もとても嬉しく思っています。
+                  <br></br>
+                  <br></br>
+                  　この北斗祭が、学生のみんなにとっても、そして足を運んでくださった来場者の皆様にとっても、心から楽しめる特別な時間になることを願っています。
+                  <br></br>
+                  <br></br>
+                  　また、開催にあたり多大なるご支援をいただいた協賛企業の皆様、そして温かく指導してくださった先生方、関係者の皆様にこの場を借りて深く御礼申し上げます。
+                  <br></br>
+                  <br></br>
+                  　今日からの２日間、富山高専射水キャンパスならではの活気と熱量を、ぜひ存分に味わってください。最高の文化祭にしましょう！
+                </div>
               </div>
               <p className={styles["view-more"]} onClick={() => setIsPresidentExpanded(!isPresidentExpanded)}>
                 {isPresidentExpanded ? "CLOSE" : "VIEW MORE"}
