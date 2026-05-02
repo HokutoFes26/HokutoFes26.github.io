@@ -116,7 +116,7 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
     if (pinData) {
       setActiveIndex(pinData.mapId);
     } else if (initialPlace && initialPlace.includes("テント番号")) {
-      setActiveIndex(7);
+      setActiveIndex(5);
     }
   }, [pinData, initialPlace]);
 
@@ -189,7 +189,7 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
               attributionControl={false}
             >
               <ImageOverlay url={getPath(mapList[activeIndex].src)} bounds={getBounds()} />
-              {pinData && pinData.mapId === activeIndex && (
+              {/* {pinData && pinData.mapId === activeIndex && (
                 <Marker
                   position={[pinData.y, pinData.x]}
                   icon={L.divIcon({
@@ -198,7 +198,7 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
                     iconSize: [0, 0],
                   })}
                 />
-              )}
+              )} */}
               <MapController onFullscreen={toggleFullscreen} isFullscreen={isCurrentlyFullscreen} />
             </MapContainer>
           ) : (

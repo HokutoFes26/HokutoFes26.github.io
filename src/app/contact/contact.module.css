@@ -53,7 +53,7 @@
 }
 
 .form-area .item dd .checkbox-item {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 .form-area .item dd input[type="text"],
@@ -80,8 +80,8 @@
 }
 
 .form-area .privacy-policy .privacy-text {
-  max-width: 640px;
-  height: 200px;
+  max-width: 700px;
+  height: 300px;
   border: solid 1px var(--color-gray);
   padding: 40px 20px;
   margin: 0 auto 30px;
