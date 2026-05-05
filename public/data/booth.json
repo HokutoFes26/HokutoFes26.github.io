@@ -121,7 +121,7 @@
       "name": "フランクフルト",
       "team": "機関学同好会",
       "place": "テント番号17",
-      "menu": [{ "content": "フランクフルト", "price": 0 }],
+      "menu": [{ "content": "1本", "price": 300 }],
       "image": "/img/booth/機関学.jpg"
     },
     {
