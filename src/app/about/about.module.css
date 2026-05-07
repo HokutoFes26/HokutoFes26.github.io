@@ -181,6 +181,11 @@
   margin-bottom: 120px;
 }
 
+.newsList {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .newsItem {
   margin-bottom: 3em;
   display: flex;
@@ -190,6 +195,15 @@
 
 .newsTitle {
   font-size: 1.4em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsDate {
+  font-size: 0.9em !important;
+  color: #888;
 }
 
 .newsContent  {

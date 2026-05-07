@@ -11,6 +11,7 @@ import Container from "@/components/ui/Container/Container";
 
 type NewsItem = {
   title: string;
+  date: string;
   contents: string[];
 };
 
@@ -149,7 +150,7 @@ export default function AboutContent() {
           <div className={styles.newsList}>
             {news.map((item, index) => (
               <div key={index} className={styles.newsItem}>
-                <p className={styles.newsTitle}>{item.title}</p>
+                <p className={styles.newsTitle}>{item.title}<span className={styles.newsDate}>{item.date}</span></p>
                 <div className={styles.newsContent}>
                   {item.contents.map((content, idx) => (
                     <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
