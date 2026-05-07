@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/header_footer/header";
 import Footer from "@/components/header_footer/footer";
+import BackToTop from "@/components/ui/BackToTop/BackToTop";
 import Script from "next/script";
 import { getPath } from "@/constants/paths";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <BackToTop />
         <Script src={getPath("/js/main.js")} strategy="afterInteractive" />
       </body>
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
