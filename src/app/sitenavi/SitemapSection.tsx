@@ -27,9 +27,6 @@ export default function SitemapSection() {
                 <li>
                   <Link href="/about#news">ニュース</Link>
                 </li>
-                <li>
-                  <Link href="/about#access">アクセス</Link>
-                </li>
               </ul>
             </li>
             <li>
@@ -59,7 +56,7 @@ export default function SitemapSection() {
                   <Link href="/visitor?tab=faq">よくあるご質問</Link>
                 </li>
                 <li>
-                  <Link href="/visitor?tab=bus">シャトルバス時刻表</Link>
+                  <Link href="/visitor?tab=access">アクセス</Link>
                 </li>
                 <li>
                   <Link href="/visitor?tab=maps">校内マップ</Link>

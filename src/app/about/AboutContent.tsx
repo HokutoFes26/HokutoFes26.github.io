@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import styles from "./about.module.css";
 import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
@@ -30,14 +29,13 @@ export default function AboutContent() {
 
   return (
     <main>
-      <PageHeader enTitle="ABOUT" jaTitle="「北斗祭」について" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
+      <PageHeader enTitle="ABOUT" jaTitle="「北斗祭」について" imgSrc={getPath("/img/common/mainvisual.jpg")} />
 
       <PageNav
         items={[
           { label: "ご挨拶", href: "#greeting" },
           { label: "テーマ", href: "#theme" },
           { label: "ニュース", href: "#news" },
-          { label: "アクセス", href: "#access" },
         ]}
       />
 
@@ -150,7 +148,10 @@ export default function AboutContent() {
           <div className={styles.newsList}>
             {news.map((item, index) => (
               <div key={index} className={styles.newsItem}>
-                <p className={styles.newsTitle}>{item.title}<span className={styles.newsDate}>{item.date}</span></p>
+                <p className={styles.newsTitle}>
+                  {item.title}
+                  <span className={styles.newsDate}>{item.date}</span>
+                </p>
                 <div className={styles.newsContent}>
                   {item.contents.map((content, idx) => (
                     <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
@@ -159,47 +160,6 @@ export default function AboutContent() {
               </div>
             ))}
           </div>
-        </Container>
-      </section>
-
-      <section id="access" className={styles.accessSection}>
-        <SectionTitle>アクセス</SectionTitle>
-
-        <Container className={styles.info}>
-          <p>
-            当日は無料シャトルバスをご用意しております。
-            <br />
-            ぜひ、ご利用ください。
-          </p>
-          <Link href="/visitor?tab=bus" className={styles.btn}>
-            時刻表
-          </Link>
-        </Container>
-
-        <Container className={styles.info}>
-          <p>
-            〒933-0293
-            <br />
-            富山県射水市海老江練合1-2
-          </p>
-          <a
-            href="https://maps.app.goo.gl/qpgf2kbS3oXDsw3L6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.btn}
-          >
-            Google Mapで見る ↗
-          </a>
-        </Container>
-
-        <Container className={styles.map}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.487505609848!2d137.15628597552555!3d36.758870770028636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff79ea9182a709d%3A0x9d311ac5104b9c23!2z5a-M5bGx6auY562J5bCC6ZaA5a2m5qChIOWwhOawtOOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1775809405908!5m2!1sja!2sjp"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
         </Container>
       </section>
     </main>

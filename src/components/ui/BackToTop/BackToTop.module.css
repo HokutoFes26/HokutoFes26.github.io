@@ -33,7 +33,7 @@
 @media screen and (max-width: 767px) {
   .button {
     bottom: 15px;
-    left: 15px;
+    right: 15px;
     width: 45px;
     height: 45px;
   }

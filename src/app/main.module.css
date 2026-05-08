@@ -529,8 +529,8 @@
 .faq-contact {
   display: flex;
   justify-content: space-between;
-  padding: 0 5% 80px;
-  gap: 5%;
+  padding: 0 3% 50px;
+  gap: 3%;
 }
 
 .faq-contact .item {
@@ -636,7 +636,7 @@
   .about .flex .text {
     width: 100%;
     margin-left: 0;
-    padding: 20px;
+    padding: 20px 35px 20px 20px;
     margin-top: 10%;
     margin-left: 40%;
     height: auto;
@@ -730,12 +730,12 @@
 
   .faq-contact {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 35px;
   }
 
   .faq-contact .item {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   .faq-contact .item .title .en {

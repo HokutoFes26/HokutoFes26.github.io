@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import styles from "./main.module.css";
 import { getPath } from "@/constants/paths";
@@ -10,6 +10,21 @@ import { booth_projects_images } from "@/constants/imagePool";
 
 export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.play().catch((error) => {
+      console.warn("Autoplay logo was blocked: ", error);
+      setIsVideoFinished(true);
+      setTimeout(() => {
+        handleVideoEnded();
+      }, 700);
+    });
+  }, []);
+
   const handleVideoEnded = () => {
     setIsVideoFinished(true);
     const isMobile = window.innerWidth <= 767;
@@ -100,6 +115,7 @@ export default function Home() {
           </div>
           {!isVideoFinished ? (
             <video
+              ref={videoRef}
               className={styles.mainlogo}
               src={getPath("/img/common/animation.mp4")}
               autoPlay
@@ -116,7 +132,7 @@ export default function Home() {
           <SectionTitle type="top">VISITOR INFORMATION</SectionTitle>
           <div className={styles.flex}>
             <div className={styles.img}>
-              <img src={getPath("/img/top/visitor info.jpg")} alt="" />
+              <img src={getPath("/img/top/visitorinfo.jpg")} alt="" />
             </div>
             <div className={styles.text}>
               <p className={styles.title}>ご来場の皆様へ</p>
@@ -200,16 +216,22 @@ export default function Home() {
               <img src={getPath("/img/top/about.jpg")} alt="" />
             </div>
           </Link>
-          {/* map */}
-          <Link className={styles.item} href="/visitor?tab=maps">
-            <div className={styles.img}>
-              <img src={getPath("/img/top/faq.jpg")} alt="" />
-            </div>
-          </Link>
           {/* sponsor */}
           <Link className={styles.item} href="/works">
             <div className={styles.img}>
-              <img src={getPath("/img/top/contact.jpg")} alt="" />
+              <img src={getPath("/img/top/works.jpg")} alt="" />
+            </div>
+          </Link>
+          {/* map */}
+          <Link className={styles.item} href="/visitor?tab=maps">
+            <div className={styles.img}>
+              <img src={getPath("/img/top/visitor.jpg")} alt="" />
+            </div>
+          </Link>
+          {/* access */}
+          <Link className={styles.item} href="/visitor?tab=access">
+            <div className={styles.img}>
+              <img src={getPath("/img/top/access.jpg")} alt="" />
             </div>
           </Link>
         </div>

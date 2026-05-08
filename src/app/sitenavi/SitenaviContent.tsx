@@ -29,7 +29,7 @@ function SitenaviContent() {
 
   return (
     <main>
-      <PageHeader enTitle="SITE NAVI" jaTitle="サイトナビ" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
+      <PageHeader enTitle="SITE NAVI" jaTitle="サイトナビ" imgSrc={getPath("/img/common/mainvisual.jpg")} />
 
       <TabNav items={tabItems} currentTab={currentTab} onTabChange={(value) => setCurrentTab(value)} />
 
@@ -42,8 +42,8 @@ function SitenaviContent() {
 
 export default function SitenaviPage() {
   return (
-  <Suspense fallback={<div style={{ textAlign: "center", padding: "40px" }}>読み込み中...</div>}>
-    <SitenaviContent />
-  </Suspense>
-  )
+    <Suspense fallback={<div style={{ textAlign: "center", padding: "40px" }}>読み込み中...</div>}>
+      <SitenaviContent />
+    </Suspense>
+  );
 }

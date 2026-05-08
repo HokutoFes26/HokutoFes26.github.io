@@ -18,7 +18,7 @@ export default function ContactContent() {
 
   return (
     <main>
-      <PageHeader enTitle="CONTACT" jaTitle="お問い合わせ" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
+      <PageHeader enTitle="CONTACT" jaTitle="お問い合わせ" imgSrc={getPath("/img/common/mainvisual.jpg")} />
 
       <Container>
         {submitted ? (

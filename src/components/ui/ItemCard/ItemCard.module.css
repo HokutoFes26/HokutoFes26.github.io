@@ -58,7 +58,6 @@
   backdrop-filter: saturate(300%) brightness(120%) blur(15px);
   padding: 10px;
   transform: translateZ(0);
-  will-change: backdrop-filter;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 16px;
   border: solid #ddd 1px;
   text-align: center;

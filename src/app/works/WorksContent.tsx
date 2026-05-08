@@ -10,43 +10,39 @@ import TabNav from "@/components/ui/TabNav/TabNav";
 import worksData from "@/../public/data/works.json";
 
 function WorksContent() {
-    const searchParams = useSearchParams();
-    const tabParam = searchParams.get("tab");
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
 
-    const [currentTab, setCurrentTab] = useState<"works" | "thanks">("works");
+  const [currentTab, setCurrentTab] = useState<"works" | "thanks">("works");
 
-    useEffect(() => {
-        if (tabParam === "works" || tabParam === "thanks") {
-            setCurrentTab(tabParam as "works" | "thanks");
-        }
-    }, [tabParam]);
+  useEffect(() => {
+    if (tabParam === "works" || tabParam === "thanks") {
+      setCurrentTab(tabParam as "works" | "thanks");
+    }
+  }, [tabParam]);
 
-    const tabItems = [
-        { label: "ご協賛企業様", value: "works" as const },
-        { label: "スペシャルサンクス", value: "thanks" as const },
-    ];
+  const tabItems = [
+    { label: "ご協賛企業様", value: "works" as const },
+    { label: "スペシャルサンクス", value: "thanks" as const },
+  ];
 
-    return (
-        <>
-            <TabNav
-                items={tabItems}
-                currentTab={currentTab}
-                onTabChange={(value) => setCurrentTab(value)}
-            />
+  return (
+    <>
+      <TabNav items={tabItems} currentTab={currentTab} onTabChange={(value) => setCurrentTab(value)} />
 
-            {currentTab === "works" && <WorksSection worksData={worksData.works}/>}
-            {currentTab === "thanks" && <ThanksSection worksData={worksData.thanks} />}
-        </>
-    );
+      {currentTab === "works" && <WorksSection worksData={worksData.works} />}
+      {currentTab === "thanks" && <ThanksSection worksData={worksData.thanks} />}
+    </>
+  );
 }
 
 export default function WorksPage() {
-    return (
-        <main>
-            <PageHeader enTitle="WORKS" jaTitle="ご協賛企業様" imgSrc={getPath("/img/temporary/mainvisual.jpg")} />
-            <Suspense fallback={<div>Loading...</div>}>
-                <WorksContent />
-            </Suspense>
-        </main>
-    );
+  return (
+    <main>
+      <PageHeader enTitle="WORKS" jaTitle="ご協賛企業様" imgSrc={getPath("/img/common/mainvisual.jpg")} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <WorksContent />
+      </Suspense>
+    </main>
+  );
 }
