@@ -12,19 +12,6 @@ export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.play().catch((error) => {
-      console.warn("Autoplay logo was blocked: ", error);
-      setIsVideoFinished(true);
-      setTimeout(() => {
-        handleVideoEnded();
-      }, 700);
-    });
-  }, []);
-
   const handleVideoEnded = () => {
     setIsVideoFinished(true);
     const isMobile = window.innerWidth <= 767;
@@ -74,6 +61,19 @@ export default function Home() {
 
     requestId = requestAnimationFrame(step);
   };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.play().catch((error) => {
+      console.warn("Autoplay logo was blocked: ", error);
+      setIsVideoFinished(true);
+      setTimeout(() => {
+        handleVideoEnded();
+      }, 700);
+    });
+  }, []);
   const [randomImages, setRandomImages] = useState<string[]>([]);
 
   useEffect(() => {
