@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { getPath } from "@/constants/paths";
 import styles from "./ProductModal.module.css";
@@ -32,16 +33,17 @@ export default function ProductModal({ item }: ProductModalProps) {
   const searchParams = useSearchParams();
   const isHiddenFromUrl = searchParams.get("hidden") === "true";
   const [isOpen, setIsOpen] = useState(false);
-  const [showHidden, setShowHidden] = useState(isHiddenFromUrl);
+
+  const initialShowHidden = useMemo(() => {
+    if (isHiddenFromUrl) return true;
+    if (item.image_hidden && Math.random() < 0) return true;
+    return false;
+  }, [isHiddenFromUrl, item.image_hidden]);
+
+  const [showHidden] = useState(initialShowHidden);
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const mapControl = useMapControl();
   const modalRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!isHiddenFromUrl && item.image_hidden && Math.random() < 0) {
-      setShowHidden(true);
-    }
-  }, [isHiddenFromUrl, item.name]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 10);
