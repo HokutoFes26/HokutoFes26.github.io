@@ -218,7 +218,7 @@
     {
       "name": "イカ焼き・どんどん焼き・おにぎり・飲み物・アイスクレープ",
       "team": "富山高等専門学校後援会",
-      "place": "テント番号2・3",
+      "place": "テント番号3,4",
       "menu": [
         { "content": "イカ焼き", "price": 0 },
         { "content": "どんどん焼き", "price": 0 },
@@ -226,7 +226,7 @@
         { "content": "飲み物", "price": 0 },
         { "content": "アイスクレープ", "price": 0 }
       ],
-      "image": "/img/booth/実行委員会.jpg"
+      "image": "/img/booth/富山高等専門学校後援会.jpg"
     }
   ]
 }
