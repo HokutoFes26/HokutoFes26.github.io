@@ -104,19 +104,19 @@
             "name": "商船機関コース展示",
             "team": "商船学科機関コース",
             "place": "ETS演習室・蒸気実験室・補機実験室・内燃機関実験室",
-            "image": "/img/products/機関実習室ツアー.jpg"
+            "image": "/img/products/商船機関コース.jpg"
         },
         {
             "name": "商船航海コース展示",
             "team": "商船学科航海コース",
             "place": "航海学演習室・公開計測演習室・レーダーシミュレーター演習室",
-            "image": "/img/products/操船シミュレータ体験など.jpg"
+            "image": "/img/products/商船航海コース.jpg"
         },
         {
             "name": "若潮丸展示",
             "team": "若潮丸委員会",
             "place": "ラウンジB",
-            "image": "/img/products/若潮丸Ⅳ・Ⅴ世の紹介など.jpg"
+            "image": "/img/products/若潮丸.jpg"
         },
         {
             "name": "写真展",
@@ -128,7 +128,7 @@
             "name": "機械・電気・物質工学科展示",
             "team": "本郷C",
             "place": "ものづくり教室",
-            "image": "/img/products/本郷3学科紹介展示.jpg"
+            "image": "/img/products/機械・電気・物質.jpg"
         },
         {
             "name": "専攻科紹介",
@@ -142,7 +142,7 @@
             "name": "地域連携・スタートアップ紹介",
             "team": "研究開発共創センター",
             "place": "ものづくり教室",
-            "image": "/img/products/連携事業・活動実績など.jpg"
+            "image": "/img/products/地域連携・スタートアップ.jpg"
         },
         {
             "name": "国際教育センター展示",
@@ -154,13 +154,13 @@
             "name": "入試相談コーナー",
             "team": "入試広報センター",
             "place": "ものづくり教室",
-            "image": "/img/products/ComingSoon.jpg"
+            "image": "/img/products/入試相談センター.jpg"
         },
         {
             "name": "校長スペース",
             "team": "校長先生",
             "place": "ものづくり教室",
-            "image": "/img/products/校長先生ポスター.jpg"
+            "image": "/img/products/校長スペース.jpg"
         }
     ]
 }
