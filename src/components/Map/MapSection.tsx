@@ -207,6 +207,9 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
             </div>
           )}
         </div>
+        <div className="maps-sign-section">
+          <img src={getPath("/img/maps/sign.jpg")} alt="地図記号" className="maps-sign-img" />
+        </div>
       </div>
     </div>
   );
