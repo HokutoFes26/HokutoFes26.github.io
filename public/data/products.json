@@ -98,7 +98,7 @@
             "name": "国際ビジネス学科展示",
             "team": "国際ビジネス学科",
             "place": "K5教室",
-            "image": "/img/products/国際ビジネス学科紹介.jpg"
+            "image": "/img/products/国際ビジネス学科展示.jpg"
         },
         {
             "name": "商船機関コース展示",
@@ -134,7 +134,7 @@
             "name": "専攻科紹介",
             "team": "専攻科",
             "place": "K4紹介",
-            "image": "/img/products/専攻科活動紹介.jpg"
+            "image": "/img/products/専攻科.jpg"
         }
     ],
     "L4": [
@@ -148,7 +148,7 @@
             "name": "国際教育センター展示",
             "team": "国際教育センター",
             "place": "K4教室",
-            "image": "/img/products/富山高専の国際化への取り組み紹介.jpg"
+            "image": "/img/products/国際教育センター.jpg"
         },
         {
             "name": "入試相談コーナー",
@@ -161,6 +161,12 @@
             "team": "校長先生",
             "place": "ものづくり教室",
             "image": "/img/products/校長スペース.jpg"
+        },
+        {
+            "name": "フォトスポット",
+            "team": "実行委員会",
+            "place": "1年教室",
+            "image": "/img/products/フォトスポット.jpg"
         }
     ]
 }
