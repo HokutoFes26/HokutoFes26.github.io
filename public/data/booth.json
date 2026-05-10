@@ -206,14 +206,27 @@
     {
       "name": "ポップコーン",
       "team": "実行委員会",
-      "place": "テント番号4",
+      "place": "テント番号2",
       "menu": [
         { "content": "能登の塩", "price": 200 },
         { "content": "白エビ", "price": 200 },
         { "content": "塩キャラメル", "price": 200 },
         { "content": "ペンライト", "price": 100 }
       ],
-      "image": "/img/booth/ポップコーン.jpg"
+      "image": "/img/booth/実行委員会.jpg"
+    },
+    {
+      "name": "イカ焼き・どんどん焼き・おにぎり・飲み物・アイスクレープ",
+      "team": "富山高等専門学校後援会",
+      "place": "テント番号2・3",
+      "menu": [
+        { "content": "イカ焼き", "price": 0 },
+        { "content": "どんどん焼き", "price": 0 },
+        { "content": "おにぎり", "price": 0 },
+        { "content": "飲み物", "price": 0 },
+        { "content": "アイスクレープ", "price": 0 }
+      ],
+      "image": "/img/booth/実行委員会.jpg"
     }
   ]
 }
