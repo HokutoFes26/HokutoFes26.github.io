@@ -36,3 +36,7 @@ public_hp
 *.sql
 
 supabase
+
+# next-sitemap
+/public/robots.txt
+/public/sitemap*.xml
