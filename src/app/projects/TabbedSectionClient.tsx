@@ -122,8 +122,8 @@ export default function TabbedSectionClient({
           ))}
         </CardWrapper>
       )}
-      <Container>
-        {type === "list" && <StageList items={items} />}
+      <Container>{type === "list" && <StageList items={items} />}</Container>
+      <Container className={styles.timelineWrapper}>
         {type === "timeline" && (
           <div>
             <Timeline items={items} />

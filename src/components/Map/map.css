@@ -166,7 +166,7 @@
 
 @media screen and (max-width: 767px) {
   .maps-sign-img {
-    max-width: 100%;
+    max-width: 65%;
     padding: 4px;
   }
   .visitor-tab-nav {
@@ -179,6 +179,10 @@
     flex: 1;
     text-align: center;
     white-space: nowrap;
+  }
+
+  .maps-nav-table {
+    margin: 40px auto 20px;
   }
   .maps-nav-cell-category {
     width: 80px;

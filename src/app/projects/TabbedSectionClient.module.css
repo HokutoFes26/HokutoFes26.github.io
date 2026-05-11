@@ -1,4 +1,3 @@
-
 .fadein {
   margin-bottom: 60px;
 }
@@ -94,5 +93,19 @@
 @media screen and (max-width: 767px) {
   .event {
     left: 5vw;
+  }
+
+  .stage-list dt {
+    width: 40%;
+  }
+
+  .stage-list dd {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .timelineWrapper {
+    padding: 0 !important;
   }
 }

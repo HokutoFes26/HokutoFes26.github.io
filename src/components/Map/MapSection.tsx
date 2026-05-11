@@ -169,22 +169,22 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
           </tbody>
         </table>
 
-        <div ref={containerRef} className="maps-container" style={{ height: "500px", position: "relative" }}>
+        <div ref={containerRef} className="maps-container" style={{ height: "50vh", position: "relative" }}>
           {L && isReady ? (
             <MapContainer
               key={`${activeIndex}-${ratio}`}
               crs={L.CRS.Simple}
               bounds={[
-                [-40, -40 * ratio],
-                [1040, 1040 * ratio],
+                [-80, -80 * ratio],
+                [1080, 1080 * ratio],
               ]}
               maxBounds={[
-                [-60, -60 * ratio],
-                [1060, 1060 * ratio],
+                [-120, -120 * ratio],
+                [1120, 1120 * ratio],
               ]}
               style={{ height: "100%", width: "100%" }}
               zoomSnap={0}
-              minZoom={-2}
+              minZoom={-3}
               zoomControl={false}
               attributionControl={false}
             >
