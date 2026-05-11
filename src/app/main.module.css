@@ -63,6 +63,7 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 2px dashed rgba(100, 149, 237, 0.4);
+  will-change: transform;
 }
 
 .orbit-1 {
@@ -93,7 +94,6 @@
   line-height: 1;
   color: #fbd341;
   text-shadow: 0 0 10px rgba(251, 211, 65, 0.8);
-  filter: drop-shadow(0 0 5px rgba(251, 211, 65, 0.5));
 }
 
 .twinkling-stars-container {
@@ -115,6 +115,7 @@
   box-shadow: 0 0 6px 2px rgba(251, 211, 65, 0.4);
   animation: twinkle linear infinite;
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 @keyframes twinkle {
@@ -251,11 +252,11 @@
   width: 150px;
   height: 2px;
   background: linear-gradient(to right, rgba(100, 150, 255, 0.8) 0%, rgba(100, 150, 255, 0) 100%);
-  filter: drop-shadow(0 0 6px rgba(100, 150, 255, 0.4));
   animation: shooting 4s ease-in-out infinite;
   opacity: 0;
   transform: rotate(-45deg) scaleX(0);
   transform-origin: left center;
+  will-change: transform, opacity;
 }
 
 .shooting-star::before {
@@ -454,6 +455,7 @@
   animation: slide-left 60s infinite linear both;
   gap: 32px;
   margin-right: 32px;
+  will-change: transform;
 }
 
 .projects .products-list-area .products-list li {
