@@ -12,7 +12,8 @@ const Footer = () => {
               <img src={getPath("/img/common/logo-w.png")} alt="第18回北斗祭 HokutoFestival2026" />
             </Link>
             <div className="sns_link">
-              <a href="https://www.instagram.com/toyama.hokutosai_2026">
+              <a href="https://www.instagram.com/toyama.hokutosai_2026"
+                target="_blank">
                 <svg
                   className="insta_icon"
                   fill="#fff"

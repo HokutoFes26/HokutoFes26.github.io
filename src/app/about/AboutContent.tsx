@@ -136,7 +136,7 @@ export default function AboutContent() {
               </p>
             </div>
             <div className={styles["img-top"]}>
-              <img src={getPath("/img/common/mainlogo.jpg")} alt="" />
+              <img src={getPath("/img/common/mainlogo.png")} alt="" />
             </div>
           </div>
         </Container>

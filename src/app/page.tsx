@@ -124,7 +124,7 @@ export default function Home() {
               onEnded={handleVideoEnded}
             />
           ) : (
-            <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.jpg")} alt="Hokuto Fes Logo" />
+            <img className={styles.mainlogo} src={getPath("/img/common/mainlogo.png")} alt="Hokuto Fes Logo" />
           )}
         </div>
 
