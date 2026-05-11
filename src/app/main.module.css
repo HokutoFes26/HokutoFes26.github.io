@@ -218,7 +218,7 @@
 .ts-13 {
   top: 80%;
   left: 15%;
-  animation-duration: 3.6s;
+  animation-duration: 3s;
   animation-delay: 0.6s;
 }
 
@@ -451,10 +451,11 @@
 }
 
 .projects .products-list-area .products-list {
+  --slide-gap: 32px;
   display: flex;
   animation: slide-left 60s infinite linear both;
-  gap: 32px;
-  margin-right: 32px;
+  gap: var(--slide-gap);
+  margin-right: var(--slide-gap);
   will-change: transform;
 }
 
@@ -477,7 +478,7 @@
   }
 
   100% {
-    transform: translateX(calc(-100% - 32px));
+    transform: translateX(calc(-100% - var(--slide-gap)));
   }
 }
 
@@ -540,19 +541,6 @@
   position: relative;
 }
 
-/* .faq-contact .item::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 1));
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-
 .faq-contact .item .title {
   color: #fff;
   position: absolute;
@@ -596,6 +584,7 @@
 
 .newsSection {
   margin-bottom: 120px;
+  scroll-margin-top: 140px;
 }
 
 .newsList {
@@ -628,10 +617,6 @@
   margin-left: 1em;
 }
 
-.newsSection {
-  scroll-margin-top: 140px;
-}
-
 @media screen and (max-width: 767px) {
   .section-title {
     font-size: 12vw;
@@ -641,7 +626,6 @@
     height: 400px;
     margin-bottom: 60px;
     border-radius: 0 0 50% 50% / 0 0 30px 30px;
-    border-bottom: 1px solid #e2e8f0;
   }
 
   .mainvisual .fade-img img {
@@ -686,7 +670,6 @@
 
   .about .flex .text {
     width: 100%;
-    margin-left: 0;
     padding: 20px 35px 20px 20px;
     margin-top: 10%;
     margin-left: 40%;
@@ -730,8 +713,9 @@
   }
 
   .projects .products-list-area .products-list {
-    gap: 14px;
-    margin-right: 14px;
+    --slide-gap: 14px;
+    gap: var(--slide-gap);
+    margin-right: var(--slide-gap);
   }
 
   .projects .products-list-area .products-list li {
@@ -741,16 +725,6 @@
 
   .projects .products-list-area .products-list li img {
     border-radius: 24px;
-  }
-
-  @keyframes slide-left {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(calc(-100% - 14px));
-    }
   }
 
   .works {
@@ -804,6 +778,7 @@
 
   .newsSection {
     scroll-margin-top: 80px;
+    margin-bottom: 60px;
   }
 
   .newsTitle {
@@ -820,10 +795,6 @@
   .newsDate {
     font-size: 0.8em !important;
     margin-left: auto;
-  }
-
-  .newsSection {
-    margin-bottom: 60px;
   }
 
   .newsSection .overview-list dt {
