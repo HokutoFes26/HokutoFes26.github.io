@@ -8,24 +8,11 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
 
-type NewsItem = {
-  title: string;
-  date: string;
-  contents: string[];
-};
 
 export default function AboutContent() {
   const [isPrincipalExpanded, setIsPrincipalExpanded] = useState(false);
   const [isChairmanExpanded, setIsChairmanExpanded] = useState(false);
   const [isPresidentExpanded, setIsPresidentExpanded] = useState(false);
-  const [news, setNews] = useState<NewsItem[]>([]);
-
-  useEffect(() => {
-    fetch(getPath("/data/news.json"))
-      .then((res) => res.json())
-      .then((data) => setNews(data))
-      .catch((err) => console.error("Failed to load news:", err));
-  }, []);
 
   return (
     <main>
@@ -35,7 +22,6 @@ export default function AboutContent() {
         items={[
           { label: "ご挨拶", href: "#greeting" },
           { label: "テーマ", href: "#theme" },
-          { label: "ニュース", href: "#news" },
         ]}
       />
 
@@ -142,26 +128,6 @@ export default function AboutContent() {
         </Container>
       </section>
 
-      <section id="news" className={styles.newsSection}>
-        <SectionTitle>ニュース</SectionTitle>
-        <Container>
-          <div className={styles.newsList}>
-            {news.map((item, index) => (
-              <div key={index} className={styles.newsItem}>
-                <p className={styles.newsTitle}>
-                  {item.title}
-                  <span className={styles.newsDate}>{item.date}</span>
-                </p>
-                <div className={styles.newsContent}>
-                  {item.contents.map((content, idx) => (
-                    <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
     </main>
   );
 }

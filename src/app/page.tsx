@@ -7,10 +7,25 @@ import { getPath } from "@/constants/paths";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import BaseButton from "@/components/ui/BaseButton/BaseButton";
 import { booth_projects_images } from "@/constants/imagePool";
+import Container from "@/components/ui/Container/Container";
+
+type NewsItem = {
+  title: string;
+  date: string;
+  contents: string[];
+};
 
 export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
+  const [news, setNews] = useState<NewsItem[]>([]);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    fetch(getPath("/data/news.json"))
+      .then((res) => res.json())
+      .then((data) => setNews(data))
+      .catch((err) => console.error("Failed to load news:", err));
+  }, []);
 
   const handleVideoEnded = () => {
     setIsVideoFinished(true);
@@ -144,6 +159,29 @@ export default function Home() {
               <BaseButton href="/visitor">VIEW MORE</BaseButton>
             </div>
           </div>
+        </section>
+
+        <section className={`${styles.news} fadein`} style={{ opacity: "1" }}>
+          <div className={styles.text}>
+            <SectionTitle type="top">NEWS</SectionTitle>
+          </div>
+            <Container>
+              <div className={styles.newsList}>
+                {news.map((item, index) => (
+                  <div key={index} className={styles.newsItem}>
+                    <p className={styles.newsTitle}>
+                      {item.title}
+                      <span className={styles.newsDate}>{item.date}</span>
+                    </p>
+                    <div className={styles.newsContent}>
+                      {item.contents.map((content, idx) => (
+                        <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Container>
         </section>
 
         <section className={`${styles.projects} fadein`}>
