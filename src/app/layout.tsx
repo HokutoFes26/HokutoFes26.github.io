@@ -55,7 +55,7 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "富山高専 第18回 北斗祭",
     alternateName: ["北斗祭2026", "北斗祭", "富山高専 北斗祭"],
-    url: "https://hokutofes26.github.io",
+    url: "https://hokutofes26.github.io/",
   };
 
   return (

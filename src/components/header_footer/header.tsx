@@ -2,19 +2,20 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { getPath } from "@/constants/paths";
 import "./header_footer.css";
 
 const Header = () => {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isEventDay, setIsEventDay] = useState(false);
 
   useEffect(() => {
     const checkDate = () => {
       const now = new Date();
       const eventDay =
-        (now.getFullYear() === 2026 &&
-          now.getMonth() === 4 &&
-          (now.getDate() === 23 || now.getDate() === 24)) ||
+        (now.getFullYear() === 2026 && now.getMonth() === 4 && (now.getDate() === 23 || now.getDate() === 24)) ||
         new URLSearchParams(window.location.search).get("app") === "true";
       setIsEventDay(eventDay);
     };
@@ -24,42 +25,52 @@ const Header = () => {
   return (
     <>
       {isEventDay && (
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          background: "#007aff",
-          color: "white",
-          textAlign: "center",
-          padding: "15px",
-          zIndex: 1200,
-          boxShadow: "0 2px 10px rgba(0,0,0,0.2)"
-        }}>
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            background: "#007aff",
+            color: "white",
+            textAlign: "center",
+            padding: "15px",
+            zIndex: 1200,
+            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+          }}
+        >
           <p style={{ margin: "0 0 10px 0", fontSize: "14px", fontWeight: "bold" }}>本日は北斗祭開催日です！</p>
-          <a href={getPath("/app/")} style={{
-            background: "white",
-            color: "#007aff",
-            padding: "8px 20px",
-            borderRadius: "20px",
-            fontWeight: "bold",
-            fontSize: "14px",
-            textDecoration: "none",
-            display: "inline-block"
-          }}>
+          <a
+            href={getPath("/app/")}
+            style={{
+              background: "white",
+              color: "#007aff",
+              padding: "8px 20px",
+              borderRadius: "20px",
+              fontWeight: "bold",
+              fontSize: "14px",
+              textDecoration: "none",
+              display: "inline-block",
+            }}
+          >
             当日用ウェブアプリを開く
           </a>
         </div>
       )}
       <header className="header" style={{ top: isEventDay ? "95px" : "0", transition: "top 0.3s" }}>
-        <div className="logo">
-          <Link href="/">
-            <img
-              src={getPath("/img/common/logo-transparent.png")}
-              alt="第18回北斗祭 HokutoFestival2026"
-            />
-          </Link>
-        </div>
+        {isHomePage ? (
+          <h1 className="logo">
+            <Link href="/">
+              <img src={getPath("/img/common/logo-transparent.png")} alt="第18回北斗祭 HokutoFestival2026" />
+            </Link>
+          </h1>
+        ) : (
+          <div className="logo">
+            <Link href="/">
+              <img src={getPath("/img/common/logo-transparent.png")} alt="第18回北斗祭 HokutoFestival2026" />
+            </Link>
+          </div>
+        )}
 
         <div className="hamburger">
           <span></span>
