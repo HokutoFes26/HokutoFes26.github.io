@@ -26,7 +26,12 @@ export const metadata: Metadata = {
   applicationName: "北斗祭2026",
   description: "富山高専で行われる北斗祭2026に関する情報を来場者・関係者に提供します。",
   openGraph: {
-    siteName: "北斗祭2026",
+    siteName: "富山高専 第18回 北斗祭",
+    title: "北斗祭2026",
+    description: "富山高専で行われる北斗祭2026に関する情報を来場者・関係者に提供します。",
+    url: "https://hokutofes26.github.io",
+    locale: "ja_JP",
+    type: "website",
   },
   icons: {
     icon: [
@@ -49,6 +54,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "富山高専 第18回 北斗祭",
+    alternateName: ["北斗祭2026", "北斗祭", "富山高専 北斗祭"],
     url: "https://hokutofes26.github.io",
   };
 
