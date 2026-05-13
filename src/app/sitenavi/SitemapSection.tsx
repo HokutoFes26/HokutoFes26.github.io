@@ -24,6 +24,9 @@ export default function SitemapSection() {
                 <li>
                   <Link href="/about#theme">テーマ</Link>
                 </li>
+                <li>
+                  <Link href="/about#app">アプリ</Link>
+                </li>
               </ul>
             </li>
             <li>

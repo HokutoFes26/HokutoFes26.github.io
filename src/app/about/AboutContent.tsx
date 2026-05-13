@@ -7,6 +7,8 @@ import PageHeader from "@/components/ui/PageHeader/PageHeader";
 import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
+import BaseButton from "@/components/ui/BaseButton/BaseButton";
+import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
 
 
 export default function AboutContent() {
@@ -22,6 +24,7 @@ export default function AboutContent() {
         items={[
           { label: "ご挨拶", href: "#greeting" },
           { label: "テーマ", href: "#theme" },
+          { label: "アプリ", href: "#app" },
         ]}
       />
 
@@ -128,6 +131,39 @@ export default function AboutContent() {
         </Container>
       </section>
 
-    </main>
+
+      <section id="app" className={styles.appSection}>
+        <SectionTitle>アプリ</SectionTitle>
+        <Container>
+          <div className={styles.appContent}>
+            <div className={styles.appText}>
+              <p className={styles.appLead}>当日はスムーズに楽しく回るためのウェブアプリをご用意しています。</p>
+              <p className={styles.appDescription}>
+                このアプリでは、各模擬店の混雑状況や在庫、イベントの進行状況、お知らせなどをリアルタイムで確認することができます。
+                <br />
+                北斗祭を効率よく巡るために、ぜひご活用ください。
+              </p>
+              <div className={styles.appNote}>
+                <p>模擬店の在庫や混雑状況などのリアルタイム情報は、当日の開催時間中のみ更新されます。</p>
+                <p>アプリはインストールせずブラウザからすぐにご利用いただけます。事前にブックマーク (ホーム画面に追加) しておくと便利です。</p>
+              </div>
+              <div className={styles.appBtnWrapper}>
+                <BaseButton href="https://hokutofes26.github.io/app" className={styles.appBtn}>
+                  アプリを開く
+                  <CallMadeRoundedIcon style={{ fontSize: "0.8em", marginLeft: "4px" }} />
+                </BaseButton>
+              </div>
+            </div>
+            <div className={styles.demoWrapper}>
+              <div className={styles.demo}>
+                <img src={getPath("/img/common/demo_1.webp")} alt="アプリ画面デモ1" />
+                <img src={getPath("/img/common/demo_2.webp")} alt="アプリ画面デモ2" />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+    </main >
   );
 }

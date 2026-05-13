@@ -223,6 +223,92 @@
   transform: scaleX(1);
 }
 
+.appSection {
+  margin-bottom: 120px;
+  scroll-margin-top: 140px;
+}
+
+.appContent {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.appText {
+  flex: 1.2;
+}
+
+.appLead {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.appDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  word-break: auto-phrase;
+}
+
+.appNote {
+  background-color: #f6f6f6;
+  padding: 24px;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  border: 1px solid #e0e0e0;
+  word-break: auto-phrase;
+}
+
+.appNote p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.appNote p + p {
+  margin-top: 12px;
+}
+
+.appBtn {
+  margin: 0 auto;
+}
+
+.demoWrapper {
+  flex: 1;
+}
+
+.demo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.demo img {
+  width: calc(50% - 10px);
+  max-width: 250px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 960px) {
+  .appContent {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .appText {
+    width: 100%;
+    order: 1;
+  }
+
+  .demoWrapper {
+    width: 100%;
+    order: 2;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .pagelink-list {
     margin-bottom: 40px;
@@ -308,5 +394,36 @@
   .greetingSection,
   .themeSection {
     scroll-margin-top: 80px;
+  }
+
+  .appSection {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px;
+  }
+
+  .appLead {
+    font-size: 18px;
+  }
+
+  .appDescription {
+    font-size: 15px;
+  }
+
+  .appNote {
+    padding: 16px;
+  }
+
+  .appNote p {
+    font-size: 13px;
+  }
+
+  .demo {
+    gap: 12px;
+  }
+
+  .demo img {
+    width: calc(50% - 6px);
+    max-width: 180px;
+    border-radius: 12px;
   }
 }

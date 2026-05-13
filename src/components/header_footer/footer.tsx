@@ -50,6 +50,9 @@ const Footer = () => {
               <li>
                 <Link href="/about#theme">テーマ</Link>
               </li>
+              <li>
+                <Link href="/about#app">アプリ</Link>
+              </li>
             </ul>
           </div>
 
