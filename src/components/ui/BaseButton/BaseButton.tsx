@@ -8,9 +8,19 @@ interface BaseButtonProps {
   className?: string;
   centered?: boolean;
   onClick?: () => void;
+  target?: string;
+  download?: string | boolean;
 }
 
-const BaseButton: React.FC<BaseButtonProps> = ({ href, children, className = '', centered = false, onClick }) => {
+const BaseButton: React.FC<BaseButtonProps> = ({ 
+  href, 
+  children, 
+  className = '', 
+  centered = false, 
+  onClick,
+  target,
+  download
+}) => {
   const commonClassName = `${styles.btn} ${centered ? styles.centered : ''} ${className}`;
 
   if (href) {
@@ -19,6 +29,8 @@ const BaseButton: React.FC<BaseButtonProps> = ({ href, children, className = '',
         href={href} 
         className={commonClassName}
         onClick={onClick}
+        target={target}
+        {...(download ? { download } : {})}
       >
         {children}
       </Link>

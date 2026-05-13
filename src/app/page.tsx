@@ -19,11 +19,25 @@ export default function Home() {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
   const [news, setNews] = useState<NewsItem[]>([]);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const newsListRef = useRef<HTMLDivElement>(null);
+  const [showTopShadow, setShowTopShadow] = useState(false);
+  const [showBottomShadow, setShowBottomShadow] = useState(false);
+
+  const handleNewsScroll = () => {
+    const el = newsListRef.current;
+    if (!el) return;
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    setShowTopShadow(scrollTop > 30);
+    setShowBottomShadow(scrollHeight - scrollTop > clientHeight + 30);
+  };
 
   useEffect(() => {
     fetch(getPath("/data/news.json"))
       .then((res) => res.json())
-      .then((data) => setNews(data))
+      .then((data) => {
+        setNews([...data].reverse());
+        setTimeout(handleNewsScroll, 100);
+      })
       .catch((err) => console.error("Failed to load news:", err));
   }, []);
 
@@ -163,25 +177,31 @@ export default function Home() {
 
         <section className={`${styles.news} fadein`} style={{ opacity: "1" }}>
           <div className={styles.text}>
-            <SectionTitle type="top">NEWS</SectionTitle>
+            <SectionTitle type="top" className={styles.newsSectionTitle}>NEWS</SectionTitle>
           </div>
-            <Container>
-              <div className={styles.newsList}>
-                {news.map((item, index) => (
-                  <div key={index} className={styles.newsItem}>
-                    <p className={styles.newsTitle}>
-                      {item.title}
-                      <span className={styles.newsDate}>{item.date}</span>
-                    </p>
-                    <div className={styles.newsContent}>
-                      {item.contents.map((content, idx) => (
-                        <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
-                      ))}
-                    </div>
+          <div className={styles.newsScrollWrapper}>
+            <div 
+              className={styles.newsList}
+              onScroll={handleNewsScroll}
+              ref={newsListRef}
+            >
+              {news.map((item, index) => (
+                <div key={index} className={styles.newsItem}>
+                  <p className={styles.newsTitle}>
+                    {item.title}
+                    <span className={styles.newsDate}>{item.date}</span>
+                  </p>
+                  <div className={styles.newsContent}>
+                    {item.contents.map((content, idx) => (
+                      <p key={idx} dangerouslySetInnerHTML={{ __html: content }} />
+                    ))}
                   </div>
-                ))}
-              </div>
-            </Container>
+                </div>
+              ))}
+            </div>
+            <div className={`${styles.newsShadow} ${styles.top} ${showTopShadow ? styles.visible : ""}`}></div>
+            <div className={`${styles.newsShadow} ${styles.bottom} ${showBottomShadow ? styles.visible : ""}`}></div>
+          </div>
         </section>
 
         <section className={`${styles.projects} fadein`}>
