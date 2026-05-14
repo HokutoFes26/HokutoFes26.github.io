@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hokutofes26.github.io"),
+  metadataBase: new URL("https://hokutofes26.github.io/"),
   title: {
     default: "北斗祭2026 | 富山高専",
     template: "%s | 北斗祭2026",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "富山高専 第18回 北斗祭",
     title: "北斗祭2026",
     description: "富山高専で行われる北斗祭2026に関する情報を来場者・関係者に提供します。",
-    url: "https://hokutofes26.github.io",
+    url: "https://hokutofes26.github.io/",
     locale: "ja_JP",
     type: "website",
   },

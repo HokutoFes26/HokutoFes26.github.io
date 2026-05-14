@@ -39,6 +39,13 @@ export default function ContactContent() {
               下記のフォームからお気軽にお問い合わせください。
             </p>
 
+            <div className={styles["faq-callout"]}>
+              <p>お問い合わせの前に、よくあるご質問をご確認ください。</p>
+              <BaseButton href="/visitor/?tab=faq" centered className={styles["contact-btn"]}>
+                よくあるご質問 (FAQ) を見る
+              </BaseButton>
+            </div>
+
             <div className={styles["form-area"]}>
               <p className={styles["form-title"]}>お問い合わせフォーム</p>
               <form

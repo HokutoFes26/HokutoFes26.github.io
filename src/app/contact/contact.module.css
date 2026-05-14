@@ -123,6 +123,24 @@
   margin: 0 auto;
 }
 
+.faq-callout {
+  text-align: center;
+  background-color: var(--color-gray-light);
+  padding: 40px 20px;
+  margin: 0 auto 60px;
+  max-width: 1280px;
+  word-break: auto-phrase;
+}
+
+.faq-callout p {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contact-btn {
+  max-width: 220px !important;
+}
+
 @media screen and (max-width: 767px) {
   .form-area {
     margin: 0 auto 60px;
