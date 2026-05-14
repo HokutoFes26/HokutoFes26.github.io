@@ -8,7 +8,8 @@ import SectionTitle from "@/components/ui/SectionTitle/SectionTitle";
 import PageNav from "@/components/ui/PageNav/PageNav";
 import Container from "@/components/ui/Container/Container";
 import BaseButton from "@/components/ui/BaseButton/BaseButton";
-import CallMadeRoundedIcon from "@mui/icons-material/CallMadeRounded";
+import CallMadeRoundedIcon from '@mui/icons-material/CallMadeRounded';
+import FlipBook from "@/components/ui/FlipBook/FlipBook";
 
 export default function AboutContent() {
   const [isPrincipalExpanded, setIsPrincipalExpanded] = useState(false);
@@ -23,8 +24,8 @@ export default function AboutContent() {
         items={[
           { label: "ご挨拶", href: "#greeting" },
           { label: "テーマ", href: "#theme" },
+          { label: "パンフレット", href: "#pamphlet" },
           { label: "アプリ", href: "#app" },
-          // { label: "パンフレット", href: "#brochure" },
         ]}
       />
 
@@ -131,6 +132,19 @@ export default function AboutContent() {
         </Container>
       </section>
 
+      <section id="pamphlet" className={styles.pamphletSection}>
+        <SectionTitle>パンフレット</SectionTitle>
+        <Container>
+          <div className={styles.pamphletContent}>
+            <FlipBook />
+            <p className={styles.pamphletDescription}>
+              ※スマートフォンの方は横にスワイプ、パソコンの方は端をクリックまたはドラッグしてページをめくることができます。
+            </p>
+          </div>
+        </Container>
+      </section>
+
+
       <section id="app" className={styles.appSection}>
         <SectionTitle>アプリ</SectionTitle>
         <Container>
@@ -162,49 +176,7 @@ export default function AboutContent() {
           </div>
         </Container>
       </section>
-      {/* <section id="brochure" className={styles.brochureSection}>
-        <SectionTitle>パンフレット</SectionTitle>
-        <Container>
-          <div className={styles.brochureContent}>
-            <div className={styles.brochureText}>
-              <p className={styles.brochureLead}>北斗祭パンフレットは現在準備中です。</p>
-              <p className={styles.brochureDescription}>
-                会場マップ、タイムスケジュール、各企画の詳細情報が掲載されたパンフレットを公開予定です。
-                <br />
-                公開まで今しばらくお待ちください。
-              </p>
-            </div>
-            <div className={styles.brochureImgWrapper}>
-              <img src={getPath("/img/common/brochure_cover.webp")} alt="パンフレット表紙" />
-            </div>
-          </div>
-        </Container>
-      </section>
-      <section id="brochure" className={styles.brochureSection}>
-        <SectionTitle>パンフレット</SectionTitle>
-        <Container>
-          <div className={styles.brochureContent}>
-            <div className={styles.brochureText}>
-              <p className={styles.brochureLead}>北斗祭パンフレットをオンラインでも公開しています。</p>
-              <p className={styles.brochureDescription}>
-                会場マップ、タイムスケジュール、各企画の詳細情報が掲載されたパンフレットをご覧いただけます。
-              </p>
-              <div className={styles.brochureBtnWrapper}>
-                <BaseButton href="" className={styles.brochureBtn} target="_blank">
-                  プレビューで見る
-                  <CallMadeRoundedIcon style={{ fontSize: "1em" }} />
-                </BaseButton>
-                <BaseButton href="" className={styles.brochureBtn} download="北斗祭2026パンフレット.pdf">
-                  ダウンロード (PDF)
-                </BaseButton>
-              </div>
-            </div>
-            <div className={styles.brochureImgWrapper}>
-              <img src={getPath("/img/common/brochure_cover.webp")} alt="パンフレット表紙" />
-            </div>
-          </div>
-        </Container>
-      </section> */}
-    </main>
+
+    </main >
   );
 }
