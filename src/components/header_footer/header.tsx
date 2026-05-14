@@ -89,12 +89,12 @@ const Header = () => {
                 <li>
                   <Link href="/about#theme">テーマ</Link>
                 </li>
+                <li>
+                <Link href="/about#pamphlet">パンフレット</Link>
+                </li>
               <li>
                 <Link href="/about#app">アプリ</Link>
               </li>
-              {/* <li>
-                <Link href="/about#brochure">パンフレット</Link>
-              </li> */}
               </ul>
             </li>
             <li className="menu-first">
