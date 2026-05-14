@@ -46,7 +46,7 @@ export default function FlipBookClient() {
   const bookHeight = isMobile ? 424 : 636;
 
   const numPages = 32;
-  const pages = Array.from({ length: numPages }, (_, i) => getPath(`/panfu/パンフレット-${i + 1}.webp`));
+  const pages = Array.from({ length: numPages }, (_, i) => getPath(`/img/pamphlet/パンフレット-${i + 1}.webp`));
 
   if (windowWidth === 0) return <div className={styles.loading}>Loading...</div>;
 
