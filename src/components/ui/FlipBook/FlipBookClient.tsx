@@ -43,12 +43,9 @@ export default function FlipBookClient() {
 
   const isMobile = windowWidth > 0 && windowWidth <= 767;
   const bookWidth = isMobile ? 300 : 450;
-  const bookHeight = isMobile ? 424 : 636; // A4 Ratio ~ 1:1.414
+  const bookHeight = isMobile ? 424 : 636;
 
-  // Try to load up to 10 pages for now (assuming Panfu-1 to Panfu-10)
-  // Since we don't know the exact number, we can define a fixed array.
-  // The user can add more files by modifying this or ensuring files exist.
-  const numPages = 32; // Start with 4 pages for demo
+  const numPages = 32;
   const pages = Array.from({ length: numPages }, (_, i) => getPath(`/panfu/パンフレット-${i + 1}.webp`));
 
   if (windowWidth === 0) return <div className={styles.loading}>Loading...</div>;
