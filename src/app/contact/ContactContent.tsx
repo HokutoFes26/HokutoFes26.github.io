@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import styles from "./contact.module.css";
 import { getPath } from "@/constants/paths";
 import PageHeader from "@/components/ui/PageHeader/PageHeader";
@@ -9,11 +9,50 @@ import BaseButton from "@/components/ui/BaseButton/BaseButton";
 
 export default function ContactContent() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [knowValues, setKnowValues] = useState<Record<string, boolean>>({});
 
-  const handleSubmit = () => {
-    setTimeout(() => {
+  const handleKnowChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setKnowValues((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.checked,
+    }));
+  };
+
+  const isKnowSelected = Object.values(knowValues).some(Boolean);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!isKnowSelected) {
+      alert("「どこでお知りになりましたか？」を1つ以上選択してください。");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+
+    formData.forEach((value, key) => {
+      if (typeof value === "string") {
+        params.append(key, value);
+      }
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        mode: "no-cors",
+        body: params,
+      });
       setSubmitted(true);
-    }, 150);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("送信中にエラーが発生しました。");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,7 +90,6 @@ export default function ContactContent() {
               <form
                 action="https://docs.google.com/forms/d/e/1FAIpQLSetR4DmQ9l8-nBAWryIOUuL5Obbemb5ZFAzbcJS35dbzBaETw/formResponse"
                 method="post"
-                target="hidden_iframe"
                 onSubmit={handleSubmit}
               >
                 <dl>
@@ -90,7 +128,10 @@ export default function ContactContent() {
                     </dd>
                   </div>
                   <div className={styles.item}>
-                    <dt>どこでお知りになりましたか？</dt>
+                    <dt>
+                      どこでお知りになりましたか？
+                      <span className={styles.require}>必須</span>
+                    </dt>
                     <dd className={styles["checkbox-group"]}>
                       <div className={styles["checkbox-item"]}>
                         <input
@@ -98,19 +139,38 @@ export default function ContactContent() {
                           name="entry.410116180"
                           id="know-1"
                           value="SNS (Instagram, Google検索など)"
+                          onChange={handleKnowChange}
                         />
                         <label htmlFor="know-1">SNS (Instagram, Google検索など)</label>
                       </div>
                       <div className={styles["checkbox-item"]}>
-                        <input type="checkbox" name="entry.410116180" id="know-2" value="ポスター" />
+                        <input
+                          type="checkbox"
+                          name="entry.410116180"
+                          id="know-2"
+                          value="ポスター"
+                          onChange={handleKnowChange}
+                        />
                         <label htmlFor="know-2">ポスター</label>
                       </div>
                       <div className={styles["checkbox-item"]}>
-                        <input type="checkbox" name="entry.410116180" id="know-3" value="紹介・口コミ" />
+                        <input
+                          type="checkbox"
+                          name="entry.410116180"
+                          id="know-3"
+                          value="紹介・口コミ"
+                          onChange={handleKnowChange}
+                        />
                         <label htmlFor="know-3">紹介・口コミ</label>
                       </div>
                       <div className={styles["checkbox-item"]}>
-                        <input type="checkbox" name="entry.410116180" id="know-4" value="その他" />
+                        <input
+                          type="checkbox"
+                          name="entry.410116180"
+                          id="know-4"
+                          value="その他"
+                          onChange={handleKnowChange}
+                        />
                         <label htmlFor="know-4">その他</label>
                       </div>
                     </dd>
@@ -209,7 +269,6 @@ export default function ContactContent() {
           </>
         )}
       </Container>
-      <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: "none" }}></iframe>
     </main>
   );
 }

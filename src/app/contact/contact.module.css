@@ -38,6 +38,7 @@
   font-size: 10px;
   font-weight: 500;
   padding: 2px 5px;
+  white-space: nowrap;
 }
 
 .form-area .item dd {

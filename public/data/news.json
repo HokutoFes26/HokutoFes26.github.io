@@ -1,38 +1,23 @@
 [
-    {
-        "title": "第18回 北斗祭~再煌~ 公式ホームページ公開！",
-        "date": "5/12/2026",
-        "contents": [
-            "第18回 北斗祭~再煌~ 公式ホームページが公開されました！",
-            "公式インスタグラムはこちら: <a href='https://www.instagram.com/toyama.hokutosai_2026' target='_blank' rel='noopener noreferrer' style='color: #007aff; text-decoration: underline;'>@toyama.hokutosai_2026</a>"
-        ]
-    },
-    {
-        "title": "不具合のご報告をお願いいたします。",
-        "date": "5/13/2026",
-        "contents": [
-            "本ホームページに訪問していただきありがとうございます。",
-            "もし不具合や気になる点を見つけられましたら、お気軽にお問い合わせフォームよりお寄せください。",
-            "皆様と共に、より良いホームページ制作を続けていければ幸いです。",
-            "お問い合わせはこちら: <a href='https://hokutofes26.github.io/contact/' target='_blank' rel='noopener noreferrer' style='color: #007aff; text-decoration: underline;'>お問い合わせフォーム</a>"
-        ]
-    },
-    {
-        "title": "第18回 北斗祭~再煌~ 公式ウェブアプリ公開！",
-        "date": "5/13/2026",
-        "contents": [
-            "第18回 北斗祭~再煌~ 公式ウェブアプリを公開しました！",
-            "北斗祭について > アプリ　に設置しましたのでご活用ください。",
-            "公式ウェブアプリはこちら: <a href='https://hokutofes26.github.io/app/' target='_blank' rel='noopener noreferrer' style='color: #007aff; text-decoration: underline;'>公式ウェブアプリ</a>"
-        ]
-    },
-    {
-        "title": "第18回 北斗祭~再煌~ パンフレット公開！",
-        "date": "5/15/2026",
-        "contents": [
-            "第18回 北斗祭~再煌~ パンフレットを公開しました！",
-            "北斗祭について > パンフレット　に設置しましたのでご自由にご覧ください。",
-            "電子パンフレットはこちら: <a href='https://hokutofes26.github.io/about/#pamphlet' target='_blank' rel='noopener noreferrer' style='color: #007aff; text-decoration: underline;'>電子パンフレット</a>"
-        ]
-    }
+  {
+    "title": "公式ホームページ・アプリ・パンフレット公開のお知らせ",
+    "date": "5/12/2026",
+    "contents": [
+      "第18回 北斗祭~再煌~ の各種公式コンテンツを公開いたしました！",
+      "・公式ホームページ",
+      "・公式ウェブアプリ: <a href='/about/#app' style='color: #007aff; text-decoration: underline;'>アプリを見る</a>",
+      "・電子パンフレット: <a href='/about/#pamphlet' style='color: #007aff; text-decoration: underline;'>パンフレットを見る</a>",
+      "不具合や気になる点、ご質問などございましたら、<a href='/contact/' style='color: #007aff; text-decoration: underline;'>お問い合わせフォーム</a> よりお寄せください。",
+      "公式インスタグラムはこちら: <a href='https://www.instagram.com/toyama.hokutosai_2026' target='_blank' rel='noopener noreferrer' style='color: #007aff; text-decoration: underline;'>@toyama.hokutosai_2026</a>"
+    ]
+  },
+  {
+    "title": "お問い合わせフォームの不具合に関するお詫び",
+    "date": "5/15/2026",
+    "contents": [
+      "ホームページ公開時より、お問い合わせフォームから送信された内容が正常に届かない不具合が発生しておりました。",
+      "現在は修正が完了しておりますが、これまでに送信していただいた方は、大変お手数ですが再度送り直していただけますようお願い申し上げます。",
+      "ご不便をおかけしましたことを深くお詫び申し上げます。"
+    ]
+  }
 ]
