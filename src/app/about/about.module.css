@@ -243,6 +243,7 @@
   padding: 40px;
   background-color: var(--color-gray-light);
   border-radius: 20px;
+  min-height: 800px;
 }
 
 .pamphletDescription {
@@ -436,6 +437,7 @@
   .pamphletContent {
     padding: 20px;
     border-radius: 12px;
+    min-height: 520px;
   }
 
   .pamphletDescription {

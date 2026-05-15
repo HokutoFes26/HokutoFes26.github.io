@@ -39,6 +39,7 @@ export default function ContactContent() {
       if (typeof value === "string") {
         params.append(key, value);
       }
+    });
 
     try {
       await fetch(form.action, {
