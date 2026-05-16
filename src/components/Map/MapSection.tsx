@@ -189,16 +189,21 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
               attributionControl={false}
             >
               <ImageOverlay url={getPath(mapList[activeIndex].src)} bounds={getBounds()} />
-              {/* {pinData && pinData.mapId === activeIndex && (
+              {pinData && pinData.mapId === activeIndex && (
                 <Marker
                   position={[pinData.y, pinData.x]}
                   icon={L.divIcon({
                     className: "custom-pin",
-                    html: `<div style="background-color: #ff4d4f; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 8px rgba(0,0,0,0.4); transform: translate(-7px, -7px);"></div>`,
+                    html: `
+                      <div class="pin-wrapper">
+                        <div class="pin-head"></div>
+                        <div class="pin-pulse"></div>
+                      </div>
+                    `,
                     iconSize: [0, 0],
                   })}
                 />
-              )} */}
+              )}
               <MapController onFullscreen={toggleFullscreen} isFullscreen={isCurrentlyFullscreen} />
             </MapContainer>
           ) : (
@@ -214,3 +219,4 @@ export default function MapSection({ initialPlace }: { initialPlace?: string | n
     </div>
   );
 }
+
