@@ -80,12 +80,14 @@ export default function TabbedSectionClient({
   tabs,
   data,
   type = "card",
+  description,
 }: {
   id: string;
   title: string;
   tabs: string[];
   data: ProjectItemData[][];
   type?: "card" | "list" | "timeline";
+  description?: React.ReactNode;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = data[activeIndex] || [];
@@ -98,6 +100,8 @@ export default function TabbedSectionClient({
   return (
     <section id={id} className={styles.fadein}>
       <SectionTitle>{title}</SectionTitle>
+
+      {description && <Container className={styles.description}>{description}</Container>}
 
       <TabNav
         items={tabItems}

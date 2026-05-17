@@ -47,6 +47,18 @@ export default function ProjectsContent() {
           tabs={["クラス展示", "部活動展示", "学科展示", "特別展示"]}
           data={allData.products}
           type="card"
+          description={
+            <div style={{ maxWidth: "300px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "8px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+                <span style={{ fontWeight: "bold", color: "#555" }}>23日(土)</span>
+                <span style={{ fontWeight: "500" }}>10:00 - 15:30</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+                <span style={{ fontWeight: "bold", color: "#555" }}>24日(日)</span>
+                <span style={{ fontWeight: "500" }}>10:00 - 14:30</span>
+              </div>
+            </div>
+          }
         />
 
         <TabbedSectionClient
@@ -55,6 +67,18 @@ export default function ProjectsContent() {
           tabs={["運動部", "文化部", "クラス", "その他"]}
           data={allData.stalls}
           type="card"
+          description={
+            <div style={{ maxWidth: "300px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "8px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+                <span style={{ fontWeight: "bold", color: "#555" }}>23日(土)</span>
+                <span style={{ fontWeight: "500" }}>10:00 - 15:00</span>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+                <span style={{ fontWeight: "bold", color: "#555" }}>24日(日)</span>
+                <span style={{ fontWeight: "500" }}>10:00 - 14:30</span>
+              </div>
+            </div>
+          }
         />
 
         <TabbedSectionClient

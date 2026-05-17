@@ -57,11 +57,30 @@
   scroll-margin-top: 140px;
 }
 
-.note {
+
+.busNotice {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 30px;
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 20px;
+  line-height: 1.6;
   word-break: auto-phrase;
+}
+
+.busNotice p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.busNotice ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.busNotice li {
+  margin-bottom: 4px;
 }
 
 .cardGrid {

@@ -133,7 +133,15 @@ export default function AccessSection() {
                   <h2 className={styles.h2} id="to-imizu">
                     本郷キャンパス / 富山駅<br></br>↓<br></br>射水キャンパス
                   </h2>
-                  <p className={styles.note}>1日目、2日目共通の時刻表です。</p>
+                  <div className={styles.busNotice}>
+                    <p>シャトルバスをご利用のお客様へ</p>
+                    <ul>
+                      <li>1日目、2日目共通の時刻表です。</li>
+                      <li>富山駅の乗降場所は、北口観光バス駐車場です。</li>
+                      <li>混雑状況により、ご希望の便にご乗車いただけない場合があります。</li>
+                      <li>本郷C～富山駅北口間のみの利用はご遠慮いただいております。</li>
+                    </ul>
+                  </div>
                   <BusTable routes={busData.HongoToImizu.route} times={busData.HongoToImizu.time} />
 
                   <h2 className={`${styles.h2} ${styles.toHongo}`} id="to-hongo">

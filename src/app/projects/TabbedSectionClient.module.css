@@ -2,6 +2,39 @@
   margin-bottom: 60px;
 }
 
+.description {
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hoursContainer {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 4px;
+}
+
+.hoursLabel {
+  font-weight: bold;
+  color: #555;
+}
+
+.hoursValue {
+  font-family: var(--font-base);
+  font-weight: 500;
+}
+
 .stage-list {
   display: flex;
   flex-wrap: wrap;
