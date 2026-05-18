@@ -137,17 +137,26 @@ export default function AccessSection() {
                     <p>シャトルバスをご利用のお客様へ</p>
                     <ul>
                       <li>1日目、2日目共通の時刻表です。</li>
-                      <li>富山駅の乗降場所は、北口観光バス駐車場です。</li>
                       <li>混雑状況により、ご希望の便にご乗車いただけない場合があります。</li>
                       <li>本郷C～富山駅北口間のみの利用はご遠慮いただいております。</li>
                     </ul>
+                    <p style={{marginTop: "1em"}}>乗降場所</p>
+                    <div style={{ maxWidth: "300px", marginLeft: "15px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1.5px dashed #999", paddingBottom: "8px" }}>
+                        <span style={{ color: "#555" }}>富山駅</span>
+                        <span style={{ fontWeight: "500" }}>北口観光バス駐車場</span>
+                      </div>
+                      <div style={{ display: "flex", justifyContent: "space-between"}}>
+                        <span style={{ color: "#555" }}>射水キャンパス</span>
+                        <span style={{ fontWeight: "500" }}>管理棟前の噴水付近</span>
+                      </div>
+                    </div>
                   </div>
                   <BusTable routes={busData.HongoToImizu.route} times={busData.HongoToImizu.time} />
 
                   <h2 className={`${styles.h2} ${styles.toHongo}`} id="to-hongo">
                     射水キャンパス<br></br>↓<br></br>本郷キャンパス / 富山駅
                   </h2>
-                  <p className={styles.note}>射水キャンパスの乗り場は管理棟前の噴水付近です。</p>
                   <BusTable routes={busData.ImizuToHongo.route} times={busData.ImizuToHongo.time} />
                 </>
               )}

@@ -49,11 +49,11 @@ export default function ProjectsContent() {
           type="card"
           description={
             <div style={{ maxWidth: "300px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "8px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1.5px dashed #999", paddingBottom: "8px" }}>
                 <span style={{ fontWeight: "bold", color: "#555" }}>23日(土)</span>
                 <span style={{ fontWeight: "500" }}>10:00 - 15:30</span>
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between"}}>
                 <span style={{ fontWeight: "bold", color: "#555" }}>24日(日)</span>
                 <span style={{ fontWeight: "500" }}>10:00 - 14:30</span>
               </div>
@@ -69,11 +69,11 @@ export default function ProjectsContent() {
           type="card"
           description={
             <div style={{ maxWidth: "300px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "8px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1.5px dashed #999", paddingBottom: "8px" }}>
                 <span style={{ fontWeight: "bold", color: "#555" }}>23日(土)</span>
                 <span style={{ fontWeight: "500" }}>10:00 - 15:00</span>
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px dashed #ddd", paddingBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between"}}>
                 <span style={{ fontWeight: "bold", color: "#555" }}>24日(日)</span>
                 <span style={{ fontWeight: "500" }}>10:00 - 14:30</span>
               </div>
