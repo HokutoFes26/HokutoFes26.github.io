@@ -3,4 +3,5 @@ module.exports = {
     siteUrl: "https://hokutofes26.github.io/",
     generateRobotsTxt: true,
     outDir: "docs",
+    trailingSlash: true,
 };

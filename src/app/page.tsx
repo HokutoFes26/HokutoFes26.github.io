@@ -103,13 +103,44 @@ export default function Home() {
       }, 700);
     });
   }, []);
-  const [randomImages, setRandomImages] = useState<string[]>([]);
+  const [randomImages, setRandomImages] = useState<{ src: string; name: string }[]>([]);
 
   useEffect(() => {
     const loadImages = async () => {
-      const allImages = Array.from(new Set([...booth_projects_images]));
-      const shuffled = allImages.sort(() => 0.5 - Math.random());
-      setRandomImages(shuffled.slice(0, 8));
+      try {
+        const [productsRes, boothRes] = await Promise.all([
+          fetch(getPath("/data/products.json")),
+          fetch(getPath("/data/booth.json")),
+        ]);
+        const productsData = await productsRes.json();
+        const boothData = await boothRes.json();
+
+        const allItems = [
+          ...Object.values(productsData).flat(),
+          ...Object.values(boothData).flat(),
+        ] as any[];
+
+        const imageToNameMap = new Map<string, string>();
+        allItems.forEach((item) => {
+          const name = item.name === "縁日" && item.team ? `${item.name}-${item.team}` : item.name;
+          if (item.image) imageToNameMap.set(item.image, name);
+          if (item.image2) imageToNameMap.set(item.image2, name);
+          if (item.image_hidden) imageToNameMap.set(item.image_hidden, name);
+        });
+
+        const allImages = Array.from(new Set([...booth_projects_images]));
+        const shuffled = [...allImages].sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, 8).map((src) => ({
+          src,
+          name: imageToNameMap.get(src) || "",
+        }));
+        setRandomImages(selected);
+      } catch (err) {
+        console.error("Failed to load project data for images:", err);
+        const allImages = Array.from(new Set([...booth_projects_images]));
+        const shuffled = [...allImages].sort(() => 0.5 - Math.random());
+        setRandomImages(shuffled.slice(0, 8).map((src) => ({ src, name: "" })));
+      }
     };
     loadImages();
   }, []);
@@ -170,7 +201,7 @@ export default function Home() {
                 <br />
                 また、よくあるご質問に対する回答もご用意しておりますので、ぜひ一度ご覧ください。
               </p>
-              <BaseButton href="/visitor">VIEW MORE</BaseButton>
+              <BaseButton href="/visitor/">VIEW MORE</BaseButton>
             </div>
           </div>
         </section>
@@ -216,22 +247,44 @@ export default function Home() {
 
           <div className={`${styles["products-list-area"]} animate-optimize`}>
             <ul className={styles["products-list"]}>
-              {(randomImages.length > 0 ? randomImages : []).map((src, i) => (
+              {randomImages.map((img, i) => (
                 <li key={i}>
-                  <img src={getPath(src)} alt="" />
+                  {img.name ? (
+                    <Link
+                      href={getPath("/projects/")}
+                      onClick={() => {
+                        sessionStorage.setItem("autoOpenProduct", img.name);
+                      }}
+                    >
+                      <img src={getPath(img.src)} alt="" />
+                    </Link>
+                  ) : (
+                    <img src={getPath(img.src)} alt="" />
+                  )}
                 </li>
               ))}
             </ul>
             <ul className={styles["products-list"]}>
-              {(randomImages.length > 0 ? randomImages : []).map((src, i) => (
+              {randomImages.map((img, i) => (
                 <li key={i}>
-                  <img src={getPath(src)} alt="" />
+                  {img.name ? (
+                    <Link
+                      href={getPath("/projects/")}
+                      onClick={() => {
+                        sessionStorage.setItem("autoOpenProduct", img.name);
+                      }}
+                    >
+                      <img src={getPath(img.src)} alt="" />
+                    </Link>
+                  ) : (
+                    <img src={getPath(img.src)} alt="" />
+                  )}
                 </li>
               ))}
             </ul>
           </div>
 
-          <BaseButton href="/projects" centered>
+          <BaseButton href="/projects/" centered>
             VIEW MORE
           </BaseButton>
         </section>
@@ -248,7 +301,7 @@ export default function Home() {
               また、情報を発信するニュースや当日のアクセスの方法も掲載しています。
             </p>
             <p className={styles.description}>ぜひご活用ください。</p>
-            <BaseButton href="/about">VIEW MORE</BaseButton>
+            <BaseButton href="/about/">VIEW MORE</BaseButton>
           </div>
 
           <ul className={styles["works-list"]}>
@@ -269,25 +322,25 @@ export default function Home() {
 
         <div className={`${styles["faq-contact"]} fadein`}>
           {/* company */}
-          <Link className={styles.item} href="/about">
+          <Link className={styles.item} href="/about/">
             <div className={styles.img}>
               <img src={getPath("/img/top/about.jpg")} alt="" />
             </div>
           </Link>
           {/* sponsor */}
-          <Link className={styles.item} href="/works">
+          <Link className={styles.item} href="/works/">
             <div className={styles.img}>
               <img src={getPath("/img/top/works.jpg")} alt="" />
             </div>
           </Link>
           {/* map */}
-          <Link className={styles.item} href="/visitor?tab=maps">
+          <Link className={styles.item} href="/visitor/?tab=maps">
             <div className={styles.img}>
               <img src={getPath("/img/top/visitor.jpg")} alt="" />
             </div>
           </Link>
           {/* access */}
-          <Link className={styles.item} href="/visitor?tab=access">
+          <Link className={styles.item} href="/visitor/?tab=access">
             <div className={styles.img}>
               <img src={getPath("/img/top/access.jpg")} alt="" />
             </div>

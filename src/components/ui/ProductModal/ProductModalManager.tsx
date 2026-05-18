@@ -1,6 +1,6 @@
 "use client";
-import { useSearchParams } from "next/navigation";
-import { Suspense, useMemo } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useMemo, useEffect } from "react";
 import ProductModal from "./ProductModal";
 
 interface Item {
@@ -20,8 +20,17 @@ interface ProductModalManagerProps {
 }
 
 function ModalContent({ allData }: ProductModalManagerProps) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const selectedName = searchParams.get("name");
+
+  useEffect(() => {
+    const autoOpen = sessionStorage.getItem("autoOpenProduct");
+    if (autoOpen && !selectedName) {
+      sessionStorage.removeItem("autoOpenProduct");
+      router.push(`/projects?name=${encodeURIComponent(autoOpen)}`, { scroll: false });
+    }
+  }, [router, selectedName]);
 
   const selectedItem = useMemo(() => {
     if (!selectedName) return null;

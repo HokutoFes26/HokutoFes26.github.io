@@ -19,16 +19,16 @@ export default function SitemapSection() {
               「北斗祭」について
               <ul>
                 <li>
-                  <Link href="/about#greeting">ご挨拶</Link>
+                  <Link href="/about/#greeting">ご挨拶</Link>
                 </li>
                 <li>
-                  <Link href="/about#theme">テーマ</Link>
+                  <Link href="/about/#theme">テーマ</Link>
                 </li>
                 <li>
-                  <Link href="/about#pamphlet">パンフレット</Link>
+                  <Link href="/about/#pamphlet">パンフレット</Link>
                 </li>
                 <li>
-                  <Link href="/about#app">アプリ</Link>
+                  <Link href="/about/#app">アプリ</Link>
                 </li>
               </ul>
             </li>
@@ -36,16 +36,16 @@ export default function SitemapSection() {
               企画紹介
               <ul>
                 <li>
-                  <Link href="/projects#products">展示</Link>
+                  <Link href="/projects/#products">展示</Link>
                 </li>
                 <li>
-                  <Link href="/projects#booth">模擬店</Link>
+                  <Link href="/projects/#booth">模擬店</Link>
                 </li>
                 <li>
-                  <Link href="/projects#stage">ステージ企画</Link>
+                  <Link href="/projects/#stage">ステージ企画</Link>
                 </li>
                 <li>
-                  <Link href="/projects#timetable">タイムテーブル</Link>
+                  <Link href="/projects/#timetable">タイムテーブル</Link>
                 </li>
               </ul>
             </li>
@@ -53,16 +53,16 @@ export default function SitemapSection() {
               ご来場の皆様へ
               <ul>
                 <li>
-                  <Link href="/visitor?tab=notice">お願い</Link>
+                  <Link href="/visitor/?tab=notice">お願い</Link>
                 </li>
                 <li>
-                  <Link href="/visitor?tab=faq">よくあるご質問</Link>
+                  <Link href="/visitor/?tab=faq">よくあるご質問</Link>
                 </li>
                 <li>
-                  <Link href="/visitor?tab=access">アクセス</Link>
+                  <Link href="/visitor/?tab=access">アクセス</Link>
                 </li>
                 <li>
-                  <Link href="/visitor?tab=maps">校内マップ</Link>
+                  <Link href="/visitor/?tab=maps">校内マップ</Link>
                 </li>
               </ul>
             </li>
@@ -70,15 +70,15 @@ export default function SitemapSection() {
               ご協賛企業様
               <ul>
                 <li>
-                  <Link href="/works?tab=works">ご協賛企業様</Link>
+                  <Link href="/works/?tab=works">ご協賛企業様</Link>
                 </li>
                 <li>
-                  <Link href="/works?tab=thanks">スペシャルサンクス</Link>
+                  <Link href="/works/?tab=thanks">スペシャルサンクス</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href="/contact">お問い合わせ</Link>
+              <Link href="/contact/">お問い合わせ</Link>
             </li>
           </ul>
         </div>

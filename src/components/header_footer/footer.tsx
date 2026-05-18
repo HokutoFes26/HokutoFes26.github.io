@@ -41,91 +41,91 @@ const Footer = () => {
         <div className="menu-area">
           <div className="menu-col">
             <p className="menu-title">
-              <Link href="/about">北斗祭について</Link>
+              <Link href="/about/">北斗祭について</Link>
             </p>
             <ul className="menu-list">
               <li>
-                <Link href="/about#greeting">ご挨拶</Link>
+                <Link href="/about/#greeting">ご挨拶</Link>
               </li>
               <li>
-                <Link href="/about#theme">テーマ</Link>
+                <Link href="/about/#theme">テーマ</Link>
               </li>
               <li>
-                <Link href="/about#pamphlet">パンフレット</Link>
+                <Link href="/about/#pamphlet">パンフレット</Link>
               </li>
               <li>
-                <Link href="/about#app">アプリ</Link>
+                <Link href="/about/#app">アプリ</Link>
               </li>
             </ul>
           </div>
 
           <div className="menu-col">
             <p className="menu-title">
-              <Link href="/projects">企画紹介</Link>
+              <Link href="/projects/">企画紹介</Link>
             </p>
             <ul className="menu-list">
               <li>
-                <Link href="/projects#products">
+                <Link href="/projects/#products">
                   展示
                   <br />
                 </Link>
               </li>
               <li>
-                <Link href="/projects#booth">模擬店</Link>
+                <Link href="/projects/#booth">模擬店</Link>
               </li>
               <li>
-                <Link href="/projects#stage">ステージ企画</Link>
+                <Link href="/projects/#stage">ステージ企画</Link>
               </li>
               <li>
-                <Link href="/projects#timetable">タイムテーブル</Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="menu-col">
-            <p className="menu-title">
-              <Link href="/visitor">ご来場の皆様へ</Link>
-            </p>
-            <ul className="menu-list">
-              <li>
-                <Link href="/visitor?tab=notice">お願い</Link>
-              </li>
-              <li>
-                <Link href="/visitor?tab=maps">校内マップ</Link>
-              </li>
-              <li>
-                <Link href="/visitor?tab=access">アクセス</Link>
-              </li>
-              <li>
-                <Link href="/visitor?tab=faq">よくあるご質問</Link>
+                <Link href="/projects/#timetable">タイムテーブル</Link>
               </li>
             </ul>
           </div>
 
           <div className="menu-col">
             <p className="menu-title">
-              <Link href="/works">ご協賛企業様</Link>
+              <Link href="/visitor/">ご来場の皆様へ</Link>
             </p>
             <ul className="menu-list">
               <li>
-                <Link href="/works?tab=works">ご協賛企業様</Link>
+                <Link href="/visitor/?tab=notice">お願い</Link>
               </li>
               <li>
-                <Link href="/works?tab=thanks">スペシャルサンクス</Link>
+                <Link href="/visitor/?tab=maps">校内マップ</Link>
+              </li>
+              <li>
+                <Link href="/visitor/?tab=access">アクセス</Link>
+              </li>
+              <li>
+                <Link href="/visitor/?tab=faq">よくあるご質問</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="menu-col">
+            <p className="menu-title">
+              <Link href="/works/">ご協賛企業様</Link>
+            </p>
+            <ul className="menu-list">
+              <li>
+                <Link href="/works/?tab=works">ご協賛企業様</Link>
+              </li>
+              <li>
+                <Link href="/works/?tab=thanks">スペシャルサンクス</Link>
               </li>
             </ul>
           </div>
           <p className="menu-title">
-            <Link href="/contact">お問い合わせ</Link>
+            <Link href="/contact/">お問い合わせ</Link>
           </p>
         </div>
       </div>
       <div className="footer_info">
         <p className="copyright">© 2026 北斗祭実行委員会 All rights reserved.</p>
         <div className="sitenavi">
-          <Link href="/sitenavi?tab=sitemap">サイトマップ</Link>
-          <Link href="/sitenavi?tab=policy">サイトポリシー</Link>
-          <Link href="/sitenavi?tab=privacy">プライバシーポリシー</Link>
+          <Link href="/sitenavi/?tab=sitemap">サイトマップ</Link>
+          <Link href="/sitenavi/?tab=policy">サイトポリシー</Link>
+          <Link href="/sitenavi/?tab=privacy">プライバシーポリシー</Link>
         </div>
       </div>
     </footer>
