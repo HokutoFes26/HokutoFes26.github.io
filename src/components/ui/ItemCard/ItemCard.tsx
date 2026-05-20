@@ -66,12 +66,30 @@ export default function ItemCard({ data: item }: { data: Payload }) {
     transform: !isThanks && item.fit ? `translate(0, ${item.fit ?? 0}px)` : "scale(1)",
   };
 
+  const getNameScale = (text: string): React.CSSProperties => {
+    let scale = 1;
+    let mobileScale = 1;
+
+    if (text.length > 15) {
+      scale = 0.75;
+      mobileScale = 0.65;
+    } else if (text.length > 10) {
+      scale = 0.85;
+      mobileScale = 0.8;
+    }
+
+    return {
+      "--name-scale": scale,
+      "--name-scale-mobile": mobileScale,
+    } as React.CSSProperties;
+  };
+
   return (
     <>
       {isThanks ? (
         <div className={styles.thanksCard}>
           <p className={styles.thanks_job}>{item.job}</p>
-          <p className={styles.thanks_name}>{item.name}</p>
+          <p className={styles.thanks_name} style={getNameScale(item.name)}>{item.name}</p>
         </div>
       ) : (
         <li className={styles.card}>
@@ -83,7 +101,7 @@ export default function ItemCard({ data: item }: { data: Payload }) {
               </div>
             )}
             <div className={`${styles.info} ${isProduct ? "" : styles.textOnlyInfo}`}>
-              <p className={styles.name}>{item.name}</p>
+              <p className={styles.name} style={getNameScale(item.name)}>{item.name}</p>
               {isProduct ? (
                 <div className={styles.details}>
                   {item.team && <p>{item.team}</p>}

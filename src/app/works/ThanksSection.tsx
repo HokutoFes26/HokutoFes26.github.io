@@ -25,6 +25,7 @@ export default function ThanksSection(props: { worksData: ThanksDataType }) {
           />
         ))}
       </CardWrapper>
+      <p className="thanksOther">北斗祭の開催にあたり、多大なるご協力をいただき誠にありがとうございます。</p>
     </div>
   );
 }
