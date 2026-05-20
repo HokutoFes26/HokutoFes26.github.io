@@ -223,11 +223,11 @@
       "team": "富山高等専門学校後援会",
       "place": "テント番号3,4",
       "menu": [
-        { "content": "イカ焼き", "price": 0 },
-        { "content": "どんどん焼き", "price": 0 },
-        { "content": "おにぎり", "price": 0 },
-        { "content": "飲み物", "price": 0 },
-        { "content": "アイスクレープ", "price": 0 }
+        { "content": "イカ焼き", "price": 500 },
+        { "content": "どんどん焼き", "price": 200 },
+        { "content": "おにぎり", "price": 150 },
+        { "content": "飲み物", "price": 160 },
+        { "content": "アイスクレープ", "price": 100 }
       ],
       "image": "/img/booth/富山高等専門学校後援会.webp"
     }
